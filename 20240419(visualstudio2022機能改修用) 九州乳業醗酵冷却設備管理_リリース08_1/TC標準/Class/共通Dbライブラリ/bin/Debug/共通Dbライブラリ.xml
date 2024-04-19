@@ -1,0 +1,85 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+共通Dbライブラリ
+</name>
+</assembly>
+<members>
+<member name="T:共通Dbライブラリ.My.Resources.Resources">
+<summary>
+  ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+</summary>
+</member>
+<member name="P:共通Dbライブラリ.My.Resources.Resources.ResourceManager">
+<summary>
+  このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+</summary>
+</member>
+<member name="P:共通Dbライブラリ.My.Resources.Resources.Culture">
+<summary>
+  すべてについて、現在のスレッドの CurrentUICulture プロパティをオーバーライドします
+  現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+</summary>
+</member>
+<member name="M:共通Dbライブラリ.CDbUtil.空文字列ToDBNull(System.String)">
+ <summary>
+ 空文字列はDbNullに置き換えて返す
+ </summary>
+ <param name="変換前文字列">変換前文字列</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:共通Dbライブラリ.DbExceptionEx">
+ <summary>
+ Db拡張例外
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:共通Dbライブラリ.Cdp">
+ <summary>
+ DB処理共通クラス
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:共通Dbライブラリ.CSdp">
+ <summary>
+ 「.NET Framework Data Provider for SQL Server」用クラス
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:共通Dbライブラリ.CSql">
+ <summary>
+ SQL文生成クラス
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:共通Dbライブラリ.CSql.mStrSelectInsert">
+ <summary>
+ SELECTINSERT文の取得
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:共通Dbライブラリ.CSql.mStrInsert">
+ <summary>
+ INSERT文の取得
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:共通Dbライブラリ.CSql.あいまい検索条件対応SQL句取得(System.String,System.String)">
+ <summary>
+ あいまい検索条件対応SQL句を取得する
+ </summary>
+ <param name="列名"></param>
+ <param name="条件値"></param>
+ <returns></returns>
+ <remarks>
+ あいまい検索モード ＝ "強制"の場合、常に「LIKE」で条件検索する
+ あいまい検索モード ≠ "強制"の場合、
+ 条件値に「*」が含まれるか否かにより、「=」と「LIKE」を自動的に切り替える
+ </remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="MS UI Gothic" Size="9" />
+  <Class Name="入退共通.CMX">
+    <Position X="7.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>C:\入退室管理\入退室管理SVNWORK\TC標準\Source\CMX.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAEQAAAIogAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Interface Name="入退共通.CMX.IDeviceData(Of T)" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C:\入退室管理\入退室管理SVNWORK\TC標準\Source\CMX.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Interface>
+      <Class Name="入退共通.CMX.HandShake" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C:\入退室管理\入退室管理SVNWORK\TC標準\Source\CMX.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="入退共通.CMX.CPUType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C:\入退室管理\入退室管理SVNWORK\TC標準\Source\CMX.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Enum Name="入退共通.CMX.ECPUTypeCode" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C:\入退室管理\入退室管理SVNWORK\TC標準\Source\CMX.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Interface Name="入退共通.CMX.IDevice" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C:\入退室管理\入退室管理SVNWORK\TC標準\Source\CMX.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Interface>
+      <Class Name="入退共通.CMX.DeviceEventArgs" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C:\入退室管理\入退室管理SVNWORK\TC標準\Source\CMX.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="入退共通.CMX.DeviceData(Of T)" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C:\入退室管理\入退室管理SVNWORK\TC標準\Source\CMX.vb</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="入退共通.CMX.DeviceAttribute" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C:\入退室管理\入退室管理SVNWORK\TC標準\Source\CMX.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="入退共通.CMX.CMXException" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C:\入退室管理\入退室管理SVNWORK\TC標準\Source\CMX.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="入退共通.CMX.Device" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C:\入退室管理\入退室管理SVNWORK\TC標準\Source\CMX.vb</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="入退共通.CMX.Wrapper" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C:\入退室管理\入退室管理SVNWORK\TC標準\Source\CMX.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Enum Name="入退共通.CMX.ETagListingOperation" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C:\入退室管理\入退室管理SVNWORK\TC標準\Source\CMX.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+  </Class>
+  <Class Name="入退共通.セキュリティ管理.Cタグ割当" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Cセキュリティデータ転送クラス群.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAgAAAIAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="入退共通.セキュリティ管理.C許可" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Cセキュリティデータ転送クラス群.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAACA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="入退共通.セキュリティ管理.Cゲート" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Cセキュリティデータ転送クラス群.vb</FileName>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAEAAAIAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="入退共通.セキュリティ管理.Cセキュリティ管理" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Cセキュリティデータ転送クラス群.vb</FileName>
+      <HashCode>AgAAAAAAQAAAAIAAAAAAAIAAAACAAAAIAAAAGAAAACA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="入退共通.Cセキュリティデータ転送" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Cセキュリティデータ転送.vb</FileName>
+      <HashCode>CAAAAACAAQAAIAEAACAAEAAAAAAAAAAAEAAABACAwAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="入退共通.C入退サーバメッセージ" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\入退室管理\入退室管理SVNWORK\入退室管理標準\Source\C入退サーバメッセージ.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="入退共通.C認証ログレコード" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C認証ログ.vb</FileName>
+      <HashCode>AQUAAgAAAAAgAgAAAAAAAAAAAgIAAEAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="入退共通.C認証ログ" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C認証ログ.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAACAAQAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="入退共通.CPlcDataリスト" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PlcData.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAEABAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="入退共通.PlcData" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PlcData.vb</FileName>
+      <HashCode>QABhBAAAAAAIAAAAABAAAAACAAgAAAQAAAAABQAAgMg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="入退共通.Settings" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Settings.vb</FileName>
+      <HashCode>KAFAAAAAAAUQAIQEAAgAAIIIAAAACAAAIABwAYAkIgQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="入退共通.My.MySettings" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="入退共通.E入退ステータス" Collapsed="true">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C認証ログ.vb</FileName>
+      <HashCode>GAAAAAAAAAAAAgAAAAAAAAAAEACAAAIAIAAAAICAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Module Name="入退共通.My.Resources.Resources" Collapsed="true">
+    <Position X="2.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="入退共通.My.MySettingsProperty" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Module>
+</ClassDiagram>

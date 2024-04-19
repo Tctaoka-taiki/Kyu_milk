@@ -1,0 +1,726 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+共通Windowsコントロール
+</name>
+</assembly>
+<members>
+<member name="P:共通Windowsコントロール.UsrChk.pID">
+	<summary>
+ pID
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.UsrChk.pClearValue">
+	<summary>
+ pClearValue
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.UsrChk.Isクリア">
+	<summary>
+ pIsClear
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.CUsrctlベース.gSubコントロールの初期化(System.Object[])">
+	<summary>
+ 初期化実行
+ </summary>
+	<param name="objCtl">所属コントロールも処理します</param>
+	<remarks>コントロールを初期化する。</remarks>
+</member><member name="M:共通Windowsコントロール.CUsrctlベース.Isフォーカスセット可能(System.Windows.Forms.Control)">
+	<summary>
+ フォーカスがセットできるか判定する
+ </summary>
+	<param name="コントロール">コントロール</param>
+	<returns>処理結果</returns>
+	<remarks>タブページの時はページをアクティブにする</remarks>
+</member><member name="P:共通Windowsコントロール.usrCmb.pID">
+	<summary>
+ pID
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrCmb.pClearValue">
+	<summary>
+ pClearValue
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrCmb.pClearIndex">
+	<summary>
+ pClearIndex
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrCmb.pAutoFocus">
+	<summary>
+ pAutoFocus
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrCmb.pAutoSelect">
+	<summary>
+ pAutoSelect
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrCmb.pMaxByte">
+	<summary>
+ pMaxByte
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrCmb.pCharType">
+	<summary>
+ pCharType
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrCmb.pCondition">
+	<summary>
+ pCondition
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrCmb.pFromToSearch">
+	<summary>
+ pFromToSearch
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrCmb.pFromCtl">
+	<summary>
+ pFromCtl
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrCmb.pFromToErrText">
+	<summary>
+ pFromToErrText
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.usrCmb.UsrCmb_TextChanged(System.Object,System.EventArgs)">
+	<summary>
+ UsrCmb_TextChanged
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.usrCmb.UsrCmb_Enter(System.Object,System.EventArgs)">
+	<summary>
+ UsrCmb_Enter
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.usrCmb.UsrCmb_SizeChanged(System.Object,System.EventArgs)">
+	<summary>
+ UsrCmb_SizeChanged
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.usrCmb.UsrCmb_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+	<summary>
+ UsrCmb_KeyPress
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.usrCmb.mSubHitIndex">
+	<summary>
+ コンボ内容のIndexをかえる
+ </summary>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.usrCmb.gSubComboClear">
+	<summary>
+ gSubComboClear
+ </summary>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.usrCmb.gIntFindValue(System.String)">
+	<summary>
+ Valuesと一致するIndexの取得
+ </summary>
+	<param name="strSearch"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.usrCmb.gSubSetItemIndex(System.String)">
+	<summary>
+ Itemsと一致するIndexへ
+ </summary>
+	<param name="strValue"></param>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.usrCmb.gSubSetValueIndex(System.String)">
+	<summary>
+ Valuesと一致するIndexへ
+ </summary>
+	<param name="strValue"></param>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrDate.pAutoSelect">
+	<summary>
+ pAutoSelect
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrDate.pCondition">
+	<summary>
+ pCondition
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrDate.エラー表示用項目名">
+	<summary>
+ pErrText
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrDate.pFromToSearch">
+	<summary>
+ pFromToSearch
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrDate.pFromCtl">
+	<summary>
+ pFromCtl
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrDate.pFromToErrText">
+	<summary>
+ pFromToErrText
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrDate.Text">
+	<summary>
+ Text
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>/なし</remarks>
+</member><member name="P:共通Windowsコントロール.usrDate.Text(System.Boolean)">
+	<summary>
+ Text
+ </summary>
+	<param name="blnSura">/の有無の指定</param>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrDate.pIsDate">
+	<summary>
+ 日付として正しいか
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrDate.pClearToday">
+	<summary>
+ クリアするときに本日日付にクリア
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrDate.pYear">
+	<summary>
+ pYear
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrDate.pMonth">
+	<summary>
+ pMonth
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrDate.pDay">
+	<summary>
+ pDay
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.usrDate.UsrDate_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+	<summary>
+ UsrDate_KeyPress
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.usrDate.UsrDate_Enter(System.Object,System.EventArgs)">
+	<summary>
+ UsrDate_Enter
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.usrDate.UsrDate_TextChanged(System.Object,System.EventArgs)">
+	<summary>
+ UsrDate_TextChanged
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.usrDate.UsrDate_BackColorChanged(System.Object,System.EventArgs)">
+	<summary>
+ UsrDate_BackColorChanged
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.usrDate.UsrDate_SizeChanged(System.Object,System.EventArgs)">
+	<summary>
+ UsrDate_SizeChanged
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>サイズ変更なしにするため</remarks>
+</member><member name="M:共通Windowsコントロール.usrDate.txtYear_Leave(System.Object,System.EventArgs)">
+	<summary>
+ txtYear_Leave
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.usrDate.txtMonth_Leave(System.Object,System.EventArgs)">
+	<summary>
+ txtMonth_Leave
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.usrDate.txtDay_Leave(System.Object,System.EventArgs)">
+	<summary>
+ txtDay_Leave
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.usrDate.Dbの値をセット(System.Object)">
+	<summary>
+	</summary>
+	<param name="値"></param>
+	<remarks>値がDBNullなら、表示をクリア。Date型ならば値をセット</remarks>
+</member><member name="M:共通Windowsコントロール.usrDate.gSubFocus">
+	<summary>
+ フォーカスのセット
+ </summary>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrBtn.pFuncKey">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks>（例　F1を割り当てる。"F1"。SHIFT+F1を割り当てる。"SF1"</remarks>
+</member><member name="P:共通Windowsコントロール.UcTextLabel.pText">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks>
+ デザイナーで「Text」プロパティが表示の仕方がわからないため、こちらからセットできるようにしている。
+ </remarks>
+</member><member name="M:共通Windowsコントロール.UsrDataGridView.セル文字列(System.Int32)">
+	<summary>
+ カレント行の指定列のセル文字列を返す
+ </summary>
+	<param name="col"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:共通Windowsコントロール.CUsrctl.gDp">
+	<summary>
+ データプロバイダ管理オブジェクト
+ </summary>
+	<remarks>コンボItem設定に使用します</remarks>
+</member><member name="M:共通Windowsコントロール.CUsrctl.gSubコンボItem設定_改(共通Windowsコントロール.usrCmb,System.String,System.Boolean,System.Boolean,System.String,System.String,System.String,System.String,System.Boolean)">
+	<summary>
+ コンボ内容のセット(SQL文による)
+ </summary>
+	<param name="objCmb"></param>
+	<param name="strSQL"></param>
+	<param name="Is空白あり"></param>
+	<param name="blnItemOnly">表示項目のみセット</param>
+	<remarks>SQLの1つ目は表示内容、2つ目は隠し項目</remarks>
+</member><member name="M:共通Windowsコントロール.CUsrctl.gSubコンボItem設定カスタム(共通Windowsコントロール.usrCmb,System.String,System.Boolean,System.Boolean)">
+	<summary>
+ コンボ内容のセット(SQL文による)
+ </summary>
+	<param name="objCmb"></param>
+	<param name="strSQL"></param>
+	<param name="Is空白あり"></param>
+	<param name="blnItemOnly">表示項目のみセット</param>
+	<remarks>SQLの1つ目は表示内容、2つ目は隠し項目</remarks>
+</member><member name="M:共通Windowsコントロール.CUsrctl.gSubコンボItem設定(共通Windowsコントロール.usrCmb,System.String,System.String,System.Boolean,System.Boolean)">
+	<summary>
+ コンボ内容のセット
+ </summary>
+	<param name="objCmb"></param>
+	<param name="str名称セット">順番にカンマ区切りで指定</param>
+	<param name="str値セット">順番にカンマ区切りで指定(値の指定をしないときは表示項目のみのセットになる</param>
+	<param name="blnSpace"></param>
+	<param name="blnItemOnly"></param>
+	<remarks></remarks>
+</member><member name="T:共通Windowsコントロール.CUsrctl">
+	<summary>
+ ユーザコントロール共通クラス
+ </summary>
+	<remarks>DB関連の処理を使用する前にgDpを初期化する必要あり</remarks>
+</member><member name="T:共通Windowsコントロール.IEnterキー制御">
+	<summary>
+ ENTERキー制御対象となるためのインターフェイス
+ </summary>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrTxt.pID">
+	<summary>
+ pID
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrTxt.pClearValue">
+	<summary>
+ pClearValue
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrTxt.pAutoFocus">
+	<summary>
+ pAutoFocus
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrTxt.pAutoSelect">
+	<summary>
+ pAutoSelect
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrTxt.pMaxByte">
+	<summary>
+ pMaxByte
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrTxt.pCharType">
+	<summary>
+ pCharType
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrTxt.pCondition">
+	<summary>
+ pCondition
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrTxt.エラー表示用項目名">
+	<summary>
+ pErrText
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrTxt.pFromToSearch">
+	<summary>
+ pFromToSearch
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrTxt.pFromCtl">
+	<summary>
+ pFromCtl
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrTxt.pFromToErrText">
+	<summary>
+ pFromToErrText
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrTxt.pAutoPad">
+	<summary>
+ pAutoPad
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrTxt.pPadWord">
+	<summary>
+ pPadWord
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.usrTxt.UsrTxt_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+	<summary>
+ UsrTxt_KeyPress
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.usrTxt.UsrTxt_TextChanged(System.Object,System.EventArgs)">
+	<summary>
+ UsrTxt_TextChanged
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.usrTxt.UsrTxt_Enter(System.Object,System.EventArgs)">
+	<summary>
+ UsrTxt_Enter
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.usrTxt.WndProc(System.Windows.Forms.Message@)">
+	<summary>
+ WndProc
+ </summary>
+	<param name="m"></param>
+	<remarks>貼り付けの制御</remarks>
+</member><member name="P:共通Windowsコントロール.My.Resources.Resources.ResourceManager">
+	<summary>
+  このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+</summary>
+</member><member name="P:共通Windowsコントロール.My.Resources.Resources.Culture">
+	<summary>
+  厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
+  現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+</summary>
+</member><member name="T:共通Windowsコントロール.My.Resources.Resources">
+	<summary>
+  ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+</summary>
+</member><member name="P:共通Windowsコントロール.UsrDate2.pAutoSelect">
+	<summary>
+ pAutoSelect
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.UsrDate2.pCondition">
+	<summary>
+ pCondition
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.UsrDate2.エラー表示用項目名">
+	<summary>
+ pErrText
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.UsrDate2.pFromToSearch">
+	<summary>
+ pFromToSearch
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.UsrDate2.pFromCtl">
+	<summary>
+ pFromCtl
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.UsrDate2.pFromToErrText">
+	<summary>
+ pFromToErrText
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.UsrDate2.Text">
+	<summary>
+ Text
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>/なし</remarks>
+</member><member name="P:共通Windowsコントロール.UsrDate2.Text(System.Boolean)">
+	<summary>
+ Text
+ </summary>
+	<param name="blnSura">/の有無の指定</param>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.UsrDate2.pIsDate">
+	<summary>
+ 日付として正しいか
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.UsrDate2.pClearToday">
+	<summary>
+ クリアするときに本日日付にクリア
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.UsrDate2.pYear">
+	<summary>
+ pYear
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.UsrDate2.pMonth">
+	<summary>
+ pMonth
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.UsrDate2.pDay">
+	<summary>
+ pDay
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.UsrDate2.Dbの値をセット(System.Object)">
+	<summary>
+	</summary>
+	<param name="値"></param>
+	<remarks>値がDBNullなら、表示をクリア。Date型ならば値をセット</remarks>
+</member><member name="M:共通Windowsコントロール.UsrDate2.WndProc(System.Windows.Forms.Message@)">
+	<summary>
+ WndProc
+ </summary>
+	<param name="m"></param>
+	<remarks>貼り付けの制御</remarks>
+</member><member name="T:共通Windowsコントロール.UsrDate2">
+	<summary>
+	</summary>
+	<remarks>DateTimePickerをベースに、は背景色の変更などに対応。</remarks>
+</member><member name="T:共通Windowsコントロール.Iグリッド">
+	<summary>
+ グリッド系共通インターフェイス
+ </summary>
+	<remarks>グリッド系に共通するインターフェイスを定義し、コントロールが変わってもコード修正を減らすのが目的。
+ 現時点では機能していない。</remarks>
+</member><member name="M:共通Windowsコントロール.CMsg.gMsg_エラー(System.String)">
+	<summary>
+ エラー
+ </summary>
+	<param name="strMsg"></param>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.CMsg.gMsg_情報(System.String)">
+	<summary>
+ 情報
+ </summary>
+	<param name="strMsg"></param>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.CMsg.gMsg_YesNo(System.String,System.String)">
+	<summary>
+ 確認
+ </summary>
+	<param name="strMsg"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.CMsg.gMsg_YesNoCancel(System.String)">
+	<summary>
+ 確認キャンセル
+ </summary>
+	<param name="strMsg"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:共通Windowsコントロール.CMsg.gMsg_RetryCancel(System.String)">
+	<summary>
+ リトライ
+ </summary>
+	<param name="strMsg"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:共通Windowsコントロール.CMsg">
+	<summary>
+ メッセージボックスユーティリティクラス
+ </summary>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrOpt.pID">
+	<summary>
+ pID
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrOpt.pClearValue">
+	<summary>
+ pClearValue
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.UcComboLabel.pText">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks>
+ デザイナーで「Text」プロパティが表示の仕方がわからないため、こちらからセットできるようにしている。
+ </remarks>
+</member><member name="P:共通Windowsコントロール.usrLbl.pID">
+	<summary>
+ pID
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrLbl.pClearValue">
+	<summary>
+ pClearValue
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:共通Windowsコントロール.usrLbl.Isクリア">
+	<summary>
+ pIsClear
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

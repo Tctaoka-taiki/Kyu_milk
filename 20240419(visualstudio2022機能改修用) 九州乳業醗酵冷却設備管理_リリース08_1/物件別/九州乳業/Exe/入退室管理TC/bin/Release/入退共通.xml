@@ -1,0 +1,1686 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+入退共通
+</name>
+</assembly>
+<members>
+<member name="M:入退共通.Dnp1356Tag.#ctor(System.Byte[])">
+	<summary>
+ インスタンス生成時にタグIDを指定します
+ </summary>
+	<param name="TagID"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.Dnp1356Tag.#ctor(System.String)">
+	<summary>
+ インスタンス生成時にタグIDを指定します
+ </summary>
+	<param name="TagID"></param>
+	<remarks></remarks>
+</member><member name="T:入退共通.CHRW_DSU01.tag_USB_INFO">
+	<summary>
+ USB情報構造体
+  送信タイムアウト値
+  受信タイムアウト値
+  シリアル番号
+  USBハンドル
+ </summary>
+</member><member name="T:入退共通.CHRW_DSU01.tag_TAGINFO">
+	<summary>
+ タグ情報構造体
+  タグID
+  タグ情報
+ </summary>
+</member><member name="T:入退共通.CHRW_DSU01.tag_IN_TA">
+	<summary>
+ [IN]TAGコマンド用構造体
+  TAGコマンド送信データ
+ </summary>
+</member><member name="T:入退共通.CHRW_DSU01.tag_OUT_TA">
+	<summary>
+ [OUT]TAGコマンド用構造体
+  TAGコマンド受信データ
+ </summary>
+</member><member name="T:入退共通.CHRW_DSU01.tag_OUT_GU">
+	<summary>
+ [OUT]OUT_GU用構造体
+  取得タグ数
+  タグ情報構造体配列[MAX_IDENT]
+ </summary>
+</member><member name="T:入退共通.CHRW_DSU01.tag_IN_MR">
+	<summary>
+ [IN]タグ情報読取り用構造体
+  読取開始アドレス
+  読取ブロック数
+ </summary>
+</member><member name="T:入退共通.CHRW_DSU01.tag_OUT_MR">
+	<summary>
+ [OUT]タグ情報読取り用構造体
+  取得タグ数
+  読込み成功タグ数
+  タグ情報構造体配列[MAX_IDENT]
+ </summary>
+</member><member name="T:入退共通.CHRW_DSU01.tag_IN_MW">
+	<summary>
+ [IN]タグ書込み用構造体
+  読取開始アドレス
+  読取ブロック数
+ </summary>
+</member><member name="T:入退共通.CHRW_DSU01.tag_OUT_MW">
+	<summary>
+ [OUT]タグ情報書込み用構造体
+  取得タグ数
+  読込み成功タグ数
+  タグ情報構造体配列[MAX_IDENT]
+ </summary>
+</member><member name="T:入退共通.CHRW_DSU01.tag_BUZZER">
+	<summary>
+ ブザー情報用コマンド
+  ブザーフラグ　ON_BUZZER/OF_BUZZER
+  ブザーを鳴らす時間(0x0～0xF)
+ </summary>
+</member><member name="T:入退共通.CHRW_DSU01.tag_LOOP">
+	<summary>
+ ループ設定構造体
+  ループフラグ　ON_LOOP/OF_LOOP
+  ループ制御フラグ　初期値としてSTOP_LOOPを設定してください(DLL内部用)
+  ループステータス　現在ループしている種別です(値はRX5300DLL.h参照)
+  ループハンドル　　メッセージ送出先 画面ハンドル
+  ループハンドル　　(DLL内部用)　
+ </summary>
+</member><member name="T:入退共通.CHRW_DSU01.tag_PROPERTY">
+	<summary>
+ プロパティ構造体
+  この構造体を各関数を呼び出す為の引数とします。
+  RX_Init_PROPERTY関数でこの構造体を初期化することが出来ます。
+ </summary>
+</member><member name="M:入退共通.CHRW_DSU01.RX_Init_PROPERTY(入退共通.CHRW_DSU01.tag_PROPERTY@)">
+	<summary>
+ PROPERTY構造体の初期化を行います
+ </summary>
+	<param name="s_PROPERTY">[in]関数属性構造体</param>
+</member><member name="M:入退共通.CHRW_DSU01.RX_GetSerialNo(System.Text.StringBuilder)">
+	<summary>
+ USBシリアル番号を取得します
+ </summary>
+	<param name="lpBuf">[out]取得したシリアル番号</param>
+</member><member name="M:入退共通.CHRW_DSU01.RX_OpenUSB(入退共通.CHRW_DSU01.tag_USB_INFO@)">
+	<summary>
+ USBをオープンします
+ </summary>
+	<param name="s_USB_INFO">USB情報構造体</param>
+</member><member name="M:入退共通.CHRW_DSU01.RX_CloseUSB(入退共通.CHRW_DSU01.tag_USB_INFO@)">
+	<summary>
+ USBをクローズします
+ </summary>
+	<param name="s_USB_INFO">USB情報構造体</param>
+</member><member name="M:入退共通.CHRW_DSU01.RX_BuzzerCommand(入退共通.CHRW_DSU01.tag_USB_INFO@,System.Byte)">
+	<summary>
+ ブザーを鳴らします
+ </summary>
+	<param name="s_USB_INFO">USB情報構造体</param>
+	<param name="byTime">鳴らす時間(0h～1h)</param>
+</member><member name="M:入退共通.CHRW_DSU01.RX_GetUID(入退共通.CHRW_DSU01.tag_PROPERTY@)">
+	<summary>
+ 最大４枚のUIDを取得します
+ </summary>
+	<param name="s_PROPERTY"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.CHRW_DSU01.RX_TagCommand(入退共通.CHRW_DSU01.tag_PROPERTY@)">
+	<summary>
+ TAGコマンドの実行
+ </summary>
+</member><member name="M:入退共通.CHRW_DSU01.RX_MultiRead(入退共通.CHRW_DSU01.tag_PROPERTY@)">
+	<summary>
+ タグ情報読込み関数
+ </summary>
+	<param name="s_PROPERTY">[in]関数属性構造体</param>
+</member><member name="M:入退共通.CHRW_DSU01.RX_MultiWrite(入退共通.CHRW_DSU01.tag_PROPERTY@)">
+	<summary>
+ タグ情報書込み関数
+ </summary>
+	<param name="s_PROPERTY">[in]関数属性構造体</param>
+</member><member name="M:入退共通.CHRW_DSU01.RX_LoopStop(入退共通.CHRW_DSU01.tag_PROPERTY@)">
+	<summary>
+ 実行中のLoopを停止します。
+ 呼び出す際はs_PROPERTYの値を新たに変更する必要はありません。
+ そのままs_PROPERTYを渡してください
+ </summary>
+	<param name="s_PROPERTY">[in]関数属性構造体</param>
+</member><member name="M:入退共通.CHRW_DSU01.showErrMsg(System.Int32)">
+	<summary>
+ エラーメッセージ表示
+ </summary>
+	<param name="ErrNo">エラー番号</param>
+</member><member name="F:入退共通.CHRW_DSU01._Prop">
+	<summary>
+ 制御用構造体
+ </summary>
+	<remarks></remarks>
+</member><member name="P:入退共通.CHRW_DSU01.SendTimeput">
+	<summary>
+ 送信タイムアウト
+ </summary>
+	<remarks></remarks>
+</member><member name="P:入退共通.CHRW_DSU01.ReceiveTimeout">
+	<summary>
+ 受信タイムアウト
+ </summary>
+	<remarks></remarks>
+</member><member name="P:入退共通.CHRW_DSU01.BuzzerTime">
+	<summary>
+ ブザーの長さ
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CHRW_DSU01.GetTagIDs">
+	<summary>
+ タグIDを読み出す
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:入退共通.CHRW_DSU01">
+	<summary>
+ ＤＮＰ製ＨＲＷ－ＤＳＵ０１リーダ、ライタ処理
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.CMX.ECPUTypeCode">
+	<summary>
+ ＣＰＵ定義
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.CMX.CMXException">
+	<summary>
+ 例外
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.DeviceEventArgs.#ctor(入退共通.CMX.Device)">
+	<summary>
+ コンストラクタ
+ </summary>
+	<param name="Device"></param>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.DeviceEventArgs._Device">
+	<summary>
+ イベントの発生したデバイス
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.CMX.DeviceEventArgs">
+	<summary>
+ イベントパラメータ
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.DeviceAttribute.#ctor(System.String,System.String,System.Boolean,System.Boolean)">
+	<summary>
+ コンストラクタ
+ </summary>
+	<param name="deviceName">デバイス名</param>
+	<param name="tag">タグ名</param>
+	<param name="isWordDevice">ワードデバイスであることを示す</param>
+	<param name="isHexAddress">１６進デバイスであることを示す</param>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.DeviceAttribute._DeviceName">
+	<summary>
+ デバイス名
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.DeviceAttribute._IsWordDevice">
+	<summary>
+ ワードデバイスであることを示す
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.DeviceAttribute._IsHexAddress">
+	<summary>
+ アドレスが１６進数で表示されることを示す
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.DeviceAttribute._Tag">
+	<summary>
+ タグ名
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.CMX.DeviceAttribute">
+	<summary>
+ デバイス属性
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.DeviceAttributeArray">
+	<summary>
+ デバイス属性配列
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.CPUType._CPUName">
+	<summary>
+ ＣＰＵの名称
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.CPUType._CPUType">
+	<summary>
+ ＣＰＵの型式
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.CMX.CPUType">
+	<summary>
+ ＣＰＵ形式クラス
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.CMX.IDevice">
+	<summary>
+ デバイスインタフェース
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Device.#ctor">
+	<summary>
+ コンストラクタ
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Device.#ctor(System.String,System.Int32,System.String)">
+	<summary>
+ デバイス名とデバイス番号でオブジェクトを生成する
+ </summary>
+	<param name="DeviceName">デバイス名</param>
+	<param name="DeviceNo">デバイス番号</param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Device.#ctor(System.String,System.String)">
+	<summary>
+ デバイスを示す文字列でオブジェクトを生成する
+ </summary>
+	<param name="deviceString"></param>
+	<remarks></remarks>
+</member><member name="P:入退共通.CMX.Device.DeviceName">
+	<summary>
+ デバイス名
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.Device._DeviceNo">
+	<summary>
+ デバイス番号
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.Device._Attribute">
+	<summary>
+ デバイス属性
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Device.ToString">
+	<summary>
+ デバイスをあらわす文字列
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.Device._Tag">
+	<summary>
+ タグ
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.Device._ByteValue">
+	<summary>
+ デバイスの値（２バイト)
+ </summary>
+	<remarks></remarks>
+</member><member name="P:入退共通.CMX.Device.ShortValue">
+	<summary>
+ 符号つき１６ビット整数の値
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:入退共通.CMX.Device.UShortValue">
+	<summary>
+ 符号なし１６ビット整数の値
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:入退共通.CMX.Device.BoolValue">
+	<summary>
+ ビットデバイスのBool値
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Device.CompareTo(入退共通.CMX.Device)">
+	<summary>
+ デバイスの比較
+ </summary>
+	<param name="other"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Device.Clone">
+	<summary>
+ デバイスのクローン作成
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:入退共通.CMX.Device">
+	<summary>
+ デバイスアドレスクラス
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.DeviceData`1._Value">
+	<summary>
+ デバイスの値
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.CMX.DeviceData`1">
+	<summary>
+ 活用データ型指定付デバイス
+ </summary>
+	<typeparam name="T"></typeparam>
+	<remarks></remarks>
+</member><member name="T:入退共通.CMX.Wrapper.ECPUStatus">
+	<summary>
+ ＣＰＵリモート操作
+ </summary>
+	<remarks></remarks>
+</member><member name="E:入退共通.CMX.Wrapper.OnDeviceEvent">
+	<summary>
+ イベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="E:入退共通.CMX.Wrapper.DeviceWrited">
+	<summary>
+ デバイス書き込み通知イベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="E:入退共通.CMX.Wrapper.DeviceReaded">
+	<summary>
+ デバイス読み出し通知イベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.Wrapper._EventDeviceList">
+	<summary>
+ イベント監視デバイス
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.Wrapper._Lock">
+	<summary>
+ スレッド排他用オブジェクト
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.#ctor">
+	<summary>
+ コンストラクタ
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.Wrapper._ActEasyIF">
+	<summary>
+ インタフェース直接操作
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.Wrapper._IsOpen">
+	<summary>
+ オープンステータス
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.Wrapper._EventCycle">
+	<summary>
+ イベント監視周期
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.AddEventDevice(入退共通.CMX.Device)">
+	<summary>
+ イベント監視デバイスを追加する
+ </summary>
+	<param name="dev"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.RemoveEventDevice(入退共通.CMX.Device)">
+	<summary>
+ イベント監視デバイスを削除する
+ </summary>
+	<param name="dev"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.AddEventDeviceList(System.Collections.Generic.List{入退共通.CMX.Device})">
+	<summary>
+ イベント監視デバイスリストを追加する
+ </summary>
+	<param name="devArray"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.RemoveEventDeviceList(System.Collections.Generic.List{入退共通.CMX.Device})">
+	<summary>
+ イベント監視デバイスリストを削除する
+ </summary>
+	<param name="devArray"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.ClearEventDevice">
+	<summary>
+ イベント監視デバイスを削除する
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.ResetEventDevice">
+	<summary>
+ イベント監視を再設定する
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.Open">
+	<summary>
+ 通信回線のオープン
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.Close">
+	<summary>
+ 通信回線のクローズ
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.Connect">
+	<summary>
+ 電話回線の接続
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.Disconnect">
+	<summary>
+ 電話回線の切断
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.ReadList(System.Collections.Generic.List{入退共通.CMX.Device}@)">
+	<summary>
+ デバイスリストの一括読み出し
+ </summary>
+	<param name="dev"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.GetSerialCount(System.Collections.Generic.List{入退共通.CMX.Device}@,System.Int32)">
+	<summary>
+ 配列デバイスの連続数を取得する
+ </summary>
+	<param name="dev"></param>
+	<param name="startIndex"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.Read(入退共通.CMX.Device)">
+	<summary>
+ ビットデバイスの読み出し
+ </summary>
+	<param name="dev"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.ReadBit(入退共通.CMX.Device)">
+	<summary>
+ ビットデバイスの読み出し
+ </summary>
+	<param name="dev"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.ReadWord(入退共通.CMX.Device)">
+	<summary>
+ ワードデバイスの読み出し
+ </summary>
+	<param name="dev"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.ReadList(System.Collections.Generic.List{入退共通.CMX.Device}@,System.Int32,System.Int32)">
+	<summary>
+ ビットデバイスの一括読み出し
+ </summary>
+	<param name="devArray"></param>
+	<param name="startIndex"></param>
+	<param name="length"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.ReadBits(System.Collections.Generic.List{入退共通.CMX.Device}@,System.Int32,System.Int32)">
+	<summary>
+ ビットデバイスの一括読み出し
+ </summary>
+	<param name="dev"></param>
+	<param name="startIndex"></param>
+	<param name="length"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.ReadWords(System.Collections.Generic.List{入退共通.CMX.Device}@,System.Int32,System.Int32)">
+	<summary>
+ ワードデバイスの一括読み出し
+ </summary>
+	<param name="dev"></param>
+	<param name="startIndex"></param>
+	<param name="length"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.WriteList(System.Collections.Generic.List{入退共通.CMX.Device}@)">
+	<summary>
+ デバイスリストの一括書き込み
+ </summary>
+	<param name="dev"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.Write(入退共通.CMX.Device)">
+	<summary>
+ デバイスの書き込み
+ </summary>
+	<param name="dev"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.WriteBit(入退共通.CMX.Device)">
+	<summary>
+ ビットデバイスの書き込み
+ </summary>
+	<param name="dev"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.WriteWord(入退共通.CMX.Device)">
+	<summary>
+ ワードデバイスの書き込み
+ </summary>
+	<param name="dev"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.WriteList(System.Collections.Generic.List{入退共通.CMX.Device}@,System.Int32,System.Int32)">
+	<summary>
+ ビットデバイスの一括書き込み
+ </summary>
+	<param name="devArray"></param>
+	<param name="startIndex"></param>
+	<param name="length"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.WriteBitList(System.Collections.Generic.List{入退共通.CMX.Device}@,System.Int32,System.Int32)">
+	<summary>
+ ビットデバイスの一括書き込み
+ </summary>
+	<param name="dev"></param>
+	<param name="startIndex"></param>
+	<param name="length"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.WriteWordList(System.Collections.Generic.List{入退共通.CMX.Device}@,System.Int32,System.Int32)">
+	<summary>
+ ワードデバイスの一括書き込み
+ </summary>
+	<param name="dev"></param>
+	<param name="startIndex"></param>
+	<param name="length"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.GetCPUDate">
+	<summary>
+ ＣＰＵの日付を取得する
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.SetCPUDate(System.DateTime)">
+	<summary>
+ ＣＰＵの日付を設定する
+ </summary>
+	<param name="dateTime"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.GetCPUType">
+	<summary>
+ ＣＰＵの型式を取得する
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.RemoteControl(入退共通.CMX.Wrapper.ECPUStatus)">
+	<summary>
+ リモート実行
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.RemoteRun">
+	<summary>
+ リモートＲＵＮの実行
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.RemoteStop">
+	<summary>
+ リモートＳＴＯＰの実行
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.RemotePause">
+	<summary>
+ リモートＰＡＵＳＥの実行
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.EnableEvent">
+	<summary>
+ イベントモニタ開始
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.DisableEvent">
+	<summary>
+ イベントモニタ停止
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.Wrapper.OnDeviceStatus(System.String,System.Int32,System.Int32)">
+	<summary>
+ デバイス値変化イベント
+ </summary>
+	<param name="devicecode"></param>
+	<param name="data"></param>
+	<param name="result"></param>
+	<remarks></remarks>
+</member><member name="T:入退共通.CMX.Wrapper">
+	<summary>
+ ＭＸコンポーネントラッパークラス
+ </summary>
+	<remarks></remarks>
+</member><member name="E:入退共通.CMX.HandShake.HandShakeBase.Starting">
+	<summary>
+ ハンドシェイク開始イベント定義
+ </summary>
+	<param name="sender"></param>
+	<remarks></remarks>
+</member><member name="E:入退共通.CMX.HandShake.HandShakeBase.DoWork">
+	<summary>
+ 処理開始イベント定義
+ </summary>
+	<param name="sender"></param>
+	<remarks></remarks>
+</member><member name="E:入退共通.CMX.HandShake.HandShakeBase.Complete">
+	<summary>
+ ハンドシェイク終了イベント定義
+ </summary>
+	<param name="sender"></param>
+	<remarks></remarks>
+</member><member name="E:入退共通.CMX.HandShake.HandShakeBase.StartTimeout">
+	<summary>
+ 開始タイムアウト
+ </summary>
+	<param name="sender"></param>
+	<remarks></remarks>
+</member><member name="E:入退共通.CMX.HandShake.HandShakeBase.EndTimeout">
+	<summary>
+ 終了タイムアウト
+ </summary>
+	<param name="sender"></param>
+	<remarks></remarks>
+</member><member name="E:入退共通.CMX.HandShake.HandShakeBase.Exception">
+	<summary>
+ エラー発生
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.HandShakeBase.#ctor(入退共通.CMX.Wrapper,入退共通.CMX.Device,入退共通.CMX.Device)">
+	<summary>
+ コンストラクタ
+ </summary>
+	<param name="outDevice"></param>
+	<param name="inDevice"></param>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.HandShake.HandShakeBase._Wrap">
+	<summary>
+ ＭＸコンポーネントラッパー
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.HandShake.HandShakeBase._outDevice">
+	<summary>
+ 出力信号デバイス
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.HandShake.HandShakeBase._inDevice">
+	<summary>
+ 入力信号デバイス
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.HandShake.HandShakeBase._ReadTimer">
+	<summary>
+ 読み出しタイマー
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.HandShake.HandShakeBase._TimeoutTimer">
+	<summary>
+ タイムアウトタイマー
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.HandShake.HandShakeBase._StatusCheckInterval">
+	<summary>
+ 読み出し周期
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.HandShake.HandShakeBase._StartTimeoutInterval">
+	<summary>
+ ハンドシェイク開始タイムアウト時間
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.HandShake.HandShakeBase._EndTimeoutInterval">
+	<summary>
+ ハンドシェイク終了タイムアウト時間
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.HandShakeBase.Start">
+	<summary>
+ ハンドシェイクを開始
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.HandShakeBase.HandshakeStart">
+	<summary>
+ ハンドシェイク開始処理
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.HandShakeBase.HandshakeEnd">
+	<summary>
+ モニタデバイスイベント処理
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.HandShakeBase.OutOn">
+	<summary>
+ ＯＮを出力する
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.HandShakeBase.OutOff">
+	<summary>
+ ＯＦＦを出力する
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.CMX.HandShake.HandShakeBase">
+	<summary>
+ 基本的なハンドシェイク処理
+ </summary>
+	<remarks></remarks>
+</member><member name="E:入退共通.CMX.HandShake.Active.DoWork">
+	<summary>
+ 実行処理
+ </summary>
+	<param name="sender"></param>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.HandShake.Active._AutoCyclick">
+	<summary>
+ 処理をサイクリックに行うかを指定
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.Active.#ctor(入退共通.CMX.Wrapper,入退共通.CMX.Device,入退共通.CMX.Device)">
+	<summary>
+ コンストラクタ
+ </summary>
+	<param name="MXWrap"></param>
+	<param name="outDevice"></param>
+	<param name="inDevice"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.Active.OnStarting(System.Object)">
+	<summary>
+ 開始
+ </summary>
+	<param name="sender"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.Active.OnDoWork(System.Object)">
+	<summary>
+ 処理実行
+ </summary>
+	<param name="sender"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.Active.OnComplete(System.Object)">
+	<summary>
+ 終了
+ </summary>
+	<param name="sender"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.Active.OnStartTimeout(System.Object)">
+	<summary>
+ 開始タイムアウト処理
+ </summary>
+	<param name="sender"></param>
+	<remarks></remarks>
+</member><member name="T:入退共通.CMX.HandShake.Active">
+	<summary>
+ 要求型ハンドシェイク
+ </summary>
+	<remarks></remarks>
+</member><member name="E:入退共通.CMX.HandShake.Passive.DoWork">
+	<summary>
+ 実行処理
+ </summary>
+	<param name="sender">イベント発生元オブジェクト</param>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.HandShake.Passive._AutoCyclick">
+	<summary>
+ 処理をサイクリックに行うかを指定
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.Passive.#ctor(入退共通.CMX.Wrapper,入退共通.CMX.Device,入退共通.CMX.Device)">
+	<summary>
+ コンストラクタ
+ </summary>
+	<param name="MXWrap">オープン済みのＭＸコンポーネントラッパー</param>
+	<param name="outDevice">出力するデバイスおよび状態。ＯＮの論理をあらかじめ設定しておく</param>
+	<param name="inDevice">入力するデバイスおよび状態。ＯＮの論理をあらかじめ設定しておく</param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.Passive.OnStarting(System.Object)">
+	<summary>
+ 読み込み開始処理
+ </summary>
+	<param name="sender">イベント発生元オブジェクト</param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.Passive.OnDoWork(System.Object)">
+	<summary>
+ 処理実行
+ </summary>
+	<param name="sender">イベント発生元オブジェクト</param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.Passive.OnComplete(System.Object)">
+	<summary>
+ 読み出し終了処理
+ </summary>
+	<param name="sender">イベント発生元オブジェクト</param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.Passive.OnEndTimeout(System.Object)">
+	<summary>
+ 終了タイムアウト処理
+ </summary>
+	<param name="sender">イベント発生元オブジェクト</param>
+	<remarks></remarks>
+</member><member name="T:入退共通.CMX.HandShake.Passive">
+	<summary>
+ 待ち受け型ハンドシェイク
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.HandShake.ActiveWrite._DeviceList">
+	<summary>
+ 読み書きデバイス
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.ActiveWrite.#ctor(入退共通.CMX.Wrapper,入退共通.CMX.Device,入退共通.CMX.Device,System.Collections.Generic.List{入退共通.CMX.Device},System.Int32,System.Int32,System.Boolean)">
+	<summary>
+ コンストラクタ
+ </summary>
+	<param name="MXWrap">オープン済みのＭＸコンポーネントラッパー</param>
+	<param name="outDevice">出力するデバイスおよび状態。ＯＮの論理をあらかじめ設定しておく</param>
+	<param name="inDevice">入力するデバイスおよび状態。ＯＮの論理をあらかじめ設定しておく</param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.ActiveWrite.OnDoProcess(System.Object)">
+	<summary>
+ 書き込み処理
+ </summary>
+	<param name="sender">イベント発生元オブジェクト</param>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.HandShake.ActiveRead._DeviceList">
+	<summary>
+ 読み書きデバイス
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.ActiveRead.#ctor(入退共通.CMX.Wrapper,入退共通.CMX.Device,入退共通.CMX.Device,System.Int32,System.Int32,System.Boolean)">
+	<summary>
+ コンストラクタ
+ </summary>
+	<param name="MXWrap">オープン済みのＭＸコンポーネントラッパー</param>
+	<param name="outDevice">出力するデバイスおよび状態。ＯＮの論理をあらかじめ設定しておく</param>
+	<param name="inDevice">入力するデバイスおよび状態。ＯＮの論理をあらかじめ設定しておく</param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.ActiveRead.OnDoWork(System.Object)">
+	<summary>
+ 読み込み処理
+ </summary>
+	<param name="sender">イベント発生元オブジェクト</param>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.HandShake.PassiveWrite._DeviceList">
+	<summary>
+ 読み書きデバイス
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.PassiveWrite.#ctor(入退共通.CMX.Wrapper,入退共通.CMX.Device,入退共通.CMX.Device,System.Int32,System.Boolean)">
+	<summary>
+ コンストラクタ
+ </summary>
+	<param name="MXWrap">オープン済みのＭＸコンポーネントラッパー</param>
+	<param name="outDevice">出力するデバイスおよび状態。ＯＮの論理をあらかじめ設定しておく</param>
+	<param name="inDevice">入力するデバイスおよび状態。ＯＮの論理をあらかじめ設定しておく</param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.PassiveWrite.OnDoWork(System.Object)">
+	<summary>
+ 書き込み処理
+ </summary>
+	<param name="sender"></param>
+	<remarks></remarks>
+</member><member name="F:入退共通.CMX.HandShake.PassiveRead._DeviceList">
+	<summary>
+ 読み書きデバイス
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.PassiveRead.#ctor(入退共通.CMX.Wrapper,入退共通.CMX.Device,入退共通.CMX.Device,System.Int32,System.Boolean)">
+	<summary>
+ コンストラクタ
+ </summary>
+	<param name="MXWrap">オープン済みのＭＸコンポーネントラッパー</param>
+	<param name="outDevice">出力するデバイスおよび状態。ＯＮの論理をあらかじめ設定しておく</param>
+	<param name="inDevice">入力するデバイスおよび状態。ＯＮの論理をあらかじめ設定しておく</param>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.HandShake.PassiveRead.OnDoWork(System.Object)">
+	<summary>
+ 読み込み処理
+ </summary>
+	<param name="sender">イベント発生元オブジェクト</param>
+	<remarks></remarks>
+</member><member name="T:入退共通.CMX.HandShake">
+	<summary>
+ ＭＸラッパー用ハンドシェイク
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.CMX.ETagListingOperation">
+	<summary>
+ デバイス範囲作成時のタグの処理
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.GetDeviceRange(入退共通.CMX.Device,System.Int32,入退共通.CMX.ETagListingOperation)">
+	<summary>
+ デバイス範囲を作成する
+ </summary>
+	<param name="srcDev">作成先頭デバイス</param>
+	<param name="length">作成デバイスの長さ</param>
+	<returns>作成されたデバイス配列</returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.GetDeviceArray(入退共通.CMX.Device,System.Byte[])">
+	<summary>
+ デバイス配列を作成する
+ </summary>
+	<param name="baseDevice">作成先頭デバイス</param>
+	<param name="byteArray">データバイト</param>
+	<returns>作成されたデバイス配列</returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.GetDeviceArray(入退共通.CMX.Device,System.Int16)">
+	<summary>
+ 符号付き１６ビット（ワード）のデバイスを作成する
+ </summary>
+	<param name="baseDevice">作成先頭デバイス</param>
+	<param name="data">デバイス値</param>
+	<returns>作成された１つのデバイス配列</returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.GetDeviceArray(入退共通.CMX.Device,System.UInt16)">
+	<summary>
+ 符号なし１６ビット（ワード）のデバイスを作成する
+ </summary>
+	<param name="baseDevice">作成先頭デバイス</param>
+	<param name="data">デバイス値</param>
+	<returns>作成された１つのデバイス配列</returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.GetDeviceArray(入退共通.CMX.Device,System.Int32)">
+	<summary>
+ 符号付き３２ビット（ダブルワード）のデバイスを作成する
+ </summary>
+	<param name="baseDevice">作成先頭デバイス</param>
+	<param name="data">デバイス値</param>
+	<returns>作成された２つのデバイス配列</returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.GetDeviceArray(入退共通.CMX.Device,System.UInt32)">
+	<summary>
+ 符号なし３２ビット（ダブルワード）のデバイスを作成する
+ </summary>
+	<param name="baseDevice">作成先頭デバイス</param>
+	<param name="data">デバイス値</param>
+	<returns>作成された２つのデバイス配列</returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.GetDeviceArray(入退共通.CMX.Device,System.Int64)">
+	<summary>
+ 符号付き６４ビット（クアッドワード）のデバイスを作成する
+ </summary>
+	<param name="baseDevice">作成先頭デバイス</param>
+	<param name="data">デバイス値</param>
+	<returns>作成された４つのデバイス配列</returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.GetDeviceArray(入退共通.CMX.Device,System.UInt64)">
+	<summary>
+ 符号なし６４ビット（クアッドワード）のデバイスを作成する
+ </summary>
+	<param name="baseDevice">作成先頭デバイス</param>
+	<param name="data">デバイス値</param>
+	<returns>作成された４つのデバイス配列</returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.ToInt32(入退共通.CMX.Device[])">
+	<summary>
+ デバイス配列から３２ビット符号付きデータを取得
+ </summary>
+	<param name="deviceArray">作成元デバイス配列（２つ）</param>
+	<returns>符号つき３２ビット整数</returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.ToUInt32(入退共通.CMX.Device[])">
+	<summary>
+ デバイス配列から３２ビット符号なしデータを取得
+ </summary>
+	<param name="deviceArray">作成元デバイス配列（２つ）</param>
+	<returns>符号なし３２ビット整数</returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.ToInt64(入退共通.CMX.Device[])">
+	<summary>
+ デバイス配列から６４ビット符号付きデータを取得
+ </summary>
+	<param name="deviceArray">作成元デバイス配列（４つ）</param>
+	<returns>符号つき６４ビット整数</returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.CMX.ToUInt64(入退共通.CMX.Device[])">
+	<summary>
+ デバイス配列から６４ビット符号なしデータを取得
+ </summary>
+	<param name="deviceArray">作成元デバイス配列（４つ）</param>
+	<returns>符号なし６４ビット整数</returns>
+	<remarks></remarks>
+</member><member name="T:入退共通.E入退ステータス">
+	<summary>
+ 入退ステータス
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.C認証ログレコード.BCDToInt32(System.Byte)">
+	<summary>
+ ＢＣＤ数値を３２ビット数値に変換
+ </summary>
+	<param name="bcd"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.Cセキュリティデータ転送.タグID文字列作成(System.Byte[])">
+	<summary>
+ タグID文字列の作成
+ </summary>
+	<param name="value"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.Cセキュリティデータ転送.タグIDデバイスを作成(System.Int32,System.Byte[])">
+	<summary>
+	</summary>
+	<param name="アドレス"></param>
+	<param name="タグID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.Cセキュリティデータ転送.認証デバイスを作成(System.Int32,System.UInt32)">
+	<summary>
+ 認証デバイスを作成します
+ </summary>
+	<param name="アドレス"></param>
+	<param name="許可ビット"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.Cセキュリティデータ転送.セキュリティデータ転送(入退共通.セキュリティ管理.Cセキュリティ管理,入退共通.CPlcDataリスト,入退共通.Settings)">
+	<summary>
+ セキュリティデータ転送
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.Cセキュリティデータ転送.許可パターンビット作成(入退共通.セキュリティ管理.Cタグ割当)">
+	<summary>
+ 許可パターンビット作成
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.Settings.デバイス.Convertデバイス">
+	<summary>
+ 初期設定をデバイスに変換する
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.Settings.デバイス.ConvertデバイスList">
+	<summary>
+ 初期設定をデバイスにリストに変換する
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:入退共通.Settings.デバイス">
+	<summary>
+ デバイス
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.Settings.初期化デバイス.Convert初期設定デバイス">
+	<summary>
+ 初期設定をデバイス配列に変換する
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:入退共通.Settings.初期化デバイス">
+	<summary>
+ 初期化用デバイス
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.Settings.Plc.GetIniParamByTag(System.String)">
+	<summary>
+ タグ名から初期化パラメータを取得する
+ </summary>
+	<param name="タグ"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.Settings.Plc.GetIniIndexByTag(System.String)">
+	<summary>
+ タグ名から初期化パラメータを取得する
+ </summary>
+	<param name="タグ"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:入退共通.セキュリティ管理.Cセキュリティ管理.許可割当">
+	<summary>タグIDがキーで値がCタグ</summary>
+	<remarks></remarks>
+</member><member name="M:入退共通.セキュリティ管理.Cセキュリティ管理.許可パターン追加(System.Int64,System.Int64)">
+	<summary></summary>
+	<param name="許可パターンID"></param>
+	<param name="ゲートID"></param>
+	<remarks>ゲートは既に追加していることが前提</remarks>
+</member><member name="M:入退共通.MelTag.#ctor(System.Byte[])">
+	<summary>
+ インスタンス生成時にタグIDを指定します
+ </summary>
+	<param name="TagID"></param>
+	<remarks></remarks>
+</member><member name="M:入退共通.MelTag.#ctor(System.String)">
+	<summary>
+ インスタンス生成時にタグIDを指定します
+ </summary>
+	<param name="TagID"></param>
+	<remarks></remarks>
+</member><member name="T:入退共通.MelTag">
+	<summary>
+ 三菱電機製ＵＨＦタグクラス
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.MelUHFTag.EIdentifyMethod.IDENTIFY_ALL">
+	<summary>
+ フィールド内にあるすべてのタグを認識したら終了する
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.MelUHFTag.EIdentifyMethod.IDENTIFY_AT_LEAST">
+	<summary>
+ 認識したタグ数が、NumberOfTagsに達したら終了する
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.MelUHFTag.EIdentifyMethod.IDENTIFY_NO_MORE_THAN">
+	<summary>
+ フィールド内にあるすべてのタグを認識するか、認識したタグ数が、NumberOfTagsに達したら終了する
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.MelUHFTag.EIdentifyMethod.IDENTIFY_EXACTLY">
+	<summary>
+ 認識したタグ数が、NumberOfTagsに達したら終了する（タグ数がわかっている場合）
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.MelUHFTag.EIdentifyMethod">
+	<summary>
+ 識別方法列挙型
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.MelUHFTag.ECarrier">
+	<summary>
+ チャネルキャリアセンス設定
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.MelUHFTag.EErrorCode.ERROR_SUCCESS">
+	<summary>
+ エラー無し
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.EErrorCode.ERROR_COMMAND">
+	<summary>
+ コマンド実行エラー
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.EErrorCode.ERROR_CANCEL">
+	<summary>
+ キャンセル終了
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.EErrorCode.ERROR_PARAMETER">
+	<summary>
+ 入力パラメータ不正
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.EErrorCode.ERROR_RW">
+	<summary>
+ リーダライタ出力不正
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.EErrorCode.ERROR_RESOURCE">
+	<summary>
+ RDCTLリソース不足
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.EErrorCode.ERROR_COMMUNICATION">
+	<summary>
+ 通信エラー
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.EErrorCode.ERROR_INTERNAL">
+	<summary>
+ RDCTL内部エラー
+ </summary>
+</member><member name="T:入退共通.MelUHFTag.EErrorCode">
+	<summary>
+ エラーコード列挙型
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_CANCEL_COMMAND">
+	<summary>
+ コマンドがキャンセル終了
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_PARAMETER_INPUT_DATA">
+	<summary>
+ 入力データが不正
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_PARAMETER_INPUT_PARAMETER">
+	<summary>
+ 入力パラメータが不正
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_RW_RESPONSE_OUTPUT_DATA">
+	<summary>
+ リーダライタのレスポンス出力データが不正
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_RW_RESPONSE_OUTPUT_TYPE">
+	<summary>
+ リーダライタのレスポンス出力型に不正
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_RW_RESPONSE_COMMAND_CODE_MISMATCH">
+	<summary>
+ リーダライタのレスポンスのコマンドコードが不一致
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_RW_OUTPUT_PARAMETER">
+	<summary>
+ 出力パラメータが不正
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_RESOURCE_BUFFER_DEPLETION">
+	<summary>
+ バッファ不足
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_RESOURCE_FAILURE_CREATE_FILE">
+	<summary>
+ CreateFileに失敗
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_RESOURCE_FAILURE_HEAP_CREATE">
+	<summary>
+ HeapCreateに失敗
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_RESOURCE_FAILURE_HEAP_ALLOC">
+	<summary>
+ HeapAllocに失敗
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_RESOURCE_FAILURE_HEAP_SIZE">
+	<summary>
+ HeapSizeに失敗
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_RESOURCE_FAILURE_VIRTUAL_ALLOC">
+	<summary>
+ VirtualAllocに失敗
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_RESOURCE_FAILURE_VIRTUAL_LOCK">
+	<summary>
+ VirtualLockに失敗
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_RESOURCE_FAILURE_CREATE_MUTEX">
+	<summary>
+ CreateMutexに失敗
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_RESOURCE_FAILURE_CREATE_SEMAPHORE">
+	<summary>
+ CreateSemaphoreに失敗
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_RESOURCE_FAILURE_CREATE_EVENT">
+	<summary>
+ CreateEventに失敗
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_RESOURCE_FAILURE_CREATE_FILE_MAPPING">
+	<summary>
+ CreateFileMappingに失敗
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_COMMUNICATION">
+	<summary>
+ 通信エラー
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_COMMUNICATION_FAILURE_OPEN_PORT">
+	<summary>
+ 通信ポートの確保に失敗
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_COMMUNICATION_FAILURE_SEND_COMMAND">
+	<summary>
+ コマンド送信に失敗
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_COMMUNICATION_FAILURE_RECEIVE_RESPONSE">
+	<summary>
+ レスポンス受信に失敗
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_COMMUNICATION_FAILURE_CLOSE_PORT">
+	<summary>
+ 通信ポートの開放に失敗
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_COMMUNICATION_NOT_COMPLIET_RECEIVING">
+	<summary>
+ 受信が完了しなかった
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_COMMUNICATION_IRREGULAR_PORT_NUMBER">
+	<summary>
+ 通信ポート番号が不正
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_INTERNAL">
+	<summary>
+ 内部エラー
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_INTERNAL_USE_NONSUPPORT_TYPE">
+	<summary>
+ サポート外の型を使用
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_INTERNAL_FAILURE_ENCODING">
+	<summary>
+ 符号化に失敗
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_INTERNAL_IRREGULAR_DATA_LENGTH">
+	<summary>
+ データ長に不正
+ </summary>
+</member><member name="F:入退共通.MelUHFTag.ESubErrorCode.ERROR_INTERNAL_FAILURE_DECODING">
+	<summary>
+ 復号化に失敗
+ </summary>
+</member><member name="T:入退共通.MelUHFTag.ESubErrorCode">
+	<summary>
+ サブエラーコード列挙型
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.MelUHFTag.EPower">
+	<summary>
+ 送信電力値
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.MelUHFTag.EStatus.STATUS_OK">
+	<summary>
+ 正常
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.MelUHFTag.EStatus.STATUS_ANTENNA_ERROR">
+	<summary>
+ アンテナ異常
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.MelUHFTag.EStatus.STATUS_POWER_ERROR">
+	<summary>
+ 送信電力異常
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.MelUHFTag.EStatus.STATUS_PLLLOCKOFF_ERROR">
+	<summary>
+ ＰＬＬロックオフ異常
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.MelUHFTag.EStatus">
+	<summary>
+ ステータス取得値
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.MelUHFTag.MRS_RDCTL_ERROR_INFO.ErrorCode">
+	<summary>
+ エラーコード
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.MelUHFTag.MRS_RDCTL_ERROR_INFO.SubCode">
+	<summary>
+ サブエラーコード
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.MelUHFTag.MRS_RDCTL_ERROR_INFO.SubsubCode">
+	<summary>
+ サブサブエラーコード
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.MelUHFTag.MRS_RDCTL_ERROR_INFO.FileLine">
+	<summary>
+ 行番号
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.MelUHFTag.MRS_RDCTL_ERROR_INFO.FileName">
+	<summary>
+ ファイル名
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.MelUHFTag.MRS_RDCTL_ERROR_INFO">
+	<summary>
+ エラー情報取得構造体
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.MelUHFTag.MRS_RDCTL_AFI_INFO.EApplicationFamily.ApplicationFamily_ALL">
+	<summary>
+ すべてのアプリケーションファミリー
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.MelUHFTag.MRS_RDCTL_AFI_INFO.EApplicationFamily.ApplicationFamily_AFIBlock9">
+	<summary>
+ EAN,UCC
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.MelUHFTag.MRS_RDCTL_AFI_INFO.EApplicationFamily.ApplicationFamily_AFIBlockA">
+	<summary>
+ ASN MH 10.8.2
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.MelUHFTag.MRS_RDCTL_AFI_INFO.EApplicationFamily.ApplicationFamily_AFIBlockB">
+	<summary>
+ ISO/IEC15459
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.MelUHFTag.MRS_RDCTL_AFI_INFO.EApplicationFamily.ApplicationFamily_AFIBlockC">
+	<summary>
+ IATA
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.MelUHFTag.MRS_RDCTL_AFI_INFO.EApplicationSubFamily.ApplicationSubFamily_ALL">
+	<summary>
+ すべてのアプリケーションファミリー
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.MelUHFTag.MRS_RDCTL_AFI_INFO">
+	<summary>
+ アプリケーションファミリ
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.MelUHFTag.MRS_RDCTL_BUFFER_INFO">
+	<summary>
+ バッファ情報構造体
+ </summary>
+	<remarks></remarks>
+</member><member name="P:入退共通.MelUHFTag.Address">
+	<summary>
+ リーダとの通信方法アドレスを示す文字列
+ リーダ・ライタのＩＰアドレスまたはＣＯＭ１などのポート名を指定します
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:入退共通.MelUHFTag.AntennaPort">
+	<summary>
+ 利用アンテナのポート番号（1～４）
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:入退共通.MelUHFTag.SystemAreaSafe">
+	<summary>
+ システム領域を保護するフラグ
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.MelUHFTag.GetTagIDs(入退共通.MelUHFTag.EIdentifyMethod,System.Int32@,System.Int32@,System.Int32)">
+	<summary>
+ オペレーティングフィールド内にあるRFIDタグを識別します
+ </summary>
+	<param name="IdentifyMethod">識別メソッド</param>
+	<param name="NumberOfTagsFound">タグ認識数</param>
+	<param name="NumberOfTagsReturned">タグID読出数</param>
+	<param name="NumberOfTags">タグ読み出し件数指定</param>
+	<returns>読み出したタグのクラス</returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.MelUHFTag.GetTagIDs_All(System.Int32@,System.Int32@)">
+	<summary>
+ すべてのタグを識別します
+ </summary>
+	<param name="NumberOfTagsFound">タグ認識数</param>
+	<param name="NumberOfTagsReturned">タグID読出数</param>
+	<returns>読み出したタグのクラス</returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.MelUHFTag.GetTagIDs_AtLeast(System.Int32,System.Int32@,System.Int32@)">
+	<summary>
+ 認識したタグ数が、NumberOfTagsに達したら終了します
+ </summary>
+	<param name="NumberOfTagsFound">タグ認識数</param>
+	<param name="NumberOfTagsReturned">タグID読出数</param>
+	<returns>読み出しタグリスト</returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.MelUHFTag.GetTagIDs_NoMoreThan(System.Int32,System.Int32@,System.Int32@)">
+	<summary>
+ 認識したタグ数が、NumberOfTagsに達するか、フィールド内のすべてのタグを識別したら終了します
+ </summary>
+	<param name="NumberOfTagsFound">タグ認識数</param>
+	<param name="NumberOfTagsReturned">タグID読出数</param>
+	<returns>読み出しタグリスト</returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.MelUHFTag.GetTagIDs_Exactly(System.Int32,System.Int32@,System.Int32@)">
+	<summary>
+ 認識したタグ数が、NumberOfTagsに達したら終了します
+ tadasi,
+ フィールド内にあるタグ数がわかっていること
+ </summary>
+	<param name="NumberOfTagsFound">タグ認識数</param>
+	<param name="NumberOfTagsReturned">タグID読出数</param>
+	<returns>読み出しタグリスト</returns>
+	<remarks></remarks>
+</member><member name="M:入退共通.MelUHFTag.WriteTagID(共通.TagID,System.String)">
+	<summary>
+ タグIDを変更する
+ </summary>
+	<param name="TargetTagID">書き換え対象のタグID</param>
+	<param name="HexString">書き換え後の１６進文字列タグID</param>
+	<remarks></remarks>
+</member><member name="M:入退共通.MelUHFTag.WriteTagID(共通.TagID,System.Byte[])">
+	<summary>
+ タグIDを変更する
+ </summary>
+	<param name="TargetTagID">書き換え対象のタグID</param>
+	<param name="Binary">書き換え後のタグID</param>
+	<remarks></remarks>
+</member><member name="M:入退共通.MelUHFTag.WriteUserTagID(共通.TagID,System.String)">
+	<summary>
+ ユーザ領域のタグIDを変更する
+ </summary>
+	<param name="TargetTagID">書き換え対象のタグID</param>
+	<param name="HexString">書き換え後の１６進文字列タグID</param>
+	<remarks></remarks>
+</member><member name="M:入退共通.MelUHFTag.WriteUserTagID(共通.TagID,System.Byte[])">
+	<summary>
+ ユーザ領域のタグIDを変更する
+ </summary>
+	<param name="TargetTagID">書き換え対象のタグID</param>
+	<param name="Binary">書き換え後のタグID</param>
+	<remarks></remarks>
+</member><member name="M:入退共通.MelUHFTag.SetPower(入退共通.MelUHFTag.EPower)">
+	<summary>
+ 送信電力値設定
+ </summary>
+	<param name="Power">送信電力値</param>
+	<remarks></remarks>
+</member><member name="M:入退共通.MelUHFTag.SetCarrierSense(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+	<summary>
+ リーダ・ライタ装置のＬＢＴ使用チャネルの設定を行う
+ </summary>
+	<param name="CarrierSense2">２チャネルをキャリアセンスの対象とするか</param>
+	<param name="CarrierSense3">３チャネルをキャリアセンスの対象とするか</param>
+	<param name="CarrierSense4">４チャネルをキャリアセンスの対象とするか</param>
+	<param name="CarrierSense5">５チャネルをキャリアセンスの対象とするか</param>
+	<param name="CarrierSense6">６チャネルをキャリアセンスの対象とするか</param>
+	<param name="CarrierSense7">７チャネルをキャリアセンスの対象とするか</param>
+	<param name="CarrierSense8">８チャネルをキャリアセンスの対象とするか</param>
+	<remarks></remarks>
+</member><member name="T:入退共通.MelUHFTag">
+	<summary>
+ 三菱電機製ＵＨＦ対応ＲＦＩＤリーダ・ライタ操作クラス
+ </summary>
+	<remarks></remarks>
+</member><member name="P:入退共通.My.Resources.Resources.ResourceManager">
+	<summary>
+  このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+</summary>
+</member><member name="P:入退共通.My.Resources.Resources.Culture">
+	<summary>
+  厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
+  現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+</summary>
+</member><member name="T:入退共通.My.Resources.Resources">
+	<summary>
+  ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+</summary>
+</member><member name="F:入退共通.C入退サーバメッセージ.メッセージベース.要求._応答メッセージキュー名">
+	<summary>
+ 応答メッセージキュー名
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.C入退サーバメッセージ.メッセージベース.応答`2._エラーコード">
+	<summary>
+ 入場状態設定応答
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.C入退サーバメッセージ.メッセージベース.応答`2._要求">
+	<summary>
+ 設定された要求
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.C入退サーバメッセージ.入場状態設定.E処理結果">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.C入退サーバメッセージ.入場状態設定.入場状態設定要求._タグID">
+	<summary>
+ タグID
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.C入退サーバメッセージ.入場状態設定.入場状態設定要求._入場状態">
+	<summary>
+ 入場状態を示すBoolean値(False:入場 True:退場)
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.C入退サーバメッセージ.入場状態設定.入場状態設定要求">
+	<summary>
+ 要求
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.C入退サーバメッセージ.入場状態設定.入場状態設定応答">
+	<summary>
+ 応答
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.C入退サーバメッセージ.入場状態設定">
+	<summary>
+ 入場状態設定
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.C入退サーバメッセージ.ゲート開閉.E処理結果">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.C入退サーバメッセージ.ゲート開閉.ゲート開閉要求._ゲート番号">
+	<summary>
+ ゲート番号
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.C入退サーバメッセージ.ゲート開閉.ゲート開閉要求._ゲート開">
+	<summary>
+ ゲート開
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.C入退サーバメッセージ.ゲート開閉.ゲート開閉要求">
+	<summary>
+ 要求
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.C入退サーバメッセージ.ゲート開閉.ゲート開閉応答">
+	<summary>
+ 応答
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.C入退サーバメッセージ.ゲート開閉">
+	<summary>
+ ゲート開
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.C入退サーバメッセージ.状況確認.E処理結果">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.C入退サーバメッセージ.状況確認.状況確認要求">
+	<summary>
+ 要求
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.C入退サーバメッセージ.状況確認.状況確認応答._アンチパスバック有効">
+	<summary>
+ アンチパスバック有効
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.C入退サーバメッセージ.状況確認.状況確認応答._入口開放状態">
+	<summary>
+ 入口ゲートの開放状態
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.C入退サーバメッセージ.状況確認.状況確認応答._出口開放状態">
+	<summary>
+ 出口ゲートの開放状態
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.C入退サーバメッセージ.状況確認.状況確認応答">
+	<summary>
+ 応答
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.C入退サーバメッセージ.アンチパスバック設定.E処理結果">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="F:入退共通.C入退サーバメッセージ.アンチパスバック設定.アンチパスバック設定要求._アンチパスバック有効">
+	<summary>
+ アンチパスバック有効
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退共通.C入退サーバメッセージ.セキュリティデータ転送.E処理結果">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

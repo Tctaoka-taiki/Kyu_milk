@@ -1,0 +1,629 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+入退室管理
+</name>
+</assembly>
+<members>
+<member name="F:入退室管理.C入退サーバメッセージ.メッセージベース.要求._応答メッセージキュー名">
+	<summary>
+ 応答メッセージキュー名
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退室管理.C入退サーバメッセージ.メッセージベース.応答`2._エラーコード">
+	<summary>
+ 入場状態設定応答
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退室管理.C入退サーバメッセージ.メッセージベース.応答`2._要求">
+	<summary>
+ 設定された要求
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退室管理.C入退サーバメッセージ.入場状態設定.E処理結果">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="F:入退室管理.C入退サーバメッセージ.入場状態設定.入場状態設定要求._タグID">
+	<summary>
+ タグID
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退室管理.C入退サーバメッセージ.入場状態設定.入場状態設定要求._入場状態">
+	<summary>
+ 入場状態を示すBoolean値(False:入場 True:退場)
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退室管理.C入退サーバメッセージ.入場状態設定.入場状態設定要求">
+	<summary>
+ 要求
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退室管理.C入退サーバメッセージ.入場状態設定.入場状態設定応答">
+	<summary>
+ 応答
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退室管理.C入退サーバメッセージ.入場状態設定">
+	<summary>
+ 入場状態設定
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退室管理.C入退サーバメッセージ.ゲート開閉.E処理結果">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="F:入退室管理.C入退サーバメッセージ.ゲート開閉.ゲート開閉要求._ゲート番号">
+	<summary>
+ ゲート番号
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退室管理.C入退サーバメッセージ.ゲート開閉.ゲート開閉要求._ゲート開">
+	<summary>
+ ゲート開
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退室管理.C入退サーバメッセージ.ゲート開閉.ゲート開閉要求">
+	<summary>
+ 要求
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退室管理.C入退サーバメッセージ.ゲート開閉.ゲート開閉応答">
+	<summary>
+ 応答
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退室管理.C入退サーバメッセージ.ゲート開閉">
+	<summary>
+ ゲート開
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退室管理.C入退サーバメッセージ.状況確認.E処理結果">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="T:入退室管理.C入退サーバメッセージ.状況確認.状況確認要求">
+	<summary>
+ 要求
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退室管理.C入退サーバメッセージ.状況確認.状況確認応答._アンチパスバック有効">
+	<summary>
+ アンチパスバック有効
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退室管理.C入退サーバメッセージ.状況確認.状況確認応答._入口開放状態">
+	<summary>
+ 入口ゲートの開放状態
+ </summary>
+	<remarks></remarks>
+</member><member name="F:入退室管理.C入退サーバメッセージ.状況確認.状況確認応答._出口開放状態">
+	<summary>
+ 出口ゲートの開放状態
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退室管理.C入退サーバメッセージ.状況確認.状況確認応答">
+	<summary>
+ 応答
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退室管理.C入退サーバメッセージ.アンチパスバック設定.E処理結果">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="F:入退室管理.C入退サーバメッセージ.アンチパスバック設定.アンチパスバック設定要求._アンチパスバック有効">
+	<summary>
+ アンチパスバック有効
+ </summary>
+	<remarks></remarks>
+</member><member name="T:入退室管理.C入退サーバメッセージ.セキュリティデータ転送.E処理結果">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="M:入退室管理.三菱UHFTag.#ctor(System.Byte[])">
+	<summary>
+ インスタンス生成時にタグIDを指定します
+ </summary>
+	<param name="TagID"></param>
+	<remarks></remarks>
+</member><member name="M:入退室管理.三菱UHFTag.#ctor(System.String)">
+	<summary>
+ インスタンス生成時にタグIDを指定します
+ </summary>
+	<param name="TagID"></param>
+	<remarks></remarks>
+</member><member name="M:入退室管理.CMdiMain.gSubMDI子フォームを開く(画面標準.C子画面,System.Boolean)">
+	<summary>
+	</summary>
+	<param name="strFormID"></param>
+	<param name="blnClose">子フォームをすべて閉じてから開く</param>
+	<remarks></remarks>
+</member><member name="M:入退室管理.CMdiMain.gBln子フォーム取得(System.String,System.Windows.Forms.Form@)">
+	<summary>
+ 子フォーム取得
+ </summary>
+	<param name="strFormID"></param>
+	<param name="objFrm"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退室管理.CMdiMain.gBln子フォームアクティブ化(System.String)">
+	<summary>
+ 子フォームアクティブ化
+ </summary>
+	<param name="strFormID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退室管理.CMdiMain.gBln子フォーム有無(System.String)">
+	<summary>
+ 子フォーム有無
+ </summary>
+	<param name="strFormID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:入退室管理.TagData">
+	<summary>
+ タグ内データクラス
+ </summary>
+	<remarks></remarks>
+</member><member name="P:入退室管理.TagID.SystemArea">
+	<summary>
+ システム領域ＩＤ
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:入退室管理.TagID.UserArea">
+	<summary>
+ ユーザ領域ＩＤ
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:入退室管理.TagID.HexString">
+	<summary>
+ タグＩＤの１６進文字列
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:入退室管理.TagID.Binary">
+	<summary>
+ タグＩＤのバイナリデータ
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:入退室管理.TagID">
+	<summary>
+ タグIDクラス
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退室管理.Tag.#ctor(System.Int32,System.Int32,System.Int32)">
+	<summary>
+ コンストラクタ
+ </summary>
+	<param name="SystemAreaSize">システムタグＩＤ領域サイズ</param>
+	<param name="UserAreaSize">ユーザタグＩＤ領域サイズ</param>
+	<param name="DataAreaSize">ユーザデータ領域サイズ</param>
+	<remarks></remarks>
+</member><member name="P:入退室管理.Tag.ID">
+	<summary>
+ タグID
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:入退室管理.Tag.Data">
+	<summary>
+ タグデータ
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:入退室管理.Tag">
+	<summary>
+ タグクラス
+ </summary>
+	<remarks>ＩＤ部とデータ部が存在し、ＩＤ部もシステム領域とデータ領域に分割される</remarks>
+</member><member name="M:入退室管理.CMyProcess.ShowPrevProcess">
+ ------------------------------------------------------------------------------------
+ <summary>
+     同名のプロセスが起動中の場合、メイン ウィンドウをアクティブにします。</summary>
+	<returns>
+     既に起動中であれば true。それ以外は false。</returns>
+ ------------------------------------------------------------------------------------
+
+</member><member name="M:入退室管理.Dnp1356Tag.#ctor(System.Byte[])">
+	<summary>
+ インスタンス生成時にタグIDを指定します
+ </summary>
+	<param name="TagID"></param>
+	<remarks></remarks>
+</member><member name="M:入退室管理.Dnp1356Tag.#ctor(System.String)">
+	<summary>
+ インスタンス生成時にタグIDを指定します
+ </summary>
+	<param name="TagID"></param>
+	<remarks></remarks>
+</member><member name="T:入退室管理.CHRW_DSU01.tag_USB_INFO">
+	<summary>
+ USB情報構造体
+  送信タイムアウト値
+  受信タイムアウト値
+  シリアル番号
+  USBハンドル
+ </summary>
+</member><member name="T:入退室管理.CHRW_DSU01.tag_TAGINFO">
+	<summary>
+ タグ情報構造体
+  タグID
+  タグ情報
+ </summary>
+</member><member name="T:入退室管理.CHRW_DSU01.tag_IN_TA">
+	<summary>
+ [IN]TAGコマンド用構造体
+  TAGコマンド送信データ
+ </summary>
+</member><member name="T:入退室管理.CHRW_DSU01.tag_OUT_TA">
+	<summary>
+ [OUT]TAGコマンド用構造体
+  TAGコマンド受信データ
+ </summary>
+</member><member name="T:入退室管理.CHRW_DSU01.tag_OUT_GU">
+	<summary>
+ [OUT]OUT_GU用構造体
+  取得タグ数
+  タグ情報構造体配列[MAX_IDENT]
+ </summary>
+</member><member name="T:入退室管理.CHRW_DSU01.tag_IN_MR">
+	<summary>
+ [IN]タグ情報読取り用構造体
+  読取開始アドレス
+  読取ブロック数
+ </summary>
+</member><member name="T:入退室管理.CHRW_DSU01.tag_OUT_MR">
+	<summary>
+ [OUT]タグ情報読取り用構造体
+  取得タグ数
+  読込み成功タグ数
+  タグ情報構造体配列[MAX_IDENT]
+ </summary>
+</member><member name="T:入退室管理.CHRW_DSU01.tag_IN_MW">
+	<summary>
+ [IN]タグ書込み用構造体
+  読取開始アドレス
+  読取ブロック数
+ </summary>
+</member><member name="T:入退室管理.CHRW_DSU01.tag_OUT_MW">
+	<summary>
+ [OUT]タグ情報書込み用構造体
+  取得タグ数
+  読込み成功タグ数
+  タグ情報構造体配列[MAX_IDENT]
+ </summary>
+</member><member name="T:入退室管理.CHRW_DSU01.tag_BUZZER">
+	<summary>
+ ブザー情報用コマンド
+  ブザーフラグ　ON_BUZZER/OF_BUZZER
+  ブザーを鳴らす時間(0x0～0xF)
+ </summary>
+</member><member name="T:入退室管理.CHRW_DSU01.tag_LOOP">
+	<summary>
+ ループ設定構造体
+  ループフラグ　ON_LOOP/OF_LOOP
+  ループ制御フラグ　初期値としてSTOP_LOOPを設定してください(DLL内部用)
+  ループステータス　現在ループしている種別です(値はRX5300DLL.h参照)
+  ループハンドル　　メッセージ送出先 画面ハンドル
+  ループハンドル　　(DLL内部用)　
+ </summary>
+</member><member name="T:入退室管理.CHRW_DSU01.tag_PROPERTY">
+	<summary>
+ プロパティ構造体
+  この構造体を各関数を呼び出す為の引数とします。
+  RX_Init_PROPERTY関数でこの構造体を初期化することが出来ます。
+ </summary>
+</member><member name="M:入退室管理.CHRW_DSU01.RX_Init_PROPERTY(入退室管理.CHRW_DSU01.tag_PROPERTY@)">
+	<summary>
+ PROPERTY構造体の初期化を行います
+ </summary>
+	<param name="s_PROPERTY">[in]関数属性構造体</param>
+</member><member name="M:入退室管理.CHRW_DSU01.RX_GetSerialNo(System.Text.StringBuilder)">
+	<summary>
+ USBシリアル番号を取得します
+ </summary>
+	<param name="lpBuf">[out]取得したシリアル番号</param>
+</member><member name="M:入退室管理.CHRW_DSU01.RX_OpenUSB(入退室管理.CHRW_DSU01.tag_USB_INFO@)">
+	<summary>
+ USBをオープンします
+ </summary>
+	<param name="s_USB_INFO">USB情報構造体</param>
+</member><member name="M:入退室管理.CHRW_DSU01.RX_CloseUSB(入退室管理.CHRW_DSU01.tag_USB_INFO@)">
+	<summary>
+ USBをクローズします
+ </summary>
+	<param name="s_USB_INFO">USB情報構造体</param>
+</member><member name="M:入退室管理.CHRW_DSU01.RX_BuzzerCommand(入退室管理.CHRW_DSU01.tag_USB_INFO@,System.Byte)">
+	<summary>
+ ブザーを鳴らします
+ </summary>
+	<param name="s_USB_INFO">USB情報構造体</param>
+	<param name="byTime">鳴らす時間(0h～1h)</param>
+</member><member name="M:入退室管理.CHRW_DSU01.RX_GetUID(入退室管理.CHRW_DSU01.tag_PROPERTY@)">
+	<summary>
+ 最大４枚のUIDを取得します
+ </summary>
+	<param name="s_PROPERTY"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退室管理.CHRW_DSU01.RX_TagCommand(入退室管理.CHRW_DSU01.tag_PROPERTY@)">
+	<summary>
+ TAGコマンドの実行
+ </summary>
+</member><member name="M:入退室管理.CHRW_DSU01.RX_MultiRead(入退室管理.CHRW_DSU01.tag_PROPERTY@)">
+	<summary>
+ タグ情報読込み関数
+ </summary>
+	<param name="s_PROPERTY">[in]関数属性構造体</param>
+</member><member name="M:入退室管理.CHRW_DSU01.RX_MultiWrite(入退室管理.CHRW_DSU01.tag_PROPERTY@)">
+	<summary>
+ タグ情報書込み関数
+ </summary>
+	<param name="s_PROPERTY">[in]関数属性構造体</param>
+</member><member name="M:入退室管理.CHRW_DSU01.RX_LoopStop(入退室管理.CHRW_DSU01.tag_PROPERTY@)">
+	<summary>
+ 実行中のLoopを停止します。
+ 呼び出す際はs_PROPERTYの値を新たに変更する必要はありません。
+ そのままs_PROPERTYを渡してください
+ </summary>
+	<param name="s_PROPERTY">[in]関数属性構造体</param>
+</member><member name="M:入退室管理.CHRW_DSU01.showErrMsg(System.Int32)">
+	<summary>
+ エラーメッセージ表示
+ </summary>
+	<param name="ErrNo">エラー番号</param>
+</member><member name="F:入退室管理.CHRW_DSU01._Prop">
+	<summary>
+ 制御用構造体
+ </summary>
+	<remarks></remarks>
+</member><member name="P:入退室管理.CHRW_DSU01.SendTimeput">
+	<summary>
+ 送信タイムアウト
+ </summary>
+	<remarks></remarks>
+</member><member name="P:入退室管理.CHRW_DSU01.ReceiveTimeout">
+	<summary>
+ 受信タイムアウト
+ </summary>
+	<remarks></remarks>
+</member><member name="P:入退室管理.CHRW_DSU01.BuzzerTime">
+	<summary>
+ ブザーの長さ
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退室管理.CHRW_DSU01.GetTagIDs">
+	<summary>
+ タグIDを読み出す
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:入退室管理.CHRW_DSU01">
+	<summary>
+ ＤＮＰ製ＨＲＷ－ＤＳＵ０１リーダ、ライタ処理
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退室管理.CMessage.Send(System.String,System.Object,System.String)">
+	<summary>
+ オブジェクトを送信する
+ </summary>
+	<param name="SendQueueName"></param>
+	<param name="SendData"></param>
+	<param name="title"></param>
+	<remarks></remarks>
+</member><member name="M:入退室管理.CMessage.GetQueue(System.String)">
+	<summary>
+ メッセージキューからメッセージを受信する
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退室管理.CMessage.Receive(System.String,System.Boolean)">
+	<summary>
+ メッセージを受信する
+ </summary>
+	<param name="ReceiveQueueName"></param>
+	<param name="AllowAutoCreateQueue"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退室管理.CMessage.ReceiveAny(System.String,System.Type[],System.Boolean)">
+	<summary>
+ メッセージキューから要求を取得する（タイプ指定）
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退室管理.CMessage.ReceiveAny(System.String,System.String[],System.Boolean)">
+	<summary>
+ メッセージキューから要求を取得する（タイプ名指定）
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退室管理.CMessage.Receive(System.String,System.Type)">
+	<summary>
+ メッセージキューから要求を取得する（タイプ指定）
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退室管理.CMessage.Receive(System.String,System.String)">
+	<summary>
+ メッセージキューから要求を取得する（タイプ名指定）
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退室管理.CMessage.ReceiveAny(System.String,System.Type[],System.TimeSpan)">
+	<summary>
+ メッセージキューから要求を取得する（タイムアウトあり）
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退室管理.CMessage.Receive(System.String,System.Type,System.TimeSpan)">
+	<summary>
+ メッセージキューから要求を取得する（タイムアウトあり）
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退室管理.CMessage.ClearMessage(System.String,System.Boolean)">
+	<summary>
+ すべてのメッセージキューを取得する
+ </summary>
+	<param name="ReceiveQueueName"></param>
+	<remarks></remarks>
+</member><member name="T:入退室管理.CDbUtil入退.E入退ステータス">
+	<summary>
+ 入退ステータス
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退室管理.CDbUtil入退.Cmb企業名コンボ初期化(共通Windowsコントロール.usrCmb,System.Boolean,System.String,System.Boolean)">
+	<summary>
+ 親となる企業区分IDが指定されていない場合、候補を表示しない
+ </summary>
+	<param name="cmb"></param>
+	<param name="blnSpace"></param>
+	<param name="企業区分ID"></param>
+	<remarks></remarks>
+</member><member name="M:入退室管理.Crypto.RSA.CreateKeys(System.String@,System.String@)">
+	<summary>
+ 公開鍵と秘密鍵を作成して返す
+ </summary>
+	<param name="publicKey">作成された公開鍵(XML形式)</param>
+	<param name="privateKey">作成された秘密鍵(XML形式)</param>
+</member><member name="M:入退室管理.Crypto.RSA.Encrypt(System.String,System.String)">
+	<summary>
+ 公開鍵を使って文字列を暗号化する
+ </summary>
+	<param name="str">暗号化する文字列</param>
+	<param name="publicKey">暗号化に使用する公開鍵(XML形式)</param>
+	<returns>暗号化された文字列</returns>
+</member><member name="M:入退室管理.Crypto.RSA.Decrypt(System.String,System.String)">
+	<summary>
+ 秘密鍵を使って文字列を復号化する
+ </summary>
+	<param name="str">Encryptメソッドにより暗号化された文字列</param>
+	<param name="privateKey">復号化に必要な秘密鍵(XML形式)</param>
+	<returns>復号化された文字列</returns>
+</member><member name="T:入退室管理.Crypto.RSA">
+</member><member name="M:入退室管理.Crypto.Key.Encrypt(System.String,System.Byte[])">
+	<summary>
+ バイト列をエンコードします
+ </summary>
+	<param name="passphrase">共通鍵パスワード文字列</param>
+	<param name="data">暗号化したいバイト列</param>
+	<returns>暗号化されたバイト列</returns>
+	<remarks></remarks>
+</member><member name="M:入退室管理.Crypto.Key.Decrypt(System.String,System.Byte[])">
+	<summary>
+ バイト列をデコードします
+ </summary>
+	<param name="passphrase"></param>
+	<param name="data"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退室管理.Crypto.Key.Encrypt(System.String,System.String)">
+	<summary>
+ 文字列を暗号化して暗号化文字列を返す
+ </summary>
+	<param name="passphrase">パスワード</param>
+	<param name="planeText">データ文字列</param>
+	<returns>暗号化された文字列</returns>
+	<remarks></remarks>
+</member><member name="M:入退室管理.Crypto.Key.Decrypt(System.String,System.String)">
+	<summary>
+ 文字列を復号化して暗号化文字列を返す
+ </summary>
+	<param name="passphrase">パスワード</param>
+	<param name="cryptText">データ文字列</param>
+	<returns>復号化された文字列</returns>
+	<remarks></remarks>
+</member><member name="M:入退室管理.Crypto.Key.GetCryptoKey(System.IntPtr,System.String)">
+	<summary>
+ 暗号化キーのポインタを取得します
+ </summary>
+	<param name="hProv"></param>
+	<param name="passphrase"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:入退室管理.Crypto.Key.Failed(System.String)">
+	<summary>
+ エラー処理
+ </summary>
+	<param name="command"></param>
+	<remarks></remarks>
+</member><member name="T:入退室管理.Crypto.Key">
+	<summary>
+ 共通鍵暗号化処理を提供します
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退室管理.CMdiChild.gRSubボタン設定">
+	<summary>
+ ボタンの有効無効設定
+ </summary>
+	<remarks></remarks>
+</member><member name="M:入退室管理.CMdiChild.mSubフォーカスのセット(System.Windows.Forms.Control)">
+	<summary>
+ フォーカスのセット
+ </summary>
+	<param name="ctlSet">コントロール</param>
+	<remarks>複合コントロールの場合はiSubFocusを呼び出す</remarks>
+</member><member name="M:入退室管理.CMdiChild.iRBlnKeyEnter(System.Object,System.Windows.Forms.KeyEventArgs)">
+	<summary>
+ エンターキーの処理
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<returns></returns>
+	<remarks>エンターキーのときにタブキーを送り次のコントロールへ(グリッドは処理しない)
+  エンターキーの動作を各画面で行う場合はオーバーライドする</remarks>
+</member><member name="M:入退室管理.Dlg0001園児情報メンテナンス.確定処理">
+	<summary>
+	</summary>
+	<returns>更新に成功時はTrue</returns>
+	<remarks></remarks>
+</member><member name="P:入退室管理.My.Resources.Resources.ResourceManager">
+	<summary>
+  このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+</summary>
+</member><member name="P:入退室管理.My.Resources.Resources.Culture">
+	<summary>
+  厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
+  現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+</summary>
+</member><member name="T:入退室管理.My.Resources.Resources">
+	<summary>
+  ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+</summary>
+</member><member name="M:入退室管理.Dlg0004登録者情報メンテナンス.確定処理">
+	<summary>
+	</summary>
+	<returns>更新に成功時はTrue</returns>
+	<remarks></remarks>
+</member><member name="M:入退室管理.CSqlEx.gSubSelect日時文字列(System.String,System.String,System.Boolean)">
+	<summary>
+ 更新日時取得用
+ </summary>
+	<param name="元列名"></param>
+	<param name="表示列名"></param>
+	<remarks></remarks>
+</member><member name="M:入退室管理.CSqlEx.gSubWhere日時文字列(System.String,System.String)">
+	<summary>
+ 比較条件用日時文字列をセットする
+ </summary>
+	<param name="列名"></param>
+	<param name="値文字列"></param>
+	<remarks>依存:SQLServer</remarks>
+</member><member name="M:入退室管理.C入退管理Ex.ログファイル設定">
+	<summary>
+ ログファイルの設定を行う
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

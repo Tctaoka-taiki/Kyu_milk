@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="MS UI Gothic" Size="9" />
+  <Class Name="共通.CLogUtil" Collapsed="true">
+    <Position X="2.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>CLogUtil.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="共通.Cログ管理" Collapsed="true">
+    <Position X="2.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>CLogUtil.vb</FileName>
+      <HashCode>AAAAAAAAABAAACgACACAAAAAAIgAAAAAQAEABAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="共通.CUtil" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>CUtil.vb</FileName>
+      <HashCode>AEQBAAAEAAAmAAAABGQAAAAQAAAQAAAAAEEAAAAIACA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="共通.Cひな型" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\入退室管理\入退室管理SVNWORK\TC標準\Source\Cひな型.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="共通.My.MySettings" Collapsed="true">
+    <Position X="6.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="共通.enuログレベル" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>CLogUtil.vb</FileName>
+      <HashCode>AAAAAAAAAAAABCAABAAAQAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="共通.enm処理区分" Collapsed="true">
+    <Position X="4" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>M定数.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAQAAAAAAgAAAAAAAAAAQAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="共通.enmUIモード" Collapsed="true">
+    <Position X="4" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>M定数.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="共通.enmSQL種別" Collapsed="true">
+    <Position X="4" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>M定数.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAQ=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Module Name="共通.M定数" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>M定数.vb</FileName>
+      <HashCode>AAAQAtAAEBQEjkDAoBBIxG1kAcBAwAQJQAYABACCQgw=</HashCode>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="共通.My.Resources.Resources" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="共通.My.MySettingsProperty" Collapsed="true">
+    <Position X="6.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Module>
+</ClassDiagram>
