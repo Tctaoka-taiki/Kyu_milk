@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2AD97A44-1AE9-4005-9946-5F73BACA5F59}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>入退室管理.My.MyApplication</StartupObject>
+    <RootNamespace>入退室管理</RootNamespace>
+    <AssemblyName>入退室管理</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <ApplicationIcon>TC_logo.ico</ApplicationIcon>
+    <OptionStrict>On</OptionStrict>
+    <FileUpgradeFlags>0</FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>入退室管理.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <DefineConstants>
+    </DefineConstants>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>入退室管理.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <DefineConstants>リーダライタ有効 = "TRUE"</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.TE300CommAdapterLib, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Interop.TE300CommAdapterLib, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="OutlookBarApp, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <ExecutableExtension>.exe</ExecutableExtension>
+    </Reference>
+    <Reference Include="SQLite.NET, Version=0.21.1869.3794, Culture=neutral, PublicKeyToken=c273bd375e695f9c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\SQLite.NET.0.21_x68_dll\SQLite.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLiteDotNet, Version=1.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\SQLiteDotNet_2006_02_05_V1.00\Binaries\SQLiteDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.65.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="入退共通, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\入退室管理標準\Class\入退共通\bin\Debug\入退共通.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="共通" />
+    <Import Include="共通Dbライブラリ" />
+    <Import Include="共通Windowsコントロール" />
+    <Import Include="画面標準" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\TC標準\Source\CLog.vb">
+      <Link>Class\共通参照\CLog.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TC標準\Source\CMyProcess.vb">
+      <Link>Class\共通参照\CMyProcess.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TC標準\Source\CReport.designer.vb">
+      <Link>Class\共通参照\CReport.designer.vb</Link>
+      <DependentUpon>CReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\..\..\TC標準\Source\CReport.vb">
+      <Link>Class\共通参照\CReport.vb</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\..\..\TC標準\Source\Crypto.vb">
+      <Link>Class\共通参照\Crypto.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TC標準\Source\Dnp1356Tag.vb">
+      <Link>Class\共通参照\Dnp1356Tag.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TC標準\Source\Tag.vb">
+      <Link>Class\共通参照\Tag.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TC標準\Source\Uc一覧ベース.vb">
+      <Link>UsrCntr\共通参照\Uc一覧ベース.vb</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\..\..\..\入退室管理標準\Source\CDbUtil入退.vb">
+      <Link>Class\共通参照\CDbUtil入退.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\入退室管理標準\Source\CMessage.vb">
+      <Link>Class\共通参照\CMessage.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\入退室管理標準\Source\C入退サーバメッセージ.vb">
+      <Link>Class\共通参照\C入退サーバメッセージ.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\入退室管理標準\Source\M定数入退.vb">
+      <Link>Class\共通参照\M定数入退.vb</Link>
+    </Compile>
+    <Compile Include="BaseForm\CMdiChild.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\CMdiChild.Designer.vb">
+      <DependentUpon>CMdiChild.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\CMdiChildDialog.Designer.vb">
+      <DependentUpon>CMdiChildDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\CMdiChildDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\CMdiChildFrm.Designer.vb">
+      <DependentUpon>CMdiChildFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\CMdiChildFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\CMdiMain.Designer.vb">
+      <DependentUpon>CMdiMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\CMdiMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class\C入退管理Ex.vb" />
+    <Compile Include="Class\C画面制御入退室管理.vb" />
+    <Compile Include="Class\共通参照\三菱UHFTag.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\CSqlEx.vb" />
+    <Compile Include="Class\usrLblGrd.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rpt\カード発行.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>カード発行.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rpt\ORG入退履歴リスト.vb">
+      <DependentUpon>ORG入退履歴リスト.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rpt\ログイン履歴.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ログイン履歴.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rpt\入退履歴リスト.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>入退履歴リスト.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rpt\園児予定表.vb">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>園児予定表.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="Rpt\在場者リスト.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>在場者リスト.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UsrCntr\UcメンテベースEx.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Frm\Frm9999メインメニュー.Designer.vb">
+      <DependentUpon>Frm9999メインメニュー.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Frm9999メインメニュー.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Frm0000ログイン画面.Designer.vb">
+      <DependentUpon>Frm0000ログイン画面.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Frm0000ログイン画面.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\..\..\TC標準\Source\CReport.resx">
+      <Link>Class\共通参照\CReport.resx</Link>
+      <DependentUpon>CReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\CMdiChildDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CMdiChildDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\CMdiChildFrm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CMdiChildFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\CMdiMain.resx">
+      <DependentUpon>CMdiMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt\カード発行.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>カード発行.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt\ORG入退履歴リスト.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ORG入退履歴リスト.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt\ログイン履歴.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ログイン履歴.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt\入退履歴リスト.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>入退履歴リスト.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt\園児予定表.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>園児予定表.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt\在場者リスト.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>在場者リスト.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Frm9999メインメニュー.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm9999メインメニュー.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Frm0000ログイン画面.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm0000ログイン画面.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="bin\Debug\入退室管理.exe.config" />
+    <None Include="bin\Debug\入退室管理.vshost.exe.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="入退室管理TCクラス図.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Interop.ACTMULTILib.dll" />
+    <Content Include="bin\Debug\OutlookBarApp.exe" />
+    <Content Include="bin\Debug\RDCTL.dll" />
+    <Content Include="bin\Debug\RX5300DLL.dll" />
+    <Content Include="bin\Debug\shutdown.exe" />
+    <Content Include="bin\Debug\入退共通.dll" />
+    <Content Include="bin\Debug\入退共通.pdb" />
+    <Content Include="bin\Debug\入退共通.xml" />
+    <Content Include="bin\Debug\入退室管理.exe" />
+    <Content Include="bin\Debug\入退室管理.pdb" />
+    <Content Include="bin\Debug\入退室管理.vshost.exe" />
+    <Content Include="bin\Debug\入退室管理.xml" />
+    <Content Include="bin\Debug\共通.dll" />
+    <Content Include="bin\Debug\共通.pdb" />
+    <Content Include="bin\Debug\共通.xml" />
+    <Content Include="bin\Debug\共通Dbライブラリ.dll" />
+    <Content Include="bin\Debug\共通Dbライブラリ.pdb" />
+    <Content Include="bin\Debug\共通Dbライブラリ.xml" />
+    <Content Include="bin\Debug\共通Windowsコントロール.dll" />
+    <Content Include="bin\Debug\共通Windowsコントロール.pdb" />
+    <Content Include="bin\Debug\共通Windowsコントロール.xml" />
+    <Content Include="bin\Debug\画面標準.exe" />
+    <Content Include="bin\Debug\画面標準.pdb" />
+    <Content Include="bin\Debug\画面標準.xml" />
+    <Content Include="RX5300DLL.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sqlite3odbc.dll" />
+    <Content Include="TC_logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\TC標準\Class\共通Dbライブラリ\共通Dbライブラリ.vbproj">
+      <Project>{53BBE04D-C79B-4CAC-AADE-20C91840D1A1}</Project>
+      <Name>共通Dbライブラリ</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\TC標準\Class\共通Windowsコントロール\共通Windowsコントロール.vbproj">
+      <Project>{0513AAC8-109E-40E3-BCD6-ACBDF0540D76}</Project>
+      <Name>共通Windowsコントロール</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\TC標準\Class\共通\共通.vbproj">
+      <Project>{BC5B09F3-4EB5-4B69-B4D7-82A0546F36EB}</Project>
+      <Name>共通</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\TC標準\Exe\画面標準\画面標準.vbproj">
+      <Project>{F4C5D87F-1DEB-4C3A-A943-5D8113CAE1BA}</Project>
+      <Name>画面標準</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

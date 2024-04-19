@@ -1,0 +1,338 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.6": {
+      "共通/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/共通.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/共通.dll": {}
+        }
+      },
+      "共通Dbライブラリ/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/共通Dbライブラリ.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/共通Dbライブラリ.dll": {}
+        }
+      },
+      "共通Windowsコントロール/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "共通": "1.0.0",
+          "共通Dbライブラリ": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/共通Windowsコントロール.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/共通Windowsコントロール.dll": {}
+        }
+      },
+      "画面標準/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "共通": "1.0.0",
+          "共通Dbライブラリ": "1.0.0",
+          "共通Windowsコントロール": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/画面標準.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/画面標準.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6/win": {
+      "共通/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/共通.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/共通.dll": {}
+        }
+      },
+      "共通Dbライブラリ/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/共通Dbライブラリ.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/共通Dbライブラリ.dll": {}
+        }
+      },
+      "共通Windowsコントロール/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "共通": "1.0.0",
+          "共通Dbライブラリ": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/共通Windowsコントロール.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/共通Windowsコントロール.dll": {}
+        }
+      },
+      "画面標準/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "共通": "1.0.0",
+          "共通Dbライブラリ": "1.0.0",
+          "共通Windowsコントロール": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/画面標準.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/画面標準.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6/win-arm64": {
+      "共通/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/共通.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/共通.dll": {}
+        }
+      },
+      "共通Dbライブラリ/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/共通Dbライブラリ.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/共通Dbライブラリ.dll": {}
+        }
+      },
+      "共通Windowsコントロール/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "共通": "1.0.0",
+          "共通Dbライブラリ": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/共通Windowsコントロール.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/共通Windowsコントロール.dll": {}
+        }
+      },
+      "画面標準/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "共通": "1.0.0",
+          "共通Dbライブラリ": "1.0.0",
+          "共通Windowsコントロール": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/画面標準.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/画面標準.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6/win-x64": {
+      "共通/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/共通.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/共通.dll": {}
+        }
+      },
+      "共通Dbライブラリ/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/共通Dbライブラリ.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/共通Dbライブラリ.dll": {}
+        }
+      },
+      "共通Windowsコントロール/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "共通": "1.0.0",
+          "共通Dbライブラリ": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/共通Windowsコントロール.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/共通Windowsコントロール.dll": {}
+        }
+      },
+      "画面標準/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "共通": "1.0.0",
+          "共通Dbライブラリ": "1.0.0",
+          "共通Windowsコントロール": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/画面標準.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/画面標準.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6/win-x86": {
+      "共通/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/共通.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/共通.dll": {}
+        }
+      },
+      "共通Dbライブラリ/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/共通Dbライブラリ.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/共通Dbライブラリ.dll": {}
+        }
+      },
+      "共通Windowsコントロール/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "共通": "1.0.0",
+          "共通Dbライブラリ": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/共通Windowsコントロール.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/共通Windowsコントロール.dll": {}
+        }
+      },
+      "画面標準/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "共通": "1.0.0",
+          "共通Dbライブラリ": "1.0.0",
+          "共通Windowsコントロール": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/画面標準.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/画面標準.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "共通/1.0.0": {
+      "type": "project",
+      "path": "../../../../TC標準/Class/共通/共通.vbproj",
+      "msbuildProject": "../../../../TC標準/Class/共通/共通.vbproj"
+    },
+    "共通Dbライブラリ/1.0.0": {
+      "type": "project",
+      "path": "../../../../TC標準/Class/共通Dbライブラリ/共通Dbライブラリ.vbproj",
+      "msbuildProject": "../../../../TC標準/Class/共通Dbライブラリ/共通Dbライブラリ.vbproj"
+    },
+    "共通Windowsコントロール/1.0.0": {
+      "type": "project",
+      "path": "../../../../TC標準/Class/共通Windowsコントロール/共通Windowsコントロール.vbproj",
+      "msbuildProject": "../../../../TC標準/Class/共通Windowsコントロール/共通Windowsコントロール.vbproj"
+    },
+    "画面標準/1.0.0": {
+      "type": "project",
+      "path": "../../../../TC標準/Exe/画面標準/画面標準.vbproj",
+      "msbuildProject": "../../../../TC標準/Exe/画面標準/画面標準.vbproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.6": [
+      "共通 >= 1.0.0",
+      "共通Dbライブラリ >= 1.0.0",
+      "共通Windowsコントロール >= 1.0.0",
+      "画面標準 >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\23015\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\23015\\Desktop\\九州乳業20240415\\九州乳業醗酵冷却設備管理_リリース08_1\\物件別\\九州乳業\\Exe\\入退室管理TC\\醗酵冷却設備管理.vbproj",
+      "projectName": "醗酵冷却設備管理APL",
+      "projectPath": "C:\\Users\\23015\\Desktop\\九州乳業20240415\\九州乳業醗酵冷却設備管理_リリース08_1\\物件別\\九州乳業\\Exe\\入退室管理TC\\醗酵冷却設備管理.vbproj",
+      "packagesPath": "C:\\Users\\23015\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\23015\\Desktop\\九州乳業20240415\\九州乳業醗酵冷却設備管理_リリース08_1\\物件別\\九州乳業\\Exe\\入退室管理TC\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\23015\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net46"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://packagesource": {},
+        "https://packagesource1": {}
+      },
+      "frameworks": {
+        "net46": {
+          "projectReferences": {
+            "C:\\Users\\23015\\Desktop\\九州乳業20240415\\九州乳業醗酵冷却設備管理_リリース08_1\\TC標準\\Class\\共通Dbライブラリ\\共通Dbライブラリ.vbproj": {
+              "projectPath": "C:\\Users\\23015\\Desktop\\九州乳業20240415\\九州乳業醗酵冷却設備管理_リリース08_1\\TC標準\\Class\\共通Dbライブラリ\\共通Dbライブラリ.vbproj"
+            },
+            "C:\\Users\\23015\\Desktop\\九州乳業20240415\\九州乳業醗酵冷却設備管理_リリース08_1\\TC標準\\Class\\共通Windowsコントロール\\共通Windowsコントロール.vbproj": {
+              "projectPath": "C:\\Users\\23015\\Desktop\\九州乳業20240415\\九州乳業醗酵冷却設備管理_リリース08_1\\TC標準\\Class\\共通Windowsコントロール\\共通Windowsコントロール.vbproj"
+            },
+            "C:\\Users\\23015\\Desktop\\九州乳業20240415\\九州乳業醗酵冷却設備管理_リリース08_1\\TC標準\\Class\\共通\\共通.vbproj": {
+              "projectPath": "C:\\Users\\23015\\Desktop\\九州乳業20240415\\九州乳業醗酵冷却設備管理_リリース08_1\\TC標準\\Class\\共通\\共通.vbproj"
+            },
+            "C:\\Users\\23015\\Desktop\\九州乳業20240415\\九州乳業醗酵冷却設備管理_リリース08_1\\TC標準\\Exe\\画面標準\\画面標準.vbproj": {
+              "projectPath": "C:\\Users\\23015\\Desktop\\九州乳業20240415\\九州乳業醗酵冷却設備管理_リリース08_1\\TC標準\\Exe\\画面標準\\画面標準.vbproj"
+            }
+          }
+        }
+      }
+    },
+    "frameworks": {
+      "net46": {}
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-arm64": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

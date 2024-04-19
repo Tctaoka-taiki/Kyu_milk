@@ -1,0 +1,961 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2AD97A44-1AE9-4005-9946-5F73BACA5F59}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>入退室管理.My.MyApplication</StartupObject>
+    <RootNamespace>入退室管理</RootNamespace>
+    <AssemblyName>醗酵冷却設備管理APL</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <ApplicationIcon>imageres-96.ico</ApplicationIcon>
+    <OptionStrict>Off</OptionStrict>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>醗酵冷却設備管理APL.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <DefineConstants>
+    </DefineConstants>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>醗酵冷却設備管理APL.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <DefineConstants>リーダライタ有効 = "TRUE"</DefineConstants>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>醗酵冷却設備管理APL.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>リーダライタ有効 = "TRUE"</DefineConstants>
+    <DocumentationFile>醗酵冷却設備管理APL.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win64_x64\dotnet\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win64_x64\dotnet\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win64_x64\dotnet\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win64_x64\dotnet\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="入退共通, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\入退室管理標準\Class\入退共通\bin\Debug\入退共通.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="CrystalDecisions.CrystalReports.Engine" />
+    <Import Include="CrystalDecisions.ReportSource" />
+    <Import Include="CrystalDecisions.Shared" />
+    <Import Include="CrystalDecisions.Windows.Forms" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="共通" />
+    <Import Include="共通Dbライブラリ" />
+    <Import Include="共通Windowsコントロール" />
+    <Import Include="画面標準" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\TC標準\Source\CLog.vb">
+      <Link>Class\共通参照\CLog.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TC標準\Source\CMyProcess.vb">
+      <Link>Class\共通参照\CMyProcess.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TC標準\Source\CReport.designer.vb">
+      <Link>Class\共通参照\CReport.designer.vb</Link>
+      <DependentUpon>CReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\..\..\TC標準\Source\CReport.vb">
+      <Link>Class\共通参照\CReport.vb</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\..\..\TC標準\Source\Crypto.vb">
+      <Link>Class\共通参照\Crypto.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TC標準\Source\Dnp1356Tag.vb">
+      <Link>Class\共通参照\Dnp1356Tag.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TC標準\Source\Tag.vb">
+      <Link>Class\共通参照\Tag.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TC標準\Source\Uc一覧ベース.vb">
+      <Link>UsrCntr\共通参照\Uc一覧ベース.vb</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\..\..\..\入退室管理標準\Source\CDbUtil入退.vb">
+      <Link>Class\共通参照\CDbUtil入退.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\入退室管理標準\Source\CMessage.vb">
+      <Link>Class\共通参照\CMessage.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\入退室管理標準\Source\C入退サーバメッセージ.vb">
+      <Link>Class\共通参照\C入退サーバメッセージ.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\入退室管理標準\Source\M定数入退.vb">
+      <Link>Class\共通参照\M定数入退.vb</Link>
+    </Compile>
+    <Compile Include="BaseForm\CMdiChild.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\CMdiChild.Designer.vb">
+      <DependentUpon>CMdiChild.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\CMdiChildDialog.Designer.vb">
+      <DependentUpon>CMdiChildDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\CMdiChildDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\CMdiChildFrm.Designer.vb">
+      <DependentUpon>CMdiChildFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\CMdiChildFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\CMdiMain.Designer.vb">
+      <DependentUpon>CMdiMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\CMdiMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\UCシリアルポート.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\CUCシリアルポート.vb" />
+    <Compile Include="Dlg\01_醗酵\Dlg01001_入庫設定.Designer.vb">
+      <DependentUpon>Dlg01001_入庫設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01001_入庫設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class\C入退管理Ex.vb" />
+    <Compile Include="Class\C画面制御オーダー別.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\共通参照\三菱UHFTag.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\CSqlEx.vb" />
+    <Compile Include="Class\usrLblGrd.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_送信内容設定.Designer.vb">
+      <DependentUpon>Dlg01999_送信内容設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_送信内容設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_送信内容表示.Designer.vb">
+      <DependentUpon>Dlg01999_送信内容表示.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_送信内容表示.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01002_指定サンプル数設定.Designer.vb">
+      <DependentUpon>Dlg01002_指定サンプル数設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01002_指定サンプル数設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01003_製品表示設定.Designer.vb">
+      <DependentUpon>Dlg01003_製品表示設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01003_製品表示設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01004_出庫設定.Designer.vb">
+      <DependentUpon>Dlg01004_出庫設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01004_出庫設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_トラッキング削除.Designer.vb">
+      <DependentUpon>Dlg01999_トラッキング削除.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_トラッキング削除.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_棚メンテナンス登録.Designer.vb">
+      <DependentUpon>Dlg01999_棚メンテナンス登録.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_棚メンテナンス登録.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_棚メンテナンス削除.Designer.vb">
+      <DependentUpon>Dlg01999_棚メンテナンス削除.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_棚メンテナンス削除.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_棚メンテナンス修正.Designer.vb">
+      <DependentUpon>Dlg01999_棚メンテナンス修正.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_棚メンテナンス修正.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_棚メンテナンス禁止棚.Designer.vb">
+      <DependentUpon>Dlg01999_棚メンテナンス禁止棚.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_棚メンテナンス禁止棚.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_品種登録.Designer.vb">
+      <DependentUpon>Dlg01999_品種登録.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_品種登録.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_冷却出庫設定.Designer.vb">
+      <DependentUpon>Dlg01999_冷却出庫設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_冷却出庫設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_醗酵側棚指定登録.Designer.vb">
+      <DependentUpon>Dlg01999_醗酵側棚指定登録.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_醗酵側棚指定登録.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_冷却側棚指定登録.Designer.vb">
+      <DependentUpon>Dlg01999_冷却側棚指定登録.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_冷却側棚指定登録.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_品種削除.Designer.vb">
+      <DependentUpon>Dlg01999_品種削除.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_品種削除.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_品種修正.Designer.vb">
+      <DependentUpon>Dlg01999_品種修正.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01999_品種修正.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01031_生産問合設定.Designer.vb">
+      <DependentUpon>Dlg01031_生産問合設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01031_生産問合設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01023_温度問合設定.Designer.vb">
+      <DependentUpon>Dlg01023_温度問合設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01023_温度問合設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01041_ジャーナル問合設定.Designer.vb">
+      <DependentUpon>Dlg01041_ジャーナル問合設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01041_ジャーナル問合設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01005_棚指定出庫登録.Designer.vb">
+      <DependentUpon>Dlg01005_棚指定出庫登録.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01005_棚指定出庫登録.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01005_棚指定出庫削除.Designer.vb">
+      <DependentUpon>Dlg01005_棚指定出庫削除.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01005_棚指定出庫削除.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01005_棚指定出庫開始.Designer.vb">
+      <DependentUpon>Dlg01005_棚指定出庫開始.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01005_棚指定出庫開始.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01005_棚指定出庫中断.Designer.vb">
+      <DependentUpon>Dlg01005_棚指定出庫中断.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01005_棚指定出庫中断.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01024_作業履歴問合設定.Designer.vb">
+      <DependentUpon>Dlg01024_作業履歴問合設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\01_醗酵\Dlg01024_作業履歴問合設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dlg\02_冷却\Dlg02999_出庫設定.Designer.vb">
+      <DependentUpon>Dlg02999_出庫設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg\02_冷却\Dlg02999_出庫設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\00_共通\Frm00002_冷却側メインメニュー.Designer.vb">
+      <DependentUpon>Frm00002_冷却側メインメニュー.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\00_共通\Frm00002_冷却側メインメニュー.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01015_醗酵空棚問合せ.Designer.vb">
+      <DependentUpon>Frm01015_醗酵空棚問合せ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01015_醗酵空棚問合せ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01001_入庫設定.Designer.vb">
+      <DependentUpon>Frm01001_入庫設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01001_入庫設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01004_醗酵完了出庫設定.Designer.vb">
+      <DependentUpon>Frm01004_醗酵完了出庫設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01004_醗酵完了出庫設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01021_醗酵側設備状況.Designer.vb">
+      <DependentUpon>Frm01021_醗酵側設備状況.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01021_醗酵側設備状況.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01014_醗酵在庫問合せ.Designer.vb">
+      <DependentUpon>Frm01014_醗酵在庫問合せ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01014_醗酵在庫問合せ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01013_醗酵棚問合せメンテナンス.Designer.vb">
+      <DependentUpon>Frm01013_醗酵棚問合せメンテナンス.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01013_醗酵棚問合せメンテナンス.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01011_醗酵マスター設定.Designer.vb">
+      <DependentUpon>Frm01011_醗酵マスター設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01011_醗酵マスター設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01005_醗酵棚指定出庫設定.Designer.vb">
+      <DependentUpon>Frm01005_醗酵棚指定出庫設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01005_醗酵棚指定出庫設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01012_醗酵入庫棚順設定.Designer.vb">
+      <DependentUpon>Frm01012_醗酵入庫棚順設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01012_醗酵入庫棚順設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01022_生産実績問合せ.Designer.vb">
+      <DependentUpon>Frm01022_生産実績問合せ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01022_生産実績問合せ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01041_帳票出力.Designer.vb">
+      <DependentUpon>Frm01041_帳票出力.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01041_帳票出力.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01023_温度実績問合せ.Designer.vb">
+      <DependentUpon>Frm01023_温度実績問合せ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01023_温度実績問合せ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01041_ジャーナル照会.Designer.vb">
+      <DependentUpon>Frm01041_ジャーナル照会.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01041_ジャーナル照会.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01024_作業履歴照会.Designer.vb">
+      <DependentUpon>Frm01024_作業履歴照会.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\01_醗酵\Frm01024_作業履歴照会.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\02_冷却\Frm02002_冷却棚指定出庫設定.Designer.vb">
+      <DependentUpon>Frm02002_冷却棚指定出庫設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\02_冷却\Frm02002_冷却棚指定出庫設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\02_冷却\Frm02013_冷却空棚問合せ.Designer.vb">
+      <DependentUpon>Frm02013_冷却空棚問合せ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\02_冷却\Frm02013_冷却空棚問合せ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\02_冷却\Frm02012_冷却在庫問合せ.Designer.vb">
+      <DependentUpon>Frm02012_冷却在庫問合せ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\02_冷却\Frm02012_冷却在庫問合せ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\02_冷却\Frm02011_冷却棚問合せメンテナンス.Designer.vb">
+      <DependentUpon>Frm02011_冷却棚問合せメンテナンス.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\02_冷却\Frm02011_冷却棚問合せメンテナンス.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\02_冷却\Frm02001_冷却完了出庫設定.Designer.vb">
+      <DependentUpon>Frm02001_冷却完了出庫設定.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\02_冷却\Frm02001_冷却完了出庫設定.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\02_冷却\Frm02021_冷却側設備状況.Designer.vb">
+      <DependentUpon>Frm02021_冷却側設備状況.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\02_冷却\Frm02021_冷却側設備状況.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Application.Designer.vb">
+      <DependentUpon>Application.myapp</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Rpt\棚在庫実績_冷却.vb">
+      <DependentUpon>棚在庫実績_冷却.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rpt\棚在庫実績_醗酵.vb">
+      <DependentUpon>棚在庫実績_醗酵.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rpt\在庫実績_冷却.vb">
+      <DependentUpon>在庫実績_冷却.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rpt\在庫実績_醗酵.vb">
+      <DependentUpon>在庫実績_醗酵.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rpt\生産実績.vb">
+      <DependentUpon>生産実績.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rpt\入退履歴リスト.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>入退履歴リスト.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rpt\マスター設定.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>マスター設定.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UsrCntr\UcメンテベースEx.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Frm\00_共通\Frm00001_発酵側メインメニュー.Designer.vb">
+      <DependentUpon>Frm00001_発酵側メインメニュー.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\00_共通\Frm00001_発酵側メインメニュー.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\..\..\TC標準\Source\CReport.resx">
+      <Link>Class\共通参照\CReport.resx</Link>
+      <DependentUpon>CReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\CMdiChildDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CMdiChildDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\CMdiChildFrm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CMdiChildFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\CMdiMain.resx">
+      <DependentUpon>CMdiMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01001_入庫設定.resx">
+      <DependentUpon>Dlg01001_入庫設定.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01999_送信内容設定.resx">
+      <DependentUpon>Dlg01999_送信内容設定.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01999_送信内容表示.resx">
+      <DependentUpon>Dlg01999_送信内容表示.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01002_指定サンプル数設定.resx">
+      <DependentUpon>Dlg01002_指定サンプル数設定.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01003_製品表示設定.resx">
+      <DependentUpon>Dlg01003_製品表示設定.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01004_出庫設定.resx">
+      <DependentUpon>Dlg01004_出庫設定.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01999_トラッキング削除.resx">
+      <DependentUpon>Dlg01999_トラッキング削除.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01999_棚メンテナンス登録.resx">
+      <DependentUpon>Dlg01999_棚メンテナンス登録.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01999_棚メンテナンス削除.resx">
+      <DependentUpon>Dlg01999_棚メンテナンス削除.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01999_棚メンテナンス修正.resx">
+      <DependentUpon>Dlg01999_棚メンテナンス修正.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01999_棚メンテナンス禁止棚.resx">
+      <DependentUpon>Dlg01999_棚メンテナンス禁止棚.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01999_品種登録.resx">
+      <DependentUpon>Dlg01999_品種登録.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01999_冷却出庫設定.resx">
+      <DependentUpon>Dlg01999_冷却出庫設定.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01999_醗酵側棚指定登録.resx">
+      <DependentUpon>Dlg01999_醗酵側棚指定登録.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01999_冷却側棚指定登録.resx">
+      <DependentUpon>Dlg01999_冷却側棚指定登録.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01999_品種削除.resx">
+      <DependentUpon>Dlg01999_品種削除.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01999_品種修正.resx">
+      <DependentUpon>Dlg01999_品種修正.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01031_生産問合設定.resx">
+      <DependentUpon>Dlg01031_生産問合設定.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01023_温度問合設定.resx">
+      <DependentUpon>Dlg01023_温度問合設定.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01041_ジャーナル問合設定.resx">
+      <DependentUpon>Dlg01041_ジャーナル問合設定.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01005_棚指定出庫登録.resx">
+      <DependentUpon>Dlg01005_棚指定出庫登録.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01005_棚指定出庫削除.resx">
+      <DependentUpon>Dlg01005_棚指定出庫削除.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01005_棚指定出庫開始.resx">
+      <DependentUpon>Dlg01005_棚指定出庫開始.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01005_棚指定出庫中断.resx">
+      <DependentUpon>Dlg01005_棚指定出庫中断.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\01_醗酵\Dlg01024_作業履歴問合設定.resx">
+      <DependentUpon>Dlg01024_作業履歴問合設定.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dlg\02_冷却\Dlg02999_出庫設定.resx">
+      <DependentUpon>Dlg02999_出庫設定.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\00_共通\Frm00002_冷却側メインメニュー.resx">
+      <DependentUpon>Frm00002_冷却側メインメニュー.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\01_醗酵\Frm01015_醗酵空棚問合せ.resx">
+      <DependentUpon>Frm01015_醗酵空棚問合せ.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\01_醗酵\Frm01001_入庫設定.resx">
+      <DependentUpon>Frm01001_入庫設定.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\01_醗酵\Frm01004_醗酵完了出庫設定.resx">
+      <DependentUpon>Frm01004_醗酵完了出庫設定.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\01_醗酵\Frm01021_醗酵側設備状況.resx">
+      <DependentUpon>Frm01021_醗酵側設備状況.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\01_醗酵\Frm01014_醗酵在庫問合せ.resx">
+      <DependentUpon>Frm01014_醗酵在庫問合せ.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\01_醗酵\Frm01013_醗酵棚問合せメンテナンス.resx">
+      <DependentUpon>Frm01013_醗酵棚問合せメンテナンス.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\01_醗酵\Frm01011_醗酵マスター設定.resx">
+      <DependentUpon>Frm01011_醗酵マスター設定.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\01_醗酵\Frm01005_醗酵棚指定出庫設定.resx">
+      <DependentUpon>Frm01005_醗酵棚指定出庫設定.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\01_醗酵\Frm01012_醗酵入庫棚順設定.resx">
+      <DependentUpon>Frm01012_醗酵入庫棚順設定.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\01_醗酵\Frm01022_生産実績問合せ.resx">
+      <DependentUpon>Frm01022_生産実績問合せ.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\01_醗酵\Frm01041_帳票出力.resx">
+      <DependentUpon>Frm01041_帳票出力.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\01_醗酵\Frm01023_温度実績問合せ.resx">
+      <DependentUpon>Frm01023_温度実績問合せ.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\01_醗酵\Frm01041_ジャーナル照会.resx">
+      <DependentUpon>Frm01041_ジャーナル照会.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\01_醗酵\Frm01024_作業履歴照会.resx">
+      <DependentUpon>Frm01024_作業履歴照会.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\02_冷却\Frm02002_冷却棚指定出庫設定.resx">
+      <DependentUpon>Frm02002_冷却棚指定出庫設定.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\02_冷却\Frm02013_冷却空棚問合せ.resx">
+      <DependentUpon>Frm02013_冷却空棚問合せ.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\02_冷却\Frm02012_冷却在庫問合せ.resx">
+      <DependentUpon>Frm02012_冷却在庫問合せ.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\02_冷却\Frm02011_冷却棚問合せメンテナンス.resx">
+      <DependentUpon>Frm02011_冷却棚問合せメンテナンス.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\02_冷却\Frm02001_冷却完了出庫設定.resx">
+      <DependentUpon>Frm02001_冷却完了出庫設定.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\02_冷却\Frm02021_冷却側設備状況.resx">
+      <DependentUpon>Frm02021_冷却側設備状況.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt\棚在庫実績_冷却.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>棚在庫実績_冷却.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt\棚在庫実績_醗酵.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>棚在庫実績_醗酵.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt\在庫実績_冷却.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>在庫実績_冷却.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt\在庫実績_醗酵.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>在庫実績_醗酵.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt\生産実績.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>生産実績.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt\入退履歴リスト.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>入退履歴リスト.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\00_共通\Frm00001_発酵側メインメニュー.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm00001_発酵側メインメニュー.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt\マスター設定.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>マスター設定.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="bin\Debug\入退室管理.exe.config" />
+    <None Include="bin\Debug\入退室管理.vshost.exe.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Interop.ACTMULTILib.dll" />
+    <Content Include="bin\Debug\OutlookBarApp.exe" />
+    <Content Include="bin\Debug\RDCTL.dll" />
+    <Content Include="bin\Debug\RX5300DLL.dll" />
+    <Content Include="bin\Debug\shutdown.exe" />
+    <Content Include="bin\Debug\入退共通.dll" />
+    <Content Include="bin\Debug\入退共通.pdb" />
+    <Content Include="bin\Debug\入退共通.xml" />
+    <Content Include="bin\Debug\入退室管理.exe" />
+    <Content Include="bin\Debug\入退室管理.pdb" />
+    <Content Include="bin\Debug\入退室管理.vshost.exe" />
+    <Content Include="bin\Debug\入退室管理.xml" />
+    <Content Include="bin\Debug\共通.dll" />
+    <Content Include="bin\Debug\共通.pdb" />
+    <Content Include="bin\Debug\共通.xml" />
+    <Content Include="bin\Debug\共通Dbライブラリ.dll" />
+    <Content Include="bin\Debug\共通Dbライブラリ.pdb" />
+    <Content Include="bin\Debug\共通Dbライブラリ.xml" />
+    <Content Include="bin\Debug\共通Windowsコントロール.dll" />
+    <Content Include="bin\Debug\共通Windowsコントロール.pdb" />
+    <Content Include="bin\Debug\共通Windowsコントロール.xml" />
+    <Content Include="bin\Debug\画面標準.exe" />
+    <Content Include="bin\Debug\画面標準.pdb" />
+    <Content Include="bin\Debug\画面標準.xml" />
+    <Content Include="imageres-96.ico" />
+    <Content Include="RX5300DLL.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sqlite3odbc.dll" />
+    <Content Include="TC_logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\TC標準\Class\共通Dbライブラリ\共通Dbライブラリ.vbproj">
+      <Project>{53BBE04D-C79B-4CAC-AADE-20C91840D1A1}</Project>
+      <Name>共通Dbライブラリ</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\TC標準\Class\共通Windowsコントロール\共通Windowsコントロール.vbproj">
+      <Project>{0513AAC8-109E-40E3-BCD6-ACBDF0540D76}</Project>
+      <Name>共通Windowsコントロール</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\TC標準\Class\共通\共通.vbproj">
+      <Project>{BC5B09F3-4EB5-4B69-B4D7-82A0546F36EB}</Project>
+      <Name>共通</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\TC標準\Exe\画面標準\画面標準.vbproj">
+      <Project>{F4C5D87F-1DEB-4C3A-A943-5D8113CAE1BA}</Project>
+      <Name>画面標準</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

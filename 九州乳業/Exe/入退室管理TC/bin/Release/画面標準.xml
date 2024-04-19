@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+画面標準
+</name>
+</assembly>
+<members>
+<member name="P:画面標準.My.Resources.Resources.ResourceManager">
+	<summary>
+  このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+</summary>
+</member><member name="P:画面標準.My.Resources.Resources.Culture">
+	<summary>
+  厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
+  現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+</summary>
+</member><member name="T:画面標準.My.Resources.Resources">
+	<summary>
+  ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+</summary>
+</member><member name="T:画面標準.C画面制御">
+	<summary>
+ Windows画面アプリに共通する機能を実装するクラス
+ </summary>
+	<remarks></remarks>
+</member><member name="M:画面標準.CUtil画面標準.Application_ThreadException(System.Object,System.Threading.ThreadExceptionEventArgs)">
+	<summary>未処理例外をキャッチするイベント・ハンドラ（Windowsアプリケーション用）</summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:画面標準.CUtil画面標準.Application_UnhandledException(System.Object,System.UnhandledExceptionEventArgs)">
+	<summary>未処理例外をキャッチするイベント・ハンドラ（主にコンソール・アプリケーション用）</summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:画面標準.CUtil画面標準.エラーメッセージ表示処理(System.Exception,System.String)">
+	<summary>エラーメッセージ表示処理</summary>
+	<param name="ex"></param>
+	<param name="extraMessage"></param>
+	<remarks>ユーザー・フレンドリなダイアログを表示するメソッド</remarks>
+</member>
+</members>
+</doc>
