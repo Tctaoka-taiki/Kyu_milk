@@ -19,33 +19,34 @@ Partial Class Dlg01001_入庫設定
     'コード エディタを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.lbl賞味期限 = New 共通Windowsコントロール.usrLbl
-        Me.lbl品種 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl9 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl10 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl11 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl12 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl6 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl3 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl2 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl1 = New 共通Windowsコントロール.usrLbl
-        Me.txt品種 = New 共通Windowsコントロール.usrTxt
-        Me.txtロットNo = New 共通Windowsコントロール.usrTxt
-        Me.txt賞味期限年 = New 共通Windowsコントロール.usrTxt
-        Me.UsrLbl15 = New 共通Windowsコントロール.usrLbl
-        Me.txt賞味期限月 = New 共通Windowsコントロール.usrTxt
-        Me.txt賞味期限日 = New 共通Windowsコントロール.usrTxt
-        Me.txt醗酵開始日 = New 共通Windowsコントロール.usrTxt
-        Me.txt醗酵開始月 = New 共通Windowsコントロール.usrTxt
-        Me.UsrLbl16 = New 共通Windowsコントロール.usrLbl
-        Me.txt醗酵開始年 = New 共通Windowsコントロール.usrTxt
-        Me.UsrLbl17 = New 共通Windowsコントロール.usrLbl
-        Me.txt醗酵開始分 = New 共通Windowsコントロール.usrTxt
-        Me.txt醗酵開始時 = New 共通Windowsコントロール.usrTxt
-        Me.UsrLbl18 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl19 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl20 = New 共通Windowsコントロール.usrLbl
-        Me.lblライン名称 = New 共通Windowsコントロール.usrLbl
+        Me.lbl賞味期限 = New 共通Windowsコントロール.usrLbl()
+        Me.lbl品種 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl9 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl10 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl11 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl12 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl6 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl3 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl2 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl1 = New 共通Windowsコントロール.usrLbl()
+        Me.txt品種 = New 共通Windowsコントロール.usrTxt()
+        Me.txtロットNo = New 共通Windowsコントロール.usrTxt()
+        Me.txt賞味期限年 = New 共通Windowsコントロール.usrTxt()
+        Me.UsrLbl15 = New 共通Windowsコントロール.usrLbl()
+        Me.txt賞味期限月 = New 共通Windowsコントロール.usrTxt()
+        Me.txt賞味期限日 = New 共通Windowsコントロール.usrTxt()
+        Me.txt醗酵開始日 = New 共通Windowsコントロール.usrTxt()
+        Me.txt醗酵開始月 = New 共通Windowsコントロール.usrTxt()
+        Me.UsrLbl16 = New 共通Windowsコントロール.usrLbl()
+        Me.txt醗酵開始年 = New 共通Windowsコントロール.usrTxt()
+        Me.UsrLbl17 = New 共通Windowsコントロール.usrLbl()
+        Me.txt醗酵開始分 = New 共通Windowsコントロール.usrTxt()
+        Me.txt醗酵開始時 = New 共通Windowsコントロール.usrTxt()
+        Me.UsrLbl18 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl19 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl20 = New 共通Windowsコントロール.usrLbl()
+        Me.lblライン名称 = New 共通Windowsコントロール.usrLbl()
+        Me.lblロットNo = New 共通Windowsコントロール.usrLbl()
         Me.SuspendLayout()
         '
         'btnF1
@@ -310,7 +311,7 @@ Partial Class Dlg01001_入庫設定
         Me.txtロットNo.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
         Me.txtロットNo.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txtロットNo.Isクリア = True
-        Me.txtロットNo.Location = New System.Drawing.Point(201, 102)
+        Me.txtロットNo.Location = New System.Drawing.Point(248, 102)
         Me.txtロットNo.MaxLength = 6
         Me.txtロットNo.Name = "txtロットNo"
         Me.txtロットNo.pAutoFocus = True
@@ -324,9 +325,9 @@ Partial Class Dlg01001_入庫設定
         Me.txtロットNo.pFromToErrText = ""
         Me.txtロットNo.pFromToSearch = 共通Windowsコントロール.MCtl.gEnmFromTo.None
         Me.txtロットNo.pID = ""
-        Me.txtロットNo.pMaxByte = 6
+        Me.txtロットNo.pMaxByte = 3
         Me.txtロットNo.pPadWord = "0"
-        Me.txtロットNo.Size = New System.Drawing.Size(91, 26)
+        Me.txtロットNo.Size = New System.Drawing.Size(44, 26)
         Me.txtロットNo.TabIndex = 2
         Me.txtロットNo.エラー表示用項目名 = ""
         '
@@ -642,10 +643,27 @@ Partial Class Dlg01001_入庫設定
         Me.lblライン名称.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lblライン名称.エラー表示用項目名 = ""
         '
+        'lblロットNo
+        '
+        Me.lblロットNo.AutoSize = True
+        Me.lblロットNo.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblロットNo.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.lblロットNo.Isクリア = False
+        Me.lblロットNo.Location = New System.Drawing.Point(201, 105)
+        Me.lblロットNo.Name = "lblロットNo"
+        Me.lblロットNo.pClearValue = ""
+        Me.lblロットNo.pID = ""
+        Me.lblロットNo.Size = New System.Drawing.Size(48, 19)
+        Me.lblロットNo.TabIndex = 103
+        Me.lblロットNo.Text = "NNN"
+        Me.lblロットNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblロットNo.エラー表示用項目名 = ""
+        '
         'Dlg01001_入庫設定
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.ClientSize = New System.Drawing.Size(647, 343)
+        Me.Controls.Add(Me.lblロットNo)
         Me.Controls.Add(Me.lblライン名称)
         Me.Controls.Add(Me.UsrLbl20)
         Me.Controls.Add(Me.UsrLbl19)
@@ -714,6 +732,7 @@ Partial Class Dlg01001_入庫設定
         Me.Controls.SetChildIndex(Me.UsrLbl19, 0)
         Me.Controls.SetChildIndex(Me.UsrLbl20, 0)
         Me.Controls.SetChildIndex(Me.lblライン名称, 0)
+        Me.Controls.SetChildIndex(Me.lblロットNo, 0)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -745,5 +764,5 @@ Partial Class Dlg01001_入庫設定
     Friend WithEvents UsrLbl19 As 共通Windowsコントロール.usrLbl
     Friend WithEvents UsrLbl20 As 共通Windowsコントロール.usrLbl
     Friend WithEvents lblライン名称 As 共通Windowsコントロール.usrLbl
-
+    Friend WithEvents lblロットNo As usrLbl
 End Class

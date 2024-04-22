@@ -18,10 +18,13 @@ Public Class Dlg01001_入庫設定
         Select Case m画面モード
             Case 0
                 Me.lblライン名称.Text = "ハード１"
+                Me.lblロットNo.Text = "100"
             Case 1
                 Me.lblライン名称.Text = "プレーン１"
+                Me.lblロットNo.Text = "200"
             Case 2
                 Me.lblライン名称.Text = "ハード２"
+                Me.lblロットNo.Text = "100"
             Case Else
         End Select
 
@@ -65,8 +68,8 @@ Public Class Dlg01001_入庫設定
                 Me.txtロットNo.Focus()
                 Exit Sub
 
-            ElseIf Me.txtロットNo.Text = "000000" Then
-                If CMsg.gMsg_YesNo("ロットNo:000000でよろしいですか？") = Windows.Forms.DialogResult.No Then
+            ElseIf Me.txtロットNo.Text = "000" Then
+                If CMsg.gMsg_YesNo("ロットNo:" & Me.lblロットNo.Text & "000でよろしいですか？") = Windows.Forms.DialogResult.No Then
                     Me.txtロットNo.Text = ""
                     Me.txtロットNo.Focus()
                     Exit Sub
@@ -75,7 +78,7 @@ Public Class Dlg01001_入庫設定
             End If
 
             '0埋め処理
-            Me.txtロットNo.Text = Me.txtロットNo.Text.PadLeft(6, "0"c)
+            Me.txtロットNo.Text = Me.txtロットNo.Text.PadLeft(3, "0"c)
             '入力情報のチェック（DN入庫製品に登録済のロットNoは使用できない）
             If blnロット重複有り_トラッキング() Or blnロット重複有り_製造製品() Then
                 MessageBox.Show("既に利用させているロットNoです。")
@@ -121,7 +124,7 @@ Public Class Dlg01001_入庫設定
                 .pSQL取得タイプ = CSql.SQL_TYPE.SQL_UPDATE
                 .pテーブル名 = "DN製造製品"
                 .gSubColumnValue("品種CD", Me.txt品種.Text, True)
-                .gSubColumnValue("ロットNo", Me.txtロットNo.Text, True)
+                .gSubColumnValue("ロットNo", Me.lblロットNo.Text & Me.txtロットNo.Text, True)
                 .gSubColumnValue("賞味期限", Me.txt賞味期限年.Text & "/" & Me.txt賞味期限月.Text & "/" & Me.txt賞味期限日.Text & " 00:00:00", True)
                 .gSubColumnValue("醗酵開始時刻", Me.txt醗酵開始年.Text & "/" & Me.txt醗酵開始月.Text & "/" & Me.txt醗酵開始日.Text & " " & Me.txt醗酵開始時.Text & ":" & Me.txt醗酵開始分.Text & ":00", True)
                 .gSubColumnValue("更新プログラム", Name, True)
@@ -238,7 +241,7 @@ Public Class Dlg01001_入庫設定
                 Exit Sub
             End If
 
-            Me.txtロットNo.Text = Me.txtロットNo.Text.PadLeft(6, "0"c)
+            Me.txtロットNo.Text = Me.txtロットNo.Text.PadLeft(3, "0"c)
             '入力情報のチェック（DN入庫製品に登録済のロットNoは使用できない）
             If blnロット重複有り_トラッキング() Or blnロット重複有り_製造製品() Then
                 MessageBox.Show("既に利用させているロットNoです。")
