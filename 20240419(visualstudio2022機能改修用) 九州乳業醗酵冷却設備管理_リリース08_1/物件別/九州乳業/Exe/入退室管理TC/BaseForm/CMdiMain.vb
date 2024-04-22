@@ -468,7 +468,35 @@ EventExitSub:
 
         Return str品種名
     End Function
+    Public Function str所定賞味期間取得(ByVal str製品区分 As String, ByVal str品種CD As String) As String
+        Dim reader As DbDataReader = Nothing
+        Dim str所定賞味期間 As String = ""
+        Try
 
+            With New CSqlEx
+                .gSubSelect("A.品種名")
+                .gSubSelect("A.所定醗酵時間")
+                .gSubSelect("A.所定冷却時間")
+                .gSubSelect("A.所定賞味期間")
+                .gSubFrom("DM品種 A")
+                If str製品区分 <> 9 Then
+                    .gSubWhere("A.製品区分", str製品区分)
+                End If
+                .gSubWhere("A.品種CD", str品種CD)
+
+                If CUsrctl.gDp.gBlnReader(.gSQL文の取得, reader) Then
+                    While reader.Read
+                        str所定賞味期間 = reader.GetValue(3)
+                    End While
+                End If
+            End With
+        Catch ex As Exception
+        Finally
+            CUsrctl.gDp.gSubReaderClose(reader)
+        End Try
+
+        Return str所定賞味期間
+    End Function
     Public Function blnON状態(ByVal 倉庫区分 As Integer, ByVal デバイスNo As Integer, ByVal ビットNo As Integer) As Boolean
         Dim reader As DbDataReader = Nothing
         Try

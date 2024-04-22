@@ -97,6 +97,7 @@ Public Class Frm01011_醗酵マスター設定
                 .gSubSelect("品種名")
                 .gSubSelect("所定醗酵時間")
                 .gSubSelect("所定冷却時間")
+                .gSubSelect("所定賞味期間")
                 .gSubFrom("DM品種")
                 .gSubWhere("製品区分", Me.cmb製品区分.SelectedIndex, , , , , , , False)
                 .gSubOrderBy("品種CD")
@@ -109,6 +110,7 @@ Public Class Frm01011_醗酵マスター設定
                         Me.dgv生産データ.Item(1, i).Value = reader.GetValue(1)
                         Me.dgv生産データ.Item(2, i).Value = reader.GetValue(2) & "分"
                         Me.dgv生産データ.Item(3, i).Value = reader.GetValue(3) & "分"
+                        Me.dgv生産データ.Item(4, i).Value = reader.GetValue(4) & "日"
                         i += 1
                     End While
 

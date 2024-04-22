@@ -38,6 +38,12 @@ Public Class Dlg01999_品種登録
             Exit Sub
         End If
 
+        If Not IsNumeric(Me.txt所定賞味期間.Text) Or Val(Me.txt所定賞味期間.Text) < 0 Then
+            MessageBox.Show("所定賞味期間が正しくありません。")
+            Me.txt所定賞味期間.Focus()
+            Exit Sub
+        End If
+
         If CMsg.gMsg_YesNo("登録を行ってもよろしいですか？") = Windows.Forms.DialogResult.No Then
             Exit Sub
         End If
@@ -61,6 +67,7 @@ Public Class Dlg01999_品種登録
                 .gSubColumnValue("所定冷却時間", Me.txt所定冷却時間.Text, False)
                 .gSubColumnValue("登録日時", "GETDATE()", False)
                 .gSubColumnValue("更新プログラム", Name, True)
+                .gSubColumnValue("所定賞味期間", Me.txt所定賞味期間.Text, False)
 
                 If Not CUsrctl.gDp.gBlnExecute(.gSQL文の取得, New System.Data.SqlClient.SqlCommand) Then
                     Exit Sub
@@ -77,6 +84,7 @@ Public Class Dlg01999_品種登録
         Me.txt品種名.Text = ""
         Me.txt所定発酵時間.Text = ""
         Me.txt所定冷却時間.Text = ""
+        Me.txt所定賞味期間.Text = ""
 
     End Sub
 
@@ -130,6 +138,9 @@ Public Class Dlg01999_品種登録
     Private Sub txt所定時間_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt所定発酵時間.Leave, txt所定冷却時間.Leave
         mSubボタン設定()
     End Sub
+    Private Sub txt所定賞味期間_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt所定賞味期間.Leave
+        mSubボタン設定()
+    End Sub
 
     Public Function bln品種名が存在する(ByVal str品種名 As String) As Boolean
         Dim reader As DbDataReader = Nothing
@@ -158,7 +169,7 @@ Public Class Dlg01999_品種登録
     End Function
 
     Private Sub mSubボタン設定()
-        If Trim(Me.txt品種.Text) <> "" And Trim(Me.txt品種名.Text) <> "" And Trim(Me.txt所定発酵時間.Text) <> "" And Trim(Me.txt所定冷却時間.Text) <> "" Then
+        If Trim(Me.txt品種.Text) <> "" And Trim(Me.txt品種名.Text) <> "" And Trim(Me.txt所定発酵時間.Text) <> "" And Trim(Me.txt所定冷却時間.Text) <> "" And Trim(Me.txt所定賞味期間.Text) <> "" Then
             Me.btnF1.Enabled = True
         Else
             Me.btnF1.Enabled = False

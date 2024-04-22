@@ -33,6 +33,7 @@ Public Class Dlg01999_品種修正
                 .gSubColumnValue("品種名", Me.txt品種名.Text, True)
                 .gSubColumnValue("所定醗酵時間", Me.txt所定発酵時間.Text, False)
                 .gSubColumnValue("所定冷却時間", Me.txt所定冷却時間.Text, False)
+                .gSubColumnValue("所定賞味期間", Me.txt所定賞味期間.Text, False)
                 .gSubWhere("品種CD", Me.txt品種.Text, , , , , , , False)
 
                 If Not CUsrctl.gDp.gBlnExecute(.gSQL文の取得, New System.Data.SqlClient.SqlCommand) Then
@@ -100,6 +101,7 @@ Public Class Dlg01999_品種修正
                 .gSubSelect("品種名")
                 .gSubSelect("所定醗酵時間")
                 .gSubSelect("所定冷却時間")
+                .gSubSelect("所定賞味期間")
                 .gSubFrom("DM品種")
                 .gSubWhere("品種CD", Me.txt品種.Text, , , , , , , False)
 
@@ -113,6 +115,7 @@ Public Class Dlg01999_品種修正
                         Me.txt品種名.Text = reader.GetValue(1)
                         Me.txt所定発酵時間.Text = reader.GetValue(2)
                         Me.txt所定冷却時間.Text = reader.GetValue(3)
+                        Me.txt所定賞味期間.Text = reader.GetValue(4)
                         Me.btnF1.Enabled = True
                         Exit Sub
                     End While

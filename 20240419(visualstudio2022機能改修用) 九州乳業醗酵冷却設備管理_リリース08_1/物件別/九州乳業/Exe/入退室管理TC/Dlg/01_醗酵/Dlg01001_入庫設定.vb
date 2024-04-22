@@ -156,13 +156,29 @@ Public Class Dlg01001_入庫設定
             Me.txt品種.Text = ""
             Exit Sub
         End If
-
+        Dim 現在時刻 As DateTime = DateTime.Now
         '入力されている品種CDを元に品種名を表示する
         Select Case m画面モード
             Case 1      'プレーン製品
                 Me.lbl品種.Text = CMdiMain.str品種名取得(1, Me.txt品種.Text)
+                Dim 賞味期限 As Date
+                Try
+                    賞味期限 = DateAdd("d", Convert.ToInt32(CMdiMain.str所定賞味期間取得(1, Me.txt品種.Text)), 現在時刻)
+                    Me.txt賞味期限年.Text = 賞味期限.Year.ToString
+                    Me.txt賞味期限月.Text = 賞味期限.Month.ToString.PadLeft(2, "0"c)
+                    Me.txt賞味期限日.Text = 賞味期限.Day.ToString.PadLeft(2, "0"c)
+                Catch ex As Exception
+                End Try
             Case Else   'ハード製品
                 Me.lbl品種.Text = CMdiMain.str品種名取得(0, Me.txt品種.Text)
+                Dim 賞味期限 As Date
+                Try
+                    賞味期限 = DateAdd("d", Convert.ToInt32(CMdiMain.str所定賞味期間取得(0, Me.txt品種.Text)), 現在時刻)
+                    Me.txt賞味期限年.Text = 賞味期限.Year.ToString
+                    Me.txt賞味期限月.Text = 賞味期限.Month.ToString.PadLeft(2, "0"c)
+                    Me.txt賞味期限日.Text = 賞味期限.Day.ToString.PadLeft(2, "0"c)
+                Catch ex As Exception
+                End Try
         End Select
     End Sub
 

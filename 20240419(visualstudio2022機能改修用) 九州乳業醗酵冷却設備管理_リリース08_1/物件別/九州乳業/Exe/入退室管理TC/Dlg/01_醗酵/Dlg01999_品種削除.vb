@@ -97,6 +97,7 @@ Public Class Dlg01999_品種削除
                 .gSubSelect("品種名")
                 .gSubSelect("所定醗酵時間")
                 .gSubSelect("所定冷却時間")
+                .gSubSelect("所定賞味期間")
                 .gSubFrom("DM品種")
                 .gSubWhere("品種CD", Me.txt品種.Text, , , , , , , False)
 
@@ -108,8 +109,9 @@ Public Class Dlg01999_品種削除
                             Me.lbl製品区分.Text = "プレーン"
                         End If
                         Me.lbl品種名.Text = reader.GetValue(1)
-                        Me.lbl所定発酵時間.Text = reader.GetValue(2)
-                        Me.lbl所定冷却時間.Text = reader.GetValue(2)
+                        Me.lbl所定発酵時間.Text = reader.GetValue(2) & "分"
+                        Me.lbl所定冷却時間.Text = reader.GetValue(3) & "分"
+                        Me.lbl所定賞味期間.Text = reader.GetValue(4) & "日"
                         Me.btnF1.Enabled = True
                         Exit Sub
                     End While
@@ -126,6 +128,7 @@ Public Class Dlg01999_品種削除
         Me.lbl品種名.Text = ""
         Me.lbl所定発酵時間.Text = ""
         Me.lbl所定冷却時間.Text = ""
+        Me.lbl所定賞味期間.Text = ""
         Me.btnF1.Enabled = False
     End Sub
 

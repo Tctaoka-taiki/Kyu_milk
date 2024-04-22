@@ -19,22 +19,25 @@ Partial Class Dlg01999_品種削除
     'コード エディタを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.txt品種 = New 共通Windowsコントロール.usrTxt
-        Me.lbl品種 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl10 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl11 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl12 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl8 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl13 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl14 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl22 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl23 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl4 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl5 = New 共通Windowsコントロール.usrLbl
-        Me.lbl製品区分 = New 共通Windowsコントロール.usrLbl
-        Me.lbl品種名 = New 共通Windowsコントロール.usrLbl
-        Me.lbl所定発酵時間 = New 共通Windowsコントロール.usrLbl
-        Me.lbl所定冷却時間 = New 共通Windowsコントロール.usrLbl
+        Me.txt品種 = New 共通Windowsコントロール.usrTxt()
+        Me.lbl品種 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl10 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl11 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl12 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl8 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl13 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl14 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl22 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl23 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl4 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl5 = New 共通Windowsコントロール.usrLbl()
+        Me.lbl製品区分 = New 共通Windowsコントロール.usrLbl()
+        Me.lbl品種名 = New 共通Windowsコントロール.usrLbl()
+        Me.lbl所定発酵時間 = New 共通Windowsコントロール.usrLbl()
+        Me.lbl所定冷却時間 = New 共通Windowsコントロール.usrLbl()
+        Me.lbl所定賞味期間 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl2 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl3 = New 共通Windowsコントロール.usrLbl()
         Me.SuspendLayout()
         '
         'btnF1
@@ -366,10 +369,59 @@ Partial Class Dlg01999_品種削除
         Me.lbl所定冷却時間.Text = "UsrLbl7"
         Me.lbl所定冷却時間.エラー表示用項目名 = ""
         '
+        'lbl所定賞味期間
+        '
+        Me.lbl所定賞味期間.AutoSize = True
+        Me.lbl所定賞味期間.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.lbl所定賞味期間.Isクリア = False
+        Me.lbl所定賞味期間.Location = New System.Drawing.Point(201, 210)
+        Me.lbl所定賞味期間.Name = "lbl所定賞味期間"
+        Me.lbl所定賞味期間.pClearValue = ""
+        Me.lbl所定賞味期間.pID = ""
+        Me.lbl所定賞味期間.Size = New System.Drawing.Size(77, 19)
+        Me.lbl所定賞味期間.TabIndex = 151
+        Me.lbl所定賞味期間.Text = "UsrLbl8"
+        Me.lbl所定賞味期間.エラー表示用項目名 = ""
+        '
+        'UsrLbl2
+        '
+        Me.UsrLbl2.AutoSize = True
+        Me.UsrLbl2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.UsrLbl2.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.UsrLbl2.Isクリア = False
+        Me.UsrLbl2.Location = New System.Drawing.Point(175, 210)
+        Me.UsrLbl2.Name = "UsrLbl2"
+        Me.UsrLbl2.pClearValue = ""
+        Me.UsrLbl2.pID = ""
+        Me.UsrLbl2.Size = New System.Drawing.Size(20, 19)
+        Me.UsrLbl2.TabIndex = 153
+        Me.UsrLbl2.Text = "："
+        Me.UsrLbl2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.UsrLbl2.エラー表示用項目名 = ""
+        '
+        'UsrLbl3
+        '
+        Me.UsrLbl3.AutoSize = True
+        Me.UsrLbl3.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.UsrLbl3.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.UsrLbl3.Isクリア = False
+        Me.UsrLbl3.Location = New System.Drawing.Point(40, 210)
+        Me.UsrLbl3.Name = "UsrLbl3"
+        Me.UsrLbl3.pClearValue = ""
+        Me.UsrLbl3.pID = ""
+        Me.UsrLbl3.Size = New System.Drawing.Size(129, 19)
+        Me.UsrLbl3.TabIndex = 152
+        Me.UsrLbl3.Text = "所定冷却時間"
+        Me.UsrLbl3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.UsrLbl3.エラー表示用項目名 = ""
+        '
         'Dlg01999_品種削除
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.ClientSize = New System.Drawing.Size(647, 305)
+        Me.Controls.Add(Me.lbl所定賞味期間)
+        Me.Controls.Add(Me.UsrLbl2)
+        Me.Controls.Add(Me.UsrLbl3)
         Me.Controls.Add(Me.lbl所定冷却時間)
         Me.Controls.Add(Me.lbl所定発酵時間)
         Me.Controls.Add(Me.lbl品種名)
@@ -416,6 +468,9 @@ Partial Class Dlg01999_品種削除
         Me.Controls.SetChildIndex(Me.lbl品種名, 0)
         Me.Controls.SetChildIndex(Me.lbl所定発酵時間, 0)
         Me.Controls.SetChildIndex(Me.lbl所定冷却時間, 0)
+        Me.Controls.SetChildIndex(Me.UsrLbl3, 0)
+        Me.Controls.SetChildIndex(Me.UsrLbl2, 0)
+        Me.Controls.SetChildIndex(Me.lbl所定賞味期間, 0)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -436,5 +491,7 @@ Partial Class Dlg01999_品種削除
     Friend WithEvents lbl品種名 As 共通Windowsコントロール.usrLbl
     Friend WithEvents lbl所定発酵時間 As 共通Windowsコントロール.usrLbl
     Friend WithEvents lbl所定冷却時間 As 共通Windowsコントロール.usrLbl
-
+    Friend WithEvents lbl所定賞味期間 As usrLbl
+    Friend WithEvents UsrLbl2 As usrLbl
+    Friend WithEvents UsrLbl3 As usrLbl
 End Class
