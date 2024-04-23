@@ -444,7 +444,7 @@ Partial Class Dlg01001_入庫設定
         Me.txt醗酵開始日.pMaxByte = 2
         Me.txt醗酵開始日.pPadWord = "0"
         Me.txt醗酵開始日.Size = New System.Drawing.Size(40, 26)
-        Me.txt醗酵開始日.TabIndex = 8
+        Me.txt醗酵開始日.TabIndex = 122
         Me.txt醗酵開始日.エラー表示用項目名 = ""
         '
         'txt醗酵開始月
@@ -469,7 +469,7 @@ Partial Class Dlg01001_入庫設定
         Me.txt醗酵開始月.pMaxByte = 2
         Me.txt醗酵開始月.pPadWord = "0"
         Me.txt醗酵開始月.Size = New System.Drawing.Size(40, 26)
-        Me.txt醗酵開始月.TabIndex = 7
+        Me.txt醗酵開始月.TabIndex = 121
         Me.txt醗酵開始月.エラー表示用項目名 = ""
         '
         'UsrLbl16
@@ -510,7 +510,7 @@ Partial Class Dlg01001_入庫設定
         Me.txt醗酵開始年.pMaxByte = 4
         Me.txt醗酵開始年.pPadWord = "0"
         Me.txt醗酵開始年.Size = New System.Drawing.Size(59, 26)
-        Me.txt醗酵開始年.TabIndex = 6
+        Me.txt醗酵開始年.TabIndex = 120
         Me.txt醗酵開始年.エラー表示用項目名 = ""
         '
         'UsrLbl17
