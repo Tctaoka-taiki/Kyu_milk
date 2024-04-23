@@ -19,24 +19,28 @@ Partial Class Frm01004_醗酵完了出庫設定
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Me.dgv生産データ = New 共通Windowsコントロール.UsrDataGridView
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.dgv生産データ = New 共通Windowsコントロール.UsrDataGridView()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.ColNo = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ColロットNo = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ColサンプルNo = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Col品種名 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Col所定醗酵時間 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Col醗酵経過時間 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Col状況 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ColNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColロットNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColサンプルNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col品種名 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col所定醗酵時間 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col醗酵経過時間 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col状況 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col棚数 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col総クレート数 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgv生産データ, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -116,7 +120,7 @@ Partial Class Frm01004_醗酵完了出庫設定
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgv生産データ.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgv生産データ.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv生産データ.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColNo, Me.ColロットNo, Me.ColサンプルNo, Me.Col品種名, Me.Col所定醗酵時間, Me.Col醗酵経過時間, Me.Col状況})
+        Me.dgv生産データ.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColNo, Me.ColロットNo, Me.ColサンプルNo, Me.Col品種名, Me.Col所定醗酵時間, Me.Col醗酵経過時間, Me.Col状況, Me.Col棚数, Me.Col総クレート数})
         Me.dgv生産データ.Isクリア = True
         Me.dgv生産データ.Location = New System.Drawing.Point(12, 12)
         Me.dgv生産データ.Name = "dgv生産データ"
@@ -142,7 +146,7 @@ Partial Class Frm01004_醗酵完了出庫設定
         Me.ColNo.HeaderText = "No"
         Me.ColNo.Name = "ColNo"
         Me.ColNo.ReadOnly = True
-        Me.ColNo.Width = 50
+        Me.ColNo.Width = 30
         '
         'ColロットNo
         '
@@ -160,7 +164,7 @@ Partial Class Frm01004_醗酵完了出庫設定
         Me.ColサンプルNo.HeaderText = "SNo"
         Me.ColサンプルNo.Name = "ColサンプルNo"
         Me.ColサンプルNo.ReadOnly = True
-        Me.ColサンプルNo.Width = 50
+        Me.ColサンプルNo.Width = 40
         '
         'Col品種名
         '
@@ -178,7 +182,7 @@ Partial Class Frm01004_醗酵完了出庫設定
         Me.Col所定醗酵時間.HeaderText = "所定醗酵時間"
         Me.Col所定醗酵時間.Name = "Col所定醗酵時間"
         Me.Col所定醗酵時間.ReadOnly = True
-        Me.Col所定醗酵時間.Width = 165
+        Me.Col所定醗酵時間.Width = 125
         '
         'Col醗酵経過時間
         '
@@ -187,7 +191,7 @@ Partial Class Frm01004_醗酵完了出庫設定
         Me.Col醗酵経過時間.HeaderText = "醗酵経過時間"
         Me.Col醗酵経過時間.Name = "Col醗酵経過時間"
         Me.Col醗酵経過時間.ReadOnly = True
-        Me.Col醗酵経過時間.Width = 165
+        Me.Col醗酵経過時間.Width = 125
         '
         'Col状況
         '
@@ -196,7 +200,27 @@ Partial Class Frm01004_醗酵完了出庫設定
         Me.Col状況.HeaderText = "状況"
         Me.Col状況.Name = "Col状況"
         Me.Col状況.ReadOnly = True
-        Me.Col状況.Width = 175
+        Me.Col状況.Width = 90
+        '
+        'Col棚数
+        '
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Col棚数.DefaultCellStyle = DataGridViewCellStyle9
+        Me.Col棚数.FillWeight = 80.0!
+        Me.Col棚数.HeaderText = "棚数"
+        Me.Col棚数.Name = "Col棚数"
+        Me.Col棚数.ReadOnly = True
+        Me.Col棚数.Width = 70
+        '
+        'Col総クレート数
+        '
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Col総クレート数.DefaultCellStyle = DataGridViewCellStyle10
+        Me.Col総クレート数.FillWeight = 80.0!
+        Me.Col総クレート数.HeaderText = "総クレート数"
+        Me.Col総クレート数.Name = "Col総クレート数"
+        Me.Col総クレート数.ReadOnly = True
+        Me.Col総クレート数.Width = 125
         '
         'Frm01004_醗酵完了出庫設定
         '
@@ -224,12 +248,13 @@ Partial Class Frm01004_醗酵完了出庫設定
     End Sub
     Friend WithEvents dgv生産データ As 共通Windowsコントロール.UsrDataGridView
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
-    Friend WithEvents ColNo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColロットNo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColサンプルNo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Col品種名 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Col所定醗酵時間 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Col醗酵経過時間 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Col状況 As System.Windows.Forms.DataGridViewTextBoxColumn
-
+    Friend WithEvents ColNo As DataGridViewTextBoxColumn
+    Friend WithEvents ColロットNo As DataGridViewTextBoxColumn
+    Friend WithEvents ColサンプルNo As DataGridViewTextBoxColumn
+    Friend WithEvents Col品種名 As DataGridViewTextBoxColumn
+    Friend WithEvents Col所定醗酵時間 As DataGridViewTextBoxColumn
+    Friend WithEvents Col醗酵経過時間 As DataGridViewTextBoxColumn
+    Friend WithEvents Col状況 As DataGridViewTextBoxColumn
+    Friend WithEvents Col棚数 As DataGridViewTextBoxColumn
+    Friend WithEvents Col総クレート数 As DataGridViewTextBoxColumn
 End Class

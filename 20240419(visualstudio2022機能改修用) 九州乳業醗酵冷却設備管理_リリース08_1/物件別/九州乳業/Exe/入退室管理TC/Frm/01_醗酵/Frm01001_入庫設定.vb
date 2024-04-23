@@ -170,6 +170,7 @@ Public Class Frm01001_“üŒÉİ’è
         Me.lbl”®yŠJn.Text = ""
         Me.lblŠ’è”®yŠÔ.Text = ""
         Me.lblŠ’è—â‹pŠÔ.Text = ""
+        Me.lbl”­yI—¹.Text = ""
     End Sub
 
     Private Sub “üŒÉİ’è•\¦()
@@ -204,6 +205,8 @@ Public Class Frm01001_“üŒÉİ’è
                         Me.lbl”®yŠJn.Text = reader.GetValue(4).ToString
                         Me.lblŠ’è”®yŠÔ.Text = reader.GetValue(5) & "(•ª)"
                         Me.lblŠ’è—â‹pŠÔ.Text = reader.GetValue(6) & "(•ª)"
+                        Me.lbl”­yI—¹.Text = str”­yI—¹æ“¾(reader.GetValue(4), reader.GetValue(5).ToString)
+
                         CNT += 1
                     End While
 
@@ -216,6 +219,7 @@ Public Class Frm01001_“üŒÉİ’è
                         Me.lbl”®yŠJn.Text = ""
                         Me.lblŠ’è”®yŠÔ.Text = ""
                         Me.lblŠ’è—â‹pŠÔ.Text = ""
+                        Me.lbl”­yI—¹.Text = ""
                     End If
 
                 End If
@@ -227,7 +231,10 @@ Public Class Frm01001_“üŒÉİ’è
             CUsrctl.gDp.gSubReaderClose(reader)
         End Try
     End Sub
-
+    Private Function str”­yI—¹æ“¾(ByVal ”­yŠJn As Date, ByVal Š’è”­yŠÔ As String) As String
+        Dim ”­yI—¹ As Date = ”­yŠJn.AddMinutes(Convert.ToInt32(Š’è”­yŠÔ))
+        Return ”­yI—¹.ToString
+    End Function
     Private Function intŠm’è‰×”æ“¾() As Integer
         Dim reader As DbDataReader = Nothing
         Dim intŠm’è‰×” As Integer = 0

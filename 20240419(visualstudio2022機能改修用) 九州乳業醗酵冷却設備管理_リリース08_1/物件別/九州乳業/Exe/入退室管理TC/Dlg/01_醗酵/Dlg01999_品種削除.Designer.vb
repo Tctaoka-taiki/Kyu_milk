@@ -411,7 +411,7 @@ Partial Class Dlg01999_品種削除
         Me.UsrLbl3.pID = ""
         Me.UsrLbl3.Size = New System.Drawing.Size(129, 19)
         Me.UsrLbl3.TabIndex = 152
-        Me.UsrLbl3.Text = "所定冷却時間"
+        Me.UsrLbl3.Text = "所定賞味期間"
         Me.UsrLbl3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.UsrLbl3.エラー表示用項目名 = ""
         '

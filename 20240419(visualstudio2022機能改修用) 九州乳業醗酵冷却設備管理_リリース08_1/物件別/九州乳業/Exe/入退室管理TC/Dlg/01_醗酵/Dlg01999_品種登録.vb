@@ -26,9 +26,9 @@ Public Class Dlg01999_品種登録
             Exit Sub
         End If
 
-        If Not IsNumeric(Me.txt所定発酵時間.Text) Or Val(Me.txt所定発酵時間.Text) < 0 Then
-            MessageBox.Show("所定発酵時間が正しくありません。")
-            Me.txt所定発酵時間.Focus()
+        If Not IsNumeric(Me.txt所定醗酵時間.Text) Or Val(Me.txt所定醗酵時間.Text) < 0 Then
+            MessageBox.Show("所定醗酵時間が正しくありません。")
+            Me.txt所定醗酵時間.Focus()
             Exit Sub
         End If
 
@@ -63,7 +63,7 @@ Public Class Dlg01999_品種登録
                 .gSubColumnValue("製品区分", Me.cmb製品区分.SelectedIndex, False)
                 .gSubColumnValue("品種CD", Me.txt品種.Text, False)
                 .gSubColumnValue("品種名", Me.txt品種名.Text, True)
-                .gSubColumnValue("所定醗酵時間", Me.txt所定発酵時間.Text, False)
+                .gSubColumnValue("所定醗酵時間", Me.txt所定醗酵時間.Text, False)
                 .gSubColumnValue("所定冷却時間", Me.txt所定冷却時間.Text, False)
                 .gSubColumnValue("登録日時", "GETDATE()", False)
                 .gSubColumnValue("更新プログラム", Name, True)
@@ -82,7 +82,7 @@ Public Class Dlg01999_品種登録
     Private Sub btnF8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnF8.Click
         Me.txt品種.Text = ""
         Me.txt品種名.Text = ""
-        Me.txt所定発酵時間.Text = ""
+        Me.txt所定醗酵時間.Text = ""
         Me.txt所定冷却時間.Text = ""
         Me.txt所定賞味期間.Text = ""
 
@@ -135,7 +135,7 @@ Public Class Dlg01999_品種登録
         End Try
     End Sub
 
-    Private Sub txt所定時間_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt所定発酵時間.Leave, txt所定冷却時間.Leave
+    Private Sub txt所定時間_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt所定醗酵時間.Leave, txt所定冷却時間.Leave
         mSubボタン設定()
     End Sub
     Private Sub txt所定賞味期間_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt所定賞味期間.Leave
@@ -169,7 +169,7 @@ Public Class Dlg01999_品種登録
     End Function
 
     Private Sub mSubボタン設定()
-        If Trim(Me.txt品種.Text) <> "" And Trim(Me.txt品種名.Text) <> "" And Trim(Me.txt所定発酵時間.Text) <> "" And Trim(Me.txt所定冷却時間.Text) <> "" And Trim(Me.txt所定賞味期間.Text) <> "" Then
+        If Trim(Me.txt品種.Text) <> "" And Trim(Me.txt品種名.Text) <> "" And Trim(Me.txt所定醗酵時間.Text) <> "" And Trim(Me.txt所定冷却時間.Text) <> "" And Trim(Me.txt所定賞味期間.Text) <> "" Then
             Me.btnF1.Enabled = True
         Else
             Me.btnF1.Enabled = False

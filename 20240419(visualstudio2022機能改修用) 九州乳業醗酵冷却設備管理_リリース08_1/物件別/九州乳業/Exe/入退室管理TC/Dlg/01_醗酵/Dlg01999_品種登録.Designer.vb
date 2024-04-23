@@ -29,7 +29,7 @@ Partial Class Dlg01999_品種登録
         Me.UsrLbl13 = New 共通Windowsコントロール.usrLbl()
         Me.UsrLbl14 = New 共通Windowsコントロール.usrLbl()
         Me.txt品種名 = New 共通Windowsコントロール.usrTxt()
-        Me.txt所定発酵時間 = New 共通Windowsコントロール.usrTxt()
+        Me.txt所定醗酵時間 = New 共通Windowsコントロール.usrTxt()
         Me.UsrLbl21 = New 共通Windowsコントロール.usrLbl()
         Me.UsrLbl22 = New 共通Windowsコントロール.usrLbl()
         Me.UsrLbl23 = New 共通Windowsコントロール.usrLbl()
@@ -308,28 +308,28 @@ Partial Class Dlg01999_品種登録
         '
         'txt所定発酵時間
         '
-        Me.txt所定発酵時間.BackColor = System.Drawing.SystemColors.Window
-        Me.txt所定発酵時間.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.txt所定発酵時間.Isクリア = True
-        Me.txt所定発酵時間.Location = New System.Drawing.Point(201, 137)
-        Me.txt所定発酵時間.MaxLength = 3
-        Me.txt所定発酵時間.Name = "txt所定発酵時間"
-        Me.txt所定発酵時間.pAutoFocus = True
-        Me.txt所定発酵時間.pAutoPad = False
-        Me.txt所定発酵時間.pAutoSelect = True
-        Me.txt所定発酵時間.pCharType = 共通Windowsコントロール.MCtl.gEnmCharType.Numonly
-        Me.txt所定発酵時間.pClearText = ""
-        Me.txt所定発酵時間.pClearValue = ""
-        Me.txt所定発酵時間.pCondition = 共通Windowsコントロール.MCtl.gEnm入力条件.Nomal
-        Me.txt所定発酵時間.pFromCtl = Nothing
-        Me.txt所定発酵時間.pFromToErrText = ""
-        Me.txt所定発酵時間.pFromToSearch = 共通Windowsコントロール.MCtl.gEnmFromTo.None
-        Me.txt所定発酵時間.pID = ""
-        Me.txt所定発酵時間.pMaxByte = 3
-        Me.txt所定発酵時間.pPadWord = ""
-        Me.txt所定発酵時間.Size = New System.Drawing.Size(59, 26)
-        Me.txt所定発酵時間.TabIndex = 4
-        Me.txt所定発酵時間.エラー表示用項目名 = ""
+        Me.txt所定醗酵時間.BackColor = System.Drawing.SystemColors.Window
+        Me.txt所定醗酵時間.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.txt所定醗酵時間.Isクリア = True
+        Me.txt所定醗酵時間.Location = New System.Drawing.Point(201, 137)
+        Me.txt所定醗酵時間.MaxLength = 3
+        Me.txt所定醗酵時間.Name = "txt所定発酵時間"
+        Me.txt所定醗酵時間.pAutoFocus = True
+        Me.txt所定醗酵時間.pAutoPad = False
+        Me.txt所定醗酵時間.pAutoSelect = True
+        Me.txt所定醗酵時間.pCharType = 共通Windowsコントロール.MCtl.gEnmCharType.Numonly
+        Me.txt所定醗酵時間.pClearText = ""
+        Me.txt所定醗酵時間.pClearValue = ""
+        Me.txt所定醗酵時間.pCondition = 共通Windowsコントロール.MCtl.gEnm入力条件.Nomal
+        Me.txt所定醗酵時間.pFromCtl = Nothing
+        Me.txt所定醗酵時間.pFromToErrText = ""
+        Me.txt所定醗酵時間.pFromToSearch = 共通Windowsコントロール.MCtl.gEnmFromTo.None
+        Me.txt所定醗酵時間.pID = ""
+        Me.txt所定醗酵時間.pMaxByte = 3
+        Me.txt所定醗酵時間.pPadWord = ""
+        Me.txt所定醗酵時間.Size = New System.Drawing.Size(59, 26)
+        Me.txt所定醗酵時間.TabIndex = 4
+        Me.txt所定醗酵時間.エラー表示用項目名 = ""
         '
         'UsrLbl21
         '
@@ -586,7 +586,7 @@ Partial Class Dlg01999_品種登録
         Me.Controls.Add(Me.UsrLbl2)
         Me.Controls.Add(Me.UsrLbl1)
         Me.Controls.Add(Me.lbl製品区分)
-        Me.Controls.Add(Me.txt所定発酵時間)
+        Me.Controls.Add(Me.txt所定醗酵時間)
         Me.Controls.Add(Me.UsrLbl21)
         Me.Controls.Add(Me.UsrLbl22)
         Me.Controls.Add(Me.UsrLbl23)
@@ -615,7 +615,7 @@ Partial Class Dlg01999_品種登録
         Me.Controls.SetChildIndex(Me.UsrLbl23, 0)
         Me.Controls.SetChildIndex(Me.UsrLbl22, 0)
         Me.Controls.SetChildIndex(Me.UsrLbl21, 0)
-        Me.Controls.SetChildIndex(Me.txt所定発酵時間, 0)
+        Me.Controls.SetChildIndex(Me.txt所定醗酵時間, 0)
         Me.Controls.SetChildIndex(Me.lbl製品区分, 0)
         Me.Controls.SetChildIndex(Me.btnF12, 0)
         Me.Controls.SetChildIndex(Me.btnF11, 0)
@@ -653,7 +653,7 @@ Partial Class Dlg01999_品種登録
     Friend WithEvents UsrLbl13 As 共通Windowsコントロール.usrLbl
     Friend WithEvents UsrLbl14 As 共通Windowsコントロール.usrLbl
     Friend WithEvents txt品種名 As 共通Windowsコントロール.usrTxt
-    Friend WithEvents txt所定発酵時間 As 共通Windowsコントロール.usrTxt
+    Friend WithEvents txt所定醗酵時間 As 共通Windowsコントロール.usrTxt
     Friend WithEvents UsrLbl21 As 共通Windowsコントロール.usrLbl
     Friend WithEvents UsrLbl22 As 共通Windowsコントロール.usrLbl
     Friend WithEvents UsrLbl23 As 共通Windowsコントロール.usrLbl

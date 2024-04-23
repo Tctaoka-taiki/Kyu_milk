@@ -19,17 +19,19 @@ Partial Class Frm01011_醗酵マスター設定
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Me.dgv生産データ = New 共通Windowsコントロール.UsrDataGridView
-        Me.ColロットNo = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ColサンプルNo = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Col品種名 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Col賞味期限 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.cmb製品区分 = New 共通Windowsコントロール.usrCmb
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.dgv生産データ = New 共通Windowsコントロール.UsrDataGridView()
+        Me.cmb製品区分 = New 共通Windowsコントロール.usrCmb()
+        Me.ColロットNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColサンプルNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col品種名 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col賞味期限 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.所定賞味期間 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgv生産データ, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -111,7 +113,7 @@ Partial Class Frm01011_醗酵マスター設定
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgv生産データ.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgv生産データ.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv生産データ.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColロットNo, Me.ColサンプルNo, Me.Col品種名, Me.Col賞味期限})
+        Me.dgv生産データ.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColロットNo, Me.ColサンプルNo, Me.Col品種名, Me.Col賞味期限, Me.所定賞味期間})
         Me.dgv生産データ.Isクリア = True
         Me.dgv生産データ.Location = New System.Drawing.Point(12, 45)
         Me.dgv生産データ.Name = "dgv生産データ"
@@ -125,42 +127,6 @@ Partial Class Frm01011_醗酵マスター設定
         Me.dgv生産データ.TabIndex = 41
         Me.dgv生産データ.エラー表示用項目名 = ""
         Me.dgv生産データ.件数表示ラベル = Nothing
-        '
-        'ColロットNo
-        '
-        DataGridViewCellStyle19.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.ColロットNo.DefaultCellStyle = DataGridViewCellStyle19
-        Me.ColロットNo.HeaderText = "品種CD"
-        Me.ColロットNo.Name = "ColロットNo"
-        Me.ColロットNo.ReadOnly = True
-        Me.ColロットNo.Width = 120
-        '
-        'ColサンプルNo
-        '
-        DataGridViewCellStyle20.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.ColサンプルNo.DefaultCellStyle = DataGridViewCellStyle20
-        Me.ColサンプルNo.HeaderText = "品種名"
-        Me.ColサンプルNo.Name = "ColサンプルNo"
-        Me.ColサンプルNo.ReadOnly = True
-        Me.ColサンプルNo.Width = 330
-        '
-        'Col品種名
-        '
-        DataGridViewCellStyle21.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Col品種名.DefaultCellStyle = DataGridViewCellStyle21
-        Me.Col品種名.HeaderText = "所定発酵時間"
-        Me.Col品種名.Name = "Col品種名"
-        Me.Col品種名.ReadOnly = True
-        Me.Col品種名.Width = 250
-        '
-        'Col賞味期限
-        '
-        DataGridViewCellStyle22.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Col賞味期限.DefaultCellStyle = DataGridViewCellStyle22
-        Me.Col賞味期限.HeaderText = "所定冷却時間"
-        Me.Col賞味期限.Name = "Col賞味期限"
-        Me.Col賞味期限.ReadOnly = True
-        Me.Col賞味期限.Width = 250
         '
         'cmb製品区分
         '
@@ -187,6 +153,51 @@ Partial Class Frm01011_醗酵マスター設定
         Me.cmb製品区分.Size = New System.Drawing.Size(276, 27)
         Me.cmb製品区分.TabIndex = 42
         Me.cmb製品区分.エラー表示用項目名 = ""
+        '
+        'ColロットNo
+        '
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.ColロットNo.DefaultCellStyle = DataGridViewCellStyle2
+        Me.ColロットNo.HeaderText = "品種CD"
+        Me.ColロットNo.Name = "ColロットNo"
+        Me.ColロットNo.ReadOnly = True
+        Me.ColロットNo.Width = 120
+        '
+        'ColサンプルNo
+        '
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.ColサンプルNo.DefaultCellStyle = DataGridViewCellStyle3
+        Me.ColサンプルNo.HeaderText = "品種名"
+        Me.ColサンプルNo.Name = "ColサンプルNo"
+        Me.ColサンプルNo.ReadOnly = True
+        Me.ColサンプルNo.Width = 350
+        '
+        'Col品種名
+        '
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Col品種名.DefaultCellStyle = DataGridViewCellStyle4
+        Me.Col品種名.HeaderText = "所定発酵時間"
+        Me.Col品種名.Name = "Col品種名"
+        Me.Col品種名.ReadOnly = True
+        Me.Col品種名.Width = 160
+        '
+        'Col賞味期限
+        '
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Col賞味期限.DefaultCellStyle = DataGridViewCellStyle5
+        Me.Col賞味期限.HeaderText = "所定冷却時間"
+        Me.Col賞味期限.Name = "Col賞味期限"
+        Me.Col賞味期限.ReadOnly = True
+        Me.Col賞味期限.Width = 160
+        '
+        '所定賞味期間
+        '
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.所定賞味期間.DefaultCellStyle = DataGridViewCellStyle6
+        Me.所定賞味期間.HeaderText = "所定賞味期間"
+        Me.所定賞味期間.Name = "所定賞味期間"
+        Me.所定賞味期間.ReadOnly = True
+        Me.所定賞味期間.Width = 160
         '
         'Frm01011_醗酵マスター設定
         '
@@ -216,9 +227,9 @@ Partial Class Frm01011_醗酵マスター設定
     End Sub
     Friend WithEvents dgv生産データ As 共通Windowsコントロール.UsrDataGridView
     Friend WithEvents cmb製品区分 As 共通Windowsコントロール.usrCmb
-    Friend WithEvents ColロットNo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColサンプルNo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Col品種名 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Col賞味期限 As System.Windows.Forms.DataGridViewTextBoxColumn
-
+    Friend WithEvents ColロットNo As DataGridViewTextBoxColumn
+    Friend WithEvents ColサンプルNo As DataGridViewTextBoxColumn
+    Friend WithEvents Col品種名 As DataGridViewTextBoxColumn
+    Friend WithEvents Col賞味期限 As DataGridViewTextBoxColumn
+    Friend WithEvents 所定賞味期間 As DataGridViewTextBoxColumn
 End Class

@@ -59,6 +59,8 @@ Public Class Frm01004_醗酵完了出庫設定
                     .gSubSelect("MAX(DATEDIFF(MINUTE,醗酵開始時刻,GETDATE()))")
                     .gSubSelect("MAX(A.ステータス)")
                     .gSubSelect("MAX(A.出庫中断)")
+                    .gSubSelect("Count(DISTINCT A.ユニットSEQ)")
+                    .gSubSelect("Count(A.管理No)")
                     .gSubFrom("DNトラッキング A")
                     .gSubFrom("DM品種 B")
                     .gSubWhere("A.ステータス >= 6 ")
@@ -98,6 +100,8 @@ Public Class Frm01004_醗酵完了出庫設定
                             If reader.GetValue(6) = 1 Then
                                 Me.dgv生産データ.Item(6, i).Value = "中断中"
                             End If
+                            Me.dgv生産データ.Item(7, i).Value = reader.GetValue(7)
+                            Me.dgv生産データ.Item(8, i).Value = reader.GetValue(8)
                             i += 1
                         End While
                     End If

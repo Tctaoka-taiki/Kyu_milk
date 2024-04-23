@@ -19,42 +19,45 @@ Partial Class Frm01001_入庫設定
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Me.UsrLbl1 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl2 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl3 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl4 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl5 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl6 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl7 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl8 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl9 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl10 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl11 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl12 = New 共通Windowsコントロール.usrLbl
-        Me.lbl所定冷却時間 = New 共通Windowsコントロール.usrLbl
-        Me.lbl所定醗酵時間 = New 共通Windowsコントロール.usrLbl
-        Me.lbl醗酵開始時刻 = New 共通Windowsコントロール.usrLbl
-        Me.lbl賞味期限 = New 共通Windowsコントロール.usrLbl
-        Me.lblロットNo = New 共通Windowsコントロール.usrLbl
-        Me.lbl品種CD = New 共通Windowsコントロール.usrLbl
-        Me.dgvサンプル = New 共通Windowsコントロール.UsrDataGridView
-        Me.ColサンプルNo = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Col指定数 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Col受入数 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.UsrLbl15 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl16 = New 共通Windowsコントロール.usrLbl
-        Me.lblライン名称 = New 共通Windowsコントロール.usrLbl
-        Me.lbl品種名 = New 共通Windowsコントロール.usrLbl
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.UsrLbl1 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl2 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl3 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl4 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl5 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl6 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl7 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl8 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl9 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl10 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl11 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl12 = New 共通Windowsコントロール.usrLbl()
+        Me.lbl所定冷却時間 = New 共通Windowsコントロール.usrLbl()
+        Me.lbl所定醗酵時間 = New 共通Windowsコントロール.usrLbl()
+        Me.lbl醗酵開始時刻 = New 共通Windowsコントロール.usrLbl()
+        Me.lbl賞味期限 = New 共通Windowsコントロール.usrLbl()
+        Me.lblロットNo = New 共通Windowsコントロール.usrLbl()
+        Me.lbl品種CD = New 共通Windowsコントロール.usrLbl()
+        Me.dgvサンプル = New 共通Windowsコントロール.UsrDataGridView()
+        Me.ColサンプルNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col指定数 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col受入数 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UsrLbl15 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl16 = New 共通Windowsコントロール.usrLbl()
+        Me.lblライン名称 = New 共通Windowsコントロール.usrLbl()
+        Me.lbl品種名 = New 共通Windowsコントロール.usrLbl()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.UsrLbl13 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl14 = New 共通Windowsコントロール.usrLbl
-        Me.lblロット完了中 = New 共通Windowsコントロール.usrLbl
-        Me.pnlメッセージ = New System.Windows.Forms.Panel
+        Me.UsrLbl13 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl14 = New 共通Windowsコントロール.usrLbl()
+        Me.lblロット完了中 = New 共通Windowsコントロール.usrLbl()
+        Me.pnlメッセージ = New System.Windows.Forms.Panel()
+        Me.lbl発酵終了時刻 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl18 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl19 = New 共通Windowsコントロール.usrLbl()
         CType(Me.dgvサンプル, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlメッセージ.SuspendLayout()
         Me.SuspendLayout()
@@ -414,14 +417,14 @@ Partial Class Frm01001_入庫設定
         Me.dgvサンプル.AllowUserToDeleteRows = False
         Me.dgvサンプル.AllowUserToResizeColumns = False
         Me.dgvサンプル.AllowUserToResizeRows = False
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvサンプル.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvサンプル.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvサンプル.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvサンプル.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColサンプルNo, Me.Col指定数, Me.Col受入数})
         Me.dgvサンプル.Isクリア = True
@@ -438,24 +441,24 @@ Partial Class Frm01001_入庫設定
         '
         'ColサンプルNo
         '
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.ColサンプルNo.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.ColサンプルNo.DefaultCellStyle = DataGridViewCellStyle2
         Me.ColサンプルNo.HeaderText = "サンプルNo"
         Me.ColサンプルNo.Name = "ColサンプルNo"
         Me.ColサンプルNo.Width = 130
         '
         'Col指定数
         '
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Col指定数.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Col指定数.DefaultCellStyle = DataGridViewCellStyle3
         Me.Col指定数.HeaderText = "指定数"
         Me.Col指定数.Name = "Col指定数"
         Me.Col指定数.Width = 150
         '
         'Col受入数
         '
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Col受入数.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Col受入数.DefaultCellStyle = DataGridViewCellStyle4
         Me.Col受入数.HeaderText = "受入数"
         Me.Col受入数.Name = "Col受入数"
         Me.Col受入数.Width = 150
@@ -585,10 +588,61 @@ Partial Class Frm01001_入庫設定
         Me.pnlメッセージ.TabIndex = 49
         Me.pnlメッセージ.Visible = False
         '
+        'lbl発酵終了時刻
+        '
+        Me.lbl発酵終了時刻.AutoSize = True
+        Me.lbl発酵終了時刻.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lbl発酵終了時刻.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.lbl発酵終了時刻.Isクリア = False
+        Me.lbl発酵終了時刻.Location = New System.Drawing.Point(196, 315)
+        Me.lbl発酵終了時刻.Name = "lbl発酵終了時刻"
+        Me.lbl発酵終了時刻.pClearValue = ""
+        Me.lbl発酵終了時刻.pID = ""
+        Me.lbl発酵終了時刻.Size = New System.Drawing.Size(42, 19)
+        Me.lbl発酵終了時刻.TabIndex = 52
+        Me.lbl発酵終了時刻.Text = "999"
+        Me.lbl発酵終了時刻.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbl発酵終了時刻.エラー表示用項目名 = ""
+        '
+        'UsrLbl18
+        '
+        Me.UsrLbl18.AutoSize = True
+        Me.UsrLbl18.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.UsrLbl18.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.UsrLbl18.Isクリア = False
+        Me.UsrLbl18.Location = New System.Drawing.Point(170, 315)
+        Me.UsrLbl18.Name = "UsrLbl18"
+        Me.UsrLbl18.pClearValue = ""
+        Me.UsrLbl18.pID = ""
+        Me.UsrLbl18.Size = New System.Drawing.Size(20, 19)
+        Me.UsrLbl18.TabIndex = 51
+        Me.UsrLbl18.Text = "："
+        Me.UsrLbl18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.UsrLbl18.エラー表示用項目名 = ""
+        '
+        'UsrLbl19
+        '
+        Me.UsrLbl19.AutoSize = True
+        Me.UsrLbl19.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.UsrLbl19.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.UsrLbl19.Isクリア = False
+        Me.UsrLbl19.Location = New System.Drawing.Point(35, 315)
+        Me.UsrLbl19.Name = "UsrLbl19"
+        Me.UsrLbl19.pClearValue = ""
+        Me.UsrLbl19.pID = ""
+        Me.UsrLbl19.Size = New System.Drawing.Size(129, 19)
+        Me.UsrLbl19.TabIndex = 50
+        Me.UsrLbl19.Text = "醗酵終了時刻"
+        Me.UsrLbl19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.UsrLbl19.エラー表示用項目名 = ""
+        '
         'Frm01001_入庫設定
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.ClientSize = New System.Drawing.Size(1004, 652)
+        Me.Controls.Add(Me.lbl発酵終了時刻)
+        Me.Controls.Add(Me.UsrLbl18)
+        Me.Controls.Add(Me.UsrLbl19)
         Me.Controls.Add(Me.pnlメッセージ)
         Me.Controls.Add(Me.UsrLbl14)
         Me.Controls.Add(Me.UsrLbl13)
@@ -616,7 +670,6 @@ Partial Class Frm01001_入庫設定
         Me.Controls.Add(Me.UsrLbl2)
         Me.Controls.Add(Me.UsrLbl1)
         Me.Name = "Frm01001_入庫設定"
-        Me.Text = "メインメニュー"
         Me.Controls.SetChildIndex(Me.btnF6, 0)
         Me.Controls.SetChildIndex(Me.btnF5, 0)
         Me.Controls.SetChildIndex(Me.btnF7, 0)
@@ -655,6 +708,9 @@ Partial Class Frm01001_入庫設定
         Me.Controls.SetChildIndex(Me.UsrLbl13, 0)
         Me.Controls.SetChildIndex(Me.UsrLbl14, 0)
         Me.Controls.SetChildIndex(Me.pnlメッセージ, 0)
+        Me.Controls.SetChildIndex(Me.UsrLbl19, 0)
+        Me.Controls.SetChildIndex(Me.UsrLbl18, 0)
+        Me.Controls.SetChildIndex(Me.lbl発酵終了時刻, 0)
         CType(Me.dgvサンプル, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlメッセージ.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -692,5 +748,7 @@ Partial Class Frm01001_入庫設定
     Friend WithEvents ColサンプルNo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Col指定数 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Col受入数 As System.Windows.Forms.DataGridViewTextBoxColumn
-
+    Friend WithEvents lbl発酵終了時刻 As usrLbl
+    Friend WithEvents UsrLbl18 As usrLbl
+    Friend WithEvents UsrLbl19 As usrLbl
 End Class
