@@ -19,41 +19,46 @@ Partial Class Dlg01999_棚メンテナンス修正
     'コード エディタを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.UsrLbl1 = New 共通Windowsコントロール.usrLbl
-        Me.txt連 = New 共通Windowsコントロール.usrTxt
-        Me.UsrLbl19 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl20 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl4 = New 共通Windowsコントロール.usrLbl
-        Me.txt段 = New 共通Windowsコントロール.usrTxt
-        Me.UsrLbl6 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl5 = New 共通Windowsコントロール.usrLbl
-        Me.lbl品種 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl9 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl10 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl11 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl12 = New 共通Windowsコントロール.usrLbl
-        Me.lbl醗酵冷却開始時刻タイトル = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl8 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl13 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl14 = New 共通Windowsコントロール.usrLbl
-        Me.txt列 = New 共通Windowsコントロール.usrTxt
-        Me.lblユニット列数 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl2 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl3 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl22 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl23 = New 共通Windowsコントロール.usrLbl
-        Me.lblロットNo = New 共通Windowsコントロール.usrLbl
-        Me.lblサンプルNo = New 共通Windowsコントロール.usrLbl
-        Me.lbl賞味期限 = New 共通Windowsコントロール.usrLbl
-        Me.txt醗酵開始分 = New 共通Windowsコントロール.usrTxt
-        Me.txt醗酵開始時 = New 共通Windowsコントロール.usrTxt
-        Me.UsrLbl18 = New 共通Windowsコントロール.usrLbl
-        Me.txt醗酵開始日 = New 共通Windowsコントロール.usrTxt
-        Me.txt醗酵開始月 = New 共通Windowsコントロール.usrTxt
-        Me.UsrLbl16 = New 共通Windowsコントロール.usrLbl
-        Me.txt醗酵開始年 = New 共通Windowsコントロール.usrTxt
-        Me.UsrLbl17 = New 共通Windowsコントロール.usrLbl
-        Me.txtクレート数 = New 共通Windowsコントロール.usrTxt
+        Me.UsrLbl1 = New 共通Windowsコントロール.usrLbl()
+        Me.txt連 = New 共通Windowsコントロール.usrTxt()
+        Me.UsrLbl19 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl20 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl4 = New 共通Windowsコントロール.usrLbl()
+        Me.txt段 = New 共通Windowsコントロール.usrTxt()
+        Me.UsrLbl6 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl5 = New 共通Windowsコントロール.usrLbl()
+        Me.lbl品種 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl9 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl10 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl11 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl12 = New 共通Windowsコントロール.usrLbl()
+        Me.lbl醗酵冷却開始時刻タイトル = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl8 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl13 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl14 = New 共通Windowsコントロール.usrLbl()
+        Me.txt列 = New 共通Windowsコントロール.usrTxt()
+        Me.lblユニット列数 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl2 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl3 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl22 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl23 = New 共通Windowsコントロール.usrLbl()
+        Me.txt醗酵開始分 = New 共通Windowsコントロール.usrTxt()
+        Me.txt醗酵開始時 = New 共通Windowsコントロール.usrTxt()
+        Me.UsrLbl18 = New 共通Windowsコントロール.usrLbl()
+        Me.txt醗酵開始日 = New 共通Windowsコントロール.usrTxt()
+        Me.txt醗酵開始月 = New 共通Windowsコントロール.usrTxt()
+        Me.UsrLbl16 = New 共通Windowsコントロール.usrLbl()
+        Me.txt醗酵開始年 = New 共通Windowsコントロール.usrTxt()
+        Me.UsrLbl17 = New 共通Windowsコントロール.usrLbl()
+        Me.txtクレート数 = New 共通Windowsコントロール.usrTxt()
+        Me.txtサンプルNo = New 共通Windowsコントロール.usrTxt()
+        Me.txt賞味期限日 = New 共通Windowsコントロール.usrTxt()
+        Me.txt賞味期限月 = New 共通Windowsコントロール.usrTxt()
+        Me.UsrLbl7 = New 共通Windowsコントロール.usrLbl()
+        Me.txt賞味期限年 = New 共通Windowsコントロール.usrTxt()
+        Me.UsrLbl15 = New 共通Windowsコントロール.usrLbl()
+        Me.txt品種 = New 共通Windowsコントロール.usrTxt()
+        Me.txtロットNo = New 共通Windowsコントロール.usrTxt()
         Me.SuspendLayout()
         '
         'btnF1
@@ -281,12 +286,13 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.lbl品種.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.lbl品種.ForeColor = System.Drawing.SystemColors.ControlText
         Me.lbl品種.Isクリア = False
-        Me.lbl品種.Location = New System.Drawing.Point(201, 71)
+        Me.lbl品種.Location = New System.Drawing.Point(247, 71)
         Me.lbl品種.Name = "lbl品種"
         Me.lbl品種.pClearValue = ""
         Me.lbl品種.pID = ""
-        Me.lbl品種.Size = New System.Drawing.Size(0, 19)
+        Me.lbl品種.Size = New System.Drawing.Size(49, 19)
         Me.lbl品種.TabIndex = 131
+        Me.lbl品種.Text = "品種"
         Me.lbl品種.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lbl品種.エラー表示用項目名 = ""
         '
@@ -522,51 +528,6 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.UsrLbl23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.UsrLbl23.エラー表示用項目名 = ""
         '
-        'lblロットNo
-        '
-        Me.lblロットNo.AutoSize = True
-        Me.lblロットNo.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblロットNo.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblロットNo.Isクリア = False
-        Me.lblロットNo.Location = New System.Drawing.Point(201, 106)
-        Me.lblロットNo.Name = "lblロットNo"
-        Me.lblロットNo.pClearValue = ""
-        Me.lblロットNo.pID = ""
-        Me.lblロットNo.Size = New System.Drawing.Size(0, 19)
-        Me.lblロットNo.TabIndex = 147
-        Me.lblロットNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblロットNo.エラー表示用項目名 = ""
-        '
-        'lblサンプルNo
-        '
-        Me.lblサンプルNo.AutoSize = True
-        Me.lblサンプルNo.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblサンプルNo.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblサンプルNo.Isクリア = False
-        Me.lblサンプルNo.Location = New System.Drawing.Point(201, 141)
-        Me.lblサンプルNo.Name = "lblサンプルNo"
-        Me.lblサンプルNo.pClearValue = ""
-        Me.lblサンプルNo.pID = ""
-        Me.lblサンプルNo.Size = New System.Drawing.Size(0, 19)
-        Me.lblサンプルNo.TabIndex = 148
-        Me.lblサンプルNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblサンプルNo.エラー表示用項目名 = ""
-        '
-        'lbl賞味期限
-        '
-        Me.lbl賞味期限.AutoSize = True
-        Me.lbl賞味期限.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lbl賞味期限.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lbl賞味期限.Isクリア = False
-        Me.lbl賞味期限.Location = New System.Drawing.Point(201, 176)
-        Me.lbl賞味期限.Name = "lbl賞味期限"
-        Me.lbl賞味期限.pClearValue = ""
-        Me.lbl賞味期限.pID = ""
-        Me.lbl賞味期限.Size = New System.Drawing.Size(0, 19)
-        Me.lbl賞味期限.TabIndex = 149
-        Me.lbl賞味期限.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lbl賞味期限.エラー表示用項目名 = ""
-        '
         'txt醗酵開始分
         '
         Me.txt醗酵開始分.BackColor = System.Drawing.SystemColors.Window
@@ -590,7 +551,7 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.txt醗酵開始分.pMaxByte = 2
         Me.txt醗酵開始分.pPadWord = "0"
         Me.txt醗酵開始分.Size = New System.Drawing.Size(40, 26)
-        Me.txt醗酵開始分.TabIndex = 8
+        Me.txt醗酵開始分.TabIndex = 14
         Me.txt醗酵開始分.エラー表示用項目名 = ""
         '
         'txt醗酵開始時
@@ -616,7 +577,7 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.txt醗酵開始時.pMaxByte = 2
         Me.txt醗酵開始時.pPadWord = "0"
         Me.txt醗酵開始時.Size = New System.Drawing.Size(40, 26)
-        Me.txt醗酵開始時.TabIndex = 7
+        Me.txt醗酵開始時.TabIndex = 13
         Me.txt醗酵開始時.エラー表示用項目名 = ""
         '
         'UsrLbl18
@@ -658,7 +619,7 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.txt醗酵開始日.pMaxByte = 2
         Me.txt醗酵開始日.pPadWord = "0"
         Me.txt醗酵開始日.Size = New System.Drawing.Size(40, 26)
-        Me.txt醗酵開始日.TabIndex = 6
+        Me.txt醗酵開始日.TabIndex = 12
         Me.txt醗酵開始日.エラー表示用項目名 = ""
         '
         'txt醗酵開始月
@@ -684,7 +645,7 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.txt醗酵開始月.pMaxByte = 2
         Me.txt醗酵開始月.pPadWord = "0"
         Me.txt醗酵開始月.Size = New System.Drawing.Size(40, 26)
-        Me.txt醗酵開始月.TabIndex = 5
+        Me.txt醗酵開始月.TabIndex = 11
         Me.txt醗酵開始月.エラー表示用項目名 = ""
         '
         'UsrLbl16
@@ -726,7 +687,7 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.txt醗酵開始年.pMaxByte = 4
         Me.txt醗酵開始年.pPadWord = "0"
         Me.txt醗酵開始年.Size = New System.Drawing.Size(59, 26)
-        Me.txt醗酵開始年.TabIndex = 4
+        Me.txt醗酵開始年.TabIndex = 10
         Me.txt醗酵開始年.エラー表示用項目名 = ""
         '
         'UsrLbl17
@@ -768,13 +729,206 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.txtクレート数.pMaxByte = 3
         Me.txtクレート数.pPadWord = ""
         Me.txtクレート数.Size = New System.Drawing.Size(46, 26)
-        Me.txtクレート数.TabIndex = 9
+        Me.txtクレート数.TabIndex = 15
         Me.txtクレート数.エラー表示用項目名 = ""
+        '
+        'txtサンプルNo
+        '
+        Me.txtサンプルNo.BackColor = System.Drawing.SystemColors.Window
+        Me.txtサンプルNo.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.txtサンプルNo.Isクリア = True
+        Me.txtサンプルNo.Location = New System.Drawing.Point(201, 138)
+        Me.txtサンプルNo.MaxLength = 1
+        Me.txtサンプルNo.Name = "txtサンプルNo"
+        Me.txtサンプルNo.pAutoFocus = True
+        Me.txtサンプルNo.pAutoPad = False
+        Me.txtサンプルNo.pAutoSelect = True
+        Me.txtサンプルNo.pCharType = 共通Windowsコントロール.MCtl.gEnmCharType.Numonly
+        Me.txtサンプルNo.pClearText = ""
+        Me.txtサンプルNo.pClearValue = ""
+        Me.txtサンプルNo.pCondition = 共通Windowsコントロール.MCtl.gEnm入力条件.Nomal
+        Me.txtサンプルNo.pFromCtl = Nothing
+        Me.txtサンプルNo.pFromToErrText = ""
+        Me.txtサンプルNo.pFromToSearch = 共通Windowsコントロール.MCtl.gEnmFromTo.None
+        Me.txtサンプルNo.pID = ""
+        Me.txtサンプルNo.pMaxByte = 2
+        Me.txtサンプルNo.pPadWord = ""
+        Me.txtサンプルNo.Size = New System.Drawing.Size(40, 26)
+        Me.txtサンプルNo.TabIndex = 6
+        Me.txtサンプルNo.エラー表示用項目名 = ""
+        '
+        'txt賞味期限日
+        '
+        Me.txt賞味期限日.BackColor = System.Drawing.SystemColors.Window
+        Me.txt賞味期限日.Enabled = False
+        Me.txt賞味期限日.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.txt賞味期限日.Isクリア = True
+        Me.txt賞味期限日.Location = New System.Drawing.Point(346, 173)
+        Me.txt賞味期限日.MaxLength = 2
+        Me.txt賞味期限日.Name = "txt賞味期限日"
+        Me.txt賞味期限日.pAutoFocus = True
+        Me.txt賞味期限日.pAutoPad = True
+        Me.txt賞味期限日.pAutoSelect = True
+        Me.txt賞味期限日.pCharType = 共通Windowsコントロール.MCtl.gEnmCharType.All
+        Me.txt賞味期限日.pClearText = ""
+        Me.txt賞味期限日.pClearValue = ""
+        Me.txt賞味期限日.pCondition = 共通Windowsコントロール.MCtl.gEnm入力条件.Nomal
+        Me.txt賞味期限日.pFromCtl = Nothing
+        Me.txt賞味期限日.pFromToErrText = ""
+        Me.txt賞味期限日.pFromToSearch = 共通Windowsコントロール.MCtl.gEnmFromTo.None
+        Me.txt賞味期限日.pID = ""
+        Me.txt賞味期限日.pMaxByte = 2
+        Me.txt賞味期限日.pPadWord = "0"
+        Me.txt賞味期限日.Size = New System.Drawing.Size(40, 26)
+        Me.txt賞味期限日.TabIndex = 9
+        Me.txt賞味期限日.エラー表示用項目名 = ""
+        '
+        'txt賞味期限月
+        '
+        Me.txt賞味期限月.BackColor = System.Drawing.SystemColors.Window
+        Me.txt賞味期限月.Enabled = False
+        Me.txt賞味期限月.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.txt賞味期限月.Isクリア = True
+        Me.txt賞味期限月.Location = New System.Drawing.Point(282, 173)
+        Me.txt賞味期限月.MaxLength = 2
+        Me.txt賞味期限月.Name = "txt賞味期限月"
+        Me.txt賞味期限月.pAutoFocus = True
+        Me.txt賞味期限月.pAutoPad = True
+        Me.txt賞味期限月.pAutoSelect = True
+        Me.txt賞味期限月.pCharType = 共通Windowsコントロール.MCtl.gEnmCharType.All
+        Me.txt賞味期限月.pClearText = ""
+        Me.txt賞味期限月.pClearValue = ""
+        Me.txt賞味期限月.pCondition = 共通Windowsコントロール.MCtl.gEnm入力条件.Nomal
+        Me.txt賞味期限月.pFromCtl = Nothing
+        Me.txt賞味期限月.pFromToErrText = ""
+        Me.txt賞味期限月.pFromToSearch = 共通Windowsコントロール.MCtl.gEnmFromTo.None
+        Me.txt賞味期限月.pID = ""
+        Me.txt賞味期限月.pMaxByte = 2
+        Me.txt賞味期限月.pPadWord = "0"
+        Me.txt賞味期限月.Size = New System.Drawing.Size(40, 26)
+        Me.txt賞味期限月.TabIndex = 8
+        Me.txt賞味期限月.エラー表示用項目名 = ""
+        '
+        'UsrLbl7
+        '
+        Me.UsrLbl7.AutoSize = True
+        Me.UsrLbl7.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.UsrLbl7.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.UsrLbl7.Isクリア = False
+        Me.UsrLbl7.Location = New System.Drawing.Point(324, 176)
+        Me.UsrLbl7.Name = "UsrLbl7"
+        Me.UsrLbl7.pClearValue = ""
+        Me.UsrLbl7.pID = ""
+        Me.UsrLbl7.Size = New System.Drawing.Size(20, 19)
+        Me.UsrLbl7.TabIndex = 166
+        Me.UsrLbl7.Text = "/"
+        Me.UsrLbl7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.UsrLbl7.エラー表示用項目名 = ""
+        '
+        'txt賞味期限年
+        '
+        Me.txt賞味期限年.BackColor = System.Drawing.SystemColors.Window
+        Me.txt賞味期限年.Enabled = False
+        Me.txt賞味期限年.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.txt賞味期限年.Isクリア = True
+        Me.txt賞味期限年.Location = New System.Drawing.Point(200, 173)
+        Me.txt賞味期限年.MaxLength = 4
+        Me.txt賞味期限年.Name = "txt賞味期限年"
+        Me.txt賞味期限年.pAutoFocus = True
+        Me.txt賞味期限年.pAutoPad = True
+        Me.txt賞味期限年.pAutoSelect = True
+        Me.txt賞味期限年.pCharType = 共通Windowsコントロール.MCtl.gEnmCharType.All
+        Me.txt賞味期限年.pClearText = ""
+        Me.txt賞味期限年.pClearValue = ""
+        Me.txt賞味期限年.pCondition = 共通Windowsコントロール.MCtl.gEnm入力条件.Nomal
+        Me.txt賞味期限年.pFromCtl = Nothing
+        Me.txt賞味期限年.pFromToErrText = ""
+        Me.txt賞味期限年.pFromToSearch = 共通Windowsコントロール.MCtl.gEnmFromTo.None
+        Me.txt賞味期限年.pID = ""
+        Me.txt賞味期限年.pMaxByte = 4
+        Me.txt賞味期限年.pPadWord = "0"
+        Me.txt賞味期限年.Size = New System.Drawing.Size(59, 26)
+        Me.txt賞味期限年.TabIndex = 7
+        Me.txt賞味期限年.エラー表示用項目名 = ""
+        '
+        'UsrLbl15
+        '
+        Me.UsrLbl15.AutoSize = True
+        Me.UsrLbl15.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.UsrLbl15.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.UsrLbl15.Isクリア = False
+        Me.UsrLbl15.Location = New System.Drawing.Point(261, 176)
+        Me.UsrLbl15.Name = "UsrLbl15"
+        Me.UsrLbl15.pClearValue = ""
+        Me.UsrLbl15.pID = ""
+        Me.UsrLbl15.Size = New System.Drawing.Size(20, 19)
+        Me.UsrLbl15.TabIndex = 165
+        Me.UsrLbl15.Text = "/"
+        Me.UsrLbl15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.UsrLbl15.エラー表示用項目名 = ""
+        '
+        'txt品種
+        '
+        Me.txt品種.BackColor = System.Drawing.SystemColors.Window
+        Me.txt品種.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.txt品種.Isクリア = True
+        Me.txt品種.Location = New System.Drawing.Point(201, 68)
+        Me.txt品種.MaxLength = 1
+        Me.txt品種.Name = "txt品種"
+        Me.txt品種.pAutoFocus = True
+        Me.txt品種.pAutoPad = False
+        Me.txt品種.pAutoSelect = True
+        Me.txt品種.pCharType = 共通Windowsコントロール.MCtl.gEnmCharType.Numonly
+        Me.txt品種.pClearText = ""
+        Me.txt品種.pClearValue = ""
+        Me.txt品種.pCondition = 共通Windowsコントロール.MCtl.gEnm入力条件.Nomal
+        Me.txt品種.pFromCtl = Nothing
+        Me.txt品種.pFromToErrText = ""
+        Me.txt品種.pFromToSearch = 共通Windowsコントロール.MCtl.gEnmFromTo.None
+        Me.txt品種.pID = ""
+        Me.txt品種.pMaxByte = 2
+        Me.txt品種.pPadWord = ""
+        Me.txt品種.Size = New System.Drawing.Size(40, 26)
+        Me.txt品種.TabIndex = 4
+        Me.txt品種.エラー表示用項目名 = ""
+        '
+        'txtロットNo
+        '
+        Me.txtロットNo.BackColor = System.Drawing.SystemColors.Window
+        Me.txtロットNo.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.txtロットNo.Isクリア = True
+        Me.txtロットNo.Location = New System.Drawing.Point(201, 103)
+        Me.txtロットNo.MaxLength = 6
+        Me.txtロットNo.Name = "txtロットNo"
+        Me.txtロットNo.pAutoFocus = True
+        Me.txtロットNo.pAutoPad = False
+        Me.txtロットNo.pAutoSelect = True
+        Me.txtロットNo.pCharType = 共通Windowsコントロール.MCtl.gEnmCharType.All
+        Me.txtロットNo.pClearText = ""
+        Me.txtロットNo.pClearValue = ""
+        Me.txtロットNo.pCondition = 共通Windowsコントロール.MCtl.gEnm入力条件.Nomal
+        Me.txtロットNo.pFromCtl = Nothing
+        Me.txtロットNo.pFromToErrText = ""
+        Me.txtロットNo.pFromToSearch = 共通Windowsコントロール.MCtl.gEnmFromTo.None
+        Me.txtロットNo.pID = ""
+        Me.txtロットNo.pMaxByte = 6
+        Me.txtロットNo.pPadWord = ""
+        Me.txtロットNo.Size = New System.Drawing.Size(91, 26)
+        Me.txtロットNo.TabIndex = 5
+        Me.txtロットNo.エラー表示用項目名 = ""
         '
         'Dlg01999_棚メンテナンス修正
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.ClientSize = New System.Drawing.Size(647, 413)
+        Me.Controls.Add(Me.txtロットNo)
+        Me.Controls.Add(Me.txt品種)
+        Me.Controls.Add(Me.txt賞味期限日)
+        Me.Controls.Add(Me.txt賞味期限月)
+        Me.Controls.Add(Me.UsrLbl7)
+        Me.Controls.Add(Me.txt賞味期限年)
+        Me.Controls.Add(Me.UsrLbl15)
+        Me.Controls.Add(Me.txtサンプルNo)
         Me.Controls.Add(Me.txt醗酵開始分)
         Me.Controls.Add(Me.txt醗酵開始時)
         Me.Controls.Add(Me.UsrLbl18)
@@ -784,9 +938,6 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.Controls.Add(Me.txt醗酵開始年)
         Me.Controls.Add(Me.UsrLbl17)
         Me.Controls.Add(Me.txtクレート数)
-        Me.Controls.Add(Me.lbl賞味期限)
-        Me.Controls.Add(Me.lblサンプルNo)
-        Me.Controls.Add(Me.lblロットNo)
         Me.Controls.Add(Me.UsrLbl22)
         Me.Controls.Add(Me.UsrLbl23)
         Me.Controls.Add(Me.UsrLbl2)
@@ -847,9 +998,6 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.Controls.SetChildIndex(Me.btnF3, 0)
         Me.Controls.SetChildIndex(Me.btnF2, 0)
         Me.Controls.SetChildIndex(Me.btnF1, 0)
-        Me.Controls.SetChildIndex(Me.lblロットNo, 0)
-        Me.Controls.SetChildIndex(Me.lblサンプルNo, 0)
-        Me.Controls.SetChildIndex(Me.lbl賞味期限, 0)
         Me.Controls.SetChildIndex(Me.txtクレート数, 0)
         Me.Controls.SetChildIndex(Me.UsrLbl17, 0)
         Me.Controls.SetChildIndex(Me.txt醗酵開始年, 0)
@@ -859,6 +1007,14 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.Controls.SetChildIndex(Me.UsrLbl18, 0)
         Me.Controls.SetChildIndex(Me.txt醗酵開始時, 0)
         Me.Controls.SetChildIndex(Me.txt醗酵開始分, 0)
+        Me.Controls.SetChildIndex(Me.txtサンプルNo, 0)
+        Me.Controls.SetChildIndex(Me.UsrLbl15, 0)
+        Me.Controls.SetChildIndex(Me.txt賞味期限年, 0)
+        Me.Controls.SetChildIndex(Me.UsrLbl7, 0)
+        Me.Controls.SetChildIndex(Me.txt賞味期限月, 0)
+        Me.Controls.SetChildIndex(Me.txt賞味期限日, 0)
+        Me.Controls.SetChildIndex(Me.txt品種, 0)
+        Me.Controls.SetChildIndex(Me.txtロットNo, 0)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -886,9 +1042,6 @@ Partial Class Dlg01999_棚メンテナンス修正
     Friend WithEvents UsrLbl3 As 共通Windowsコントロール.usrLbl
     Friend WithEvents UsrLbl22 As 共通Windowsコントロール.usrLbl
     Friend WithEvents UsrLbl23 As 共通Windowsコントロール.usrLbl
-    Friend WithEvents lblロットNo As 共通Windowsコントロール.usrLbl
-    Friend WithEvents lblサンプルNo As 共通Windowsコントロール.usrLbl
-    Friend WithEvents lbl賞味期限 As 共通Windowsコントロール.usrLbl
     Friend WithEvents txt醗酵開始分 As 共通Windowsコントロール.usrTxt
     Friend WithEvents txt醗酵開始時 As 共通Windowsコントロール.usrTxt
     Friend WithEvents UsrLbl18 As 共通Windowsコントロール.usrLbl
@@ -898,5 +1051,12 @@ Partial Class Dlg01999_棚メンテナンス修正
     Friend WithEvents txt醗酵開始年 As 共通Windowsコントロール.usrTxt
     Friend WithEvents UsrLbl17 As 共通Windowsコントロール.usrLbl
     Friend WithEvents txtクレート数 As 共通Windowsコントロール.usrTxt
-
+    Friend WithEvents txtサンプルNo As usrTxt
+    Friend WithEvents txt賞味期限日 As usrTxt
+    Friend WithEvents txt賞味期限月 As usrTxt
+    Friend WithEvents UsrLbl7 As usrLbl
+    Friend WithEvents txt賞味期限年 As usrTxt
+    Friend WithEvents UsrLbl15 As usrLbl
+    Friend WithEvents txt品種 As usrTxt
+    Friend WithEvents txtロットNo As usrTxt
 End Class

@@ -10,7 +10,8 @@ Public Class Dlg01999_棚メンテナンス修正
     Dim int出庫中断_醗酵 As Integer = 0
     Dim int出庫中断_冷却 As Integer = 0
     '---------------------------------
-
+    '2024/4 田岡
+    Dim strユニットSEQ As String
     Private Sub Dlg01999_棚メンテナンス修正_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         '初期表示
         Select Case m画面モード
@@ -115,13 +116,14 @@ Public Class Dlg01999_棚メンテナンス修正
                     Else    'プレーン
                         .gSubColumnValue("製造ライン", 1, True)
                     End If
-                    .gSubColumnValue("ロットNo", Me.lblロットNo.Text, True)
-                    .gSubColumnValue("サンプルNo", Me.lblサンプルNo.Text, False)
-                    .gSubColumnValue("品種CD", int品種CD, False)
+                    .gSubColumnValue("ロットNo", Me.txtロットNo.Text, True)
+                    .gSubColumnValue("サンプルNo", Me.txtサンプルNo.Text, False)
+                    .gSubColumnValue("品種CD", Me.txt品種.Text, False)
+                    int品種CD = Convert.ToInt32(Me.txt品種.Text)
                     .gSubColumnValue("受入数", int受入数, False)
-                    .gSubColumnValue("賞味期限", Me.lbl賞味期限.Text & " 00:00:00", True)
+                    .gSubColumnValue("賞味期限", Me.txt賞味期限年.Text & "/" & Me.txt醗酵開始月.Text & "/" & Me.txt醗酵開始日.Text & " 00:00:00", True)
 
-                Select m画面モード
+                    Select Case m画面モード
                         Case 0  '醗酵
                             .gSubColumnValue("醗酵開始時刻", Me.txt醗酵開始年.Text & "/" & Me.txt醗酵開始月.Text & "/" & Me.txt醗酵開始日.Text & " " & Me.txt醗酵開始時.Text & ":" & Me.txt醗酵開始分.Text & ":00", True)
                             .gSubColumnValue("ステータス", 6, False)
@@ -130,7 +132,7 @@ Public Class Dlg01999_棚メンテナンス修正
                             .gSubColumnValue("冷却開始時刻", Me.txt醗酵開始年.Text & "/" & Me.txt醗酵開始月.Text & "/" & Me.txt醗酵開始日.Text & " " & Me.txt醗酵開始時.Text & ":" & Me.txt醗酵開始分.Text & ":00", True)
                             .gSubColumnValue("ステータス", 27, False)
                     End Select
-                    
+                    .gSubColumnValue("ユニットSEQ", strユニットSEQ, False)
                     .gSubColumnValue("列", Me.txt列.Text, False)
                     .gSubColumnValue("連", Me.txt連.Text, False)
                     .gSubColumnValue("段", Me.txt段.Text, False)
@@ -150,26 +152,26 @@ Public Class Dlg01999_棚メンテナンス修正
             End With
 
             'インサート後に最大のユニットSEQでUPDATEする
-            With New CSql
-                .pSQL取得タイプ = CSql.SQL_TYPE.SQL_UPDATE
-                .pテーブル名 = "DNトラッキング"
-                .gSubColumnValue("ユニットSEQ", int未使用ユニットSEQ(), False)
-                .gSubWhere("列", Me.txt列.Text, , , , , , , , )
-                .gSubWhere("連", Me.txt連.Text, , , , , , , , )
-                .gSubWhere("段", Me.txt段.Text, , , , , , , , )
+            'With New CSql
+            '    .pSQL取得タイプ = CSql.SQL_TYPE.SQL_UPDATE
+            '    .pテーブル名 = "DNトラッキング"
+            '    .gSubColumnValue("ユニットSEQ", int未使用ユニットSEQ(), False)
+            '    .gSubWhere("列", Me.txt列.Text, , , , , , , , )
+            '    .gSubWhere("連", Me.txt連.Text, , , , , , , , )
+            '    .gSubWhere("段", Me.txt段.Text, , , , , , , , )
 
-                Select Case m画面モード
-                    Case 0  '醗酵
-                        .gSubWhere("ステータス", 6, , , , , , , , )
+            '    Select Case m画面モード
+            '        Case 0  '醗酵
+            '            .gSubWhere("ステータス", 6, , , , , , , , )
 
-                    Case 1
-                        .gSubWhere("ステータス", 27, , , , , , , , )
+            '        Case 1
+            '            .gSubWhere("ステータス", 27, , , , , , , , )
 
-                End Select
-                If Not CUsrctl.gDp.gBlnExecute(.gSQL文の取得, New System.Data.SqlClient.SqlCommand) Then
-                    Exit Sub
-                End If
-            End With
+            '    End Select
+            '    If Not CUsrctl.gDp.gBlnExecute(.gSQL文の取得, New System.Data.SqlClient.SqlCommand) Then
+            '        Exit Sub
+            '    End If
+            'End With
         Catch ex As Exception
         Finally
         End Try
@@ -202,6 +204,9 @@ Public Class Dlg01999_棚メンテナンス修正
                 .gSubSelect("MAX(A.出庫中断) as 出庫中断_醗")
                 .gSubSelect("MAX(A.出庫中断_冷) as 出庫中断_冷")
                 '---------------------------------
+                '2024/9田岡
+                .gSubSelect("MAX(A.ユニットSEQ) as ユニットSEQ")
+                '---------------------------------
                 .gSubFrom("DNトラッキング A")
                 .gSubFrom("DM品種 B")
                 '---------------------------------
@@ -225,11 +230,14 @@ Public Class Dlg01999_棚メンテナンス修正
                     While reader.Read
                         int製品区分 = reader.GetValue(7)
                         int品種CD = reader.GetValue(8)
-                        Me.lblロットNo.Text = reader.GetValue(0)
-                        Me.lblサンプルNo.Text = reader.GetValue(1)
+                        Me.txtロットNo.Text = reader.GetValue(0)
+                        Me.txtサンプルNo.Text = reader.GetValue(1)
                         Me.lbl品種.Text = reader.GetValue(2)
+                        Me.txt品種.Text = reader.GetValue(8)
                         Me.txtクレート数.Text = reader.GetValue(3)
-                        Me.lbl賞味期限.Text = reader.GetValue(4)
+                        Me.txt賞味期限年.Text = (reader.GetValue(4)).ToString().Substring(0, 4)
+                        Me.txt賞味期限月.Text = (reader.GetValue(4)).ToString().Substring(5, 2)
+                        Me.txt賞味期限日.Text = (reader.GetValue(4)).ToString().Substring(8, 2)
                         'Me.lbl醗酵開始時刻.Text = reader.GetValue(5)
                         Dim str醗酵開始時刻 As String = reader.GetValue(5).ToString
                         Me.txt醗酵開始年.Text = Mid(str醗酵開始時刻, 1, 4)
@@ -249,6 +257,10 @@ Public Class Dlg01999_棚メンテナンス修正
                         int出庫中断_醗酵 = reader.GetValue(9)
                         int出庫中断_冷却 = reader.GetValue(10)
                         '---------------------------------
+                        '---------------------------------
+                        '2024/9田岡
+                        strユニットSEQ = reader.GetValue(11)
+                        '---------------------------------
                         Me.txtクレート数.Enabled = True
                         Me.txt醗酵開始年.Enabled = True
                         Me.txt醗酵開始月.Enabled = True
@@ -256,6 +268,12 @@ Public Class Dlg01999_棚メンテナンス修正
                         Me.txt醗酵開始時.Enabled = True
                         Me.txt醗酵開始分.Enabled = True
                         Me.btnF1.Enabled = True
+                        Me.txt賞味期限年.Enabled = True
+                        Me.txt賞味期限月.Enabled = True
+                        Me.txt賞味期限日.Enabled = True
+                        Me.txtサンプルNo.Enabled = True
+                        Me.txtロットNo.Enabled = True
+                        Me.txt品種.Enabled = True
                         Exit Sub
                     End While
                 End If
@@ -263,6 +281,7 @@ Public Class Dlg01999_棚メンテナンス修正
 
             int製品区分 = 99
             int品種CD = Nothing
+            strユニットSEQ = Nothing
             Me.txtクレート数.Enabled = False
             Me.txt醗酵開始年.Enabled = False
             Me.txt醗酵開始月.Enabled = False
@@ -270,6 +289,12 @@ Public Class Dlg01999_棚メンテナンス修正
             Me.txt醗酵開始時.Enabled = False
             Me.txt醗酵開始分.Enabled = False
             Me.btnF1.Enabled = False
+            Me.txt賞味期限年.Enabled = False
+            Me.txt賞味期限月.Enabled = False
+            Me.txt賞味期限日.Enabled = False
+            Me.txtサンプルNo.Enabled = False
+            Me.txtロットNo.Enabled = False
+            Me.txt品種.Enabled = False
             CMsg.gMsg_エラー("在庫情報がありません。")
             Me.txt列.Focus()
             Me.txt列.Text = ""
@@ -289,18 +314,27 @@ Public Class Dlg01999_棚メンテナンス修正
         Me.txt醗酵開始日.Enabled = False
         Me.txt醗酵開始時.Enabled = False
         Me.txt醗酵開始分.Enabled = False
+        Me.txt賞味期限年.Enabled = False
+        Me.txt賞味期限月.Enabled = False
+        Me.txt賞味期限日.Enabled = False
+        Me.txtサンプルNo.Enabled = False
+        Me.txtロットNo.Enabled = False
+        Me.txt品種.Enabled = False
         Me.btnF1.Enabled = False
         Me.txtクレート数.Text = ""
-        Me.lblサンプルNo.Text = ""
+        Me.txtサンプルNo.Text = ""
         Me.lblユニット列数.Text = ""
-        Me.lblロットNo.Text = ""
-        Me.lbl賞味期限.Text = ""
+        Me.txtロットNo.Text = ""
+        Me.txt賞味期限年.Text = ""
+        Me.txt賞味期限月.Text = ""
+        Me.txt賞味期限日.Text = ""
         Me.txt醗酵開始年.Text = ""
         Me.txt醗酵開始月.Text = ""
         Me.txt醗酵開始日.Text = ""
         Me.txt醗酵開始時.Text = ""
         Me.txt醗酵開始分.Text = ""
         Me.lbl品種.Text = ""
+        Me.txt品種.Text = ""
     End Sub
 
     Private Sub txtクレート数_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtクレート数.TextChanged
@@ -356,4 +390,48 @@ Public Class Dlg01999_棚メンテナンス修正
 
         Return 未使用ユニットSEQ
     End Function
+
+    Private Sub UsrTxt2_TextChanged(sender As Object, e As EventArgs) Handles txt賞味期限日.TextChanged
+
+    End Sub
+
+    Private Sub UsrTxt3_TextChanged(sender As Object, e As EventArgs) Handles txt賞味期限月.TextChanged
+
+    End Sub
+
+    Private Sub UsrLbl7_Click(sender As Object, e As EventArgs) Handles UsrLbl7.Click
+
+    End Sub
+
+    Private Sub UsrTxt4_TextChanged(sender As Object, e As EventArgs) Handles txt賞味期限年.TextChanged
+
+    End Sub
+
+    Private Sub UsrLbl15_Click(sender As Object, e As EventArgs) Handles UsrLbl15.Click
+
+    End Sub
+
+    Private Sub txt品種_TextChanged(sender As Object, e As EventArgs) Handles txt品種.TextChanged
+        Dim reader As DbDataReader = Nothing
+        Try
+            With New CSqlEx
+                .gSubSelect("MAX(B.品種名) as 品種名")
+                .gSubFrom("DNトラッキング A")
+                .gSubFrom("DM品種 B")
+                .gSubWhere(Me.txt品種.Text & " = B.品種CD")
+                .gSubWhere("A.列", Me.txt列.Text, , , , , , , False)
+                .gSubWhere("A.連", Me.txt連.Text, , , , , , , False)
+                .gSubWhere("A.段", Me.txt段.Text, , , , , , , False)
+                .gSubGroupBy("A.ユニットSEQ")
+                If CUsrctl.gDp.gBlnReader(.gSQL文の取得, reader) Then
+                    While reader.Read
+                        Me.lbl品種.Text = reader.GetValue(0)
+                    End While
+                End If
+            End With
+        Catch ex As Exception
+        Finally
+            CUsrctl.gDp.gSubReaderClose(reader)
+        End Try
+    End Sub
 End Class
