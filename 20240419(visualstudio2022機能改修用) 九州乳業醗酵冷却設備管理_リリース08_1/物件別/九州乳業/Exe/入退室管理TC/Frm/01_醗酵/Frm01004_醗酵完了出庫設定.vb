@@ -62,7 +62,7 @@ Public Class Frm01004_醗酵完了出庫設定
                     .gSubSelect("MAX(A.ステータス)")
                     .gSubSelect("MAX(A.出庫中断)")
                     .gSubSelect("Count(DISTINCT A.ユニットSEQ)")
-                    .gSubSelect("Count(A.管理No)")
+                    .gSubSelect("SUM(A.受入数)")
                     .gSubFrom("DNトラッキング A")
                     .gSubFrom("DM品種 B")
                     .gSubWhere("A.ステータス >= 6 ")
@@ -122,7 +122,7 @@ Public Class Frm01004_醗酵完了出庫設定
                     .gSubSelect("MAX(A.ステータス)")
                     .gSubSelect("MAX(A.出庫中断)")
                     .gSubSelect("Count(DISTINCT A.ユニットSEQ)")
-                    .gSubSelect("Count(A.管理No)")
+                    .gSubSelect("SUM(A.受入数)")
                     .gSubFrom("DNトラッキング A")
                     .gSubFrom("DM品種 B")
                     .gSubWhere("A.ステータス >= 6 ")
@@ -160,8 +160,10 @@ Public Class Frm01004_醗酵完了出庫設定
                                     Me.dgv生産データプレーン.Item(6, i).Value = "出庫中"
                             End Select
 
-                            If reader.GetValue(6) = 1 Then
+                            If reader.GetValue(5) = 6 And reader.GetValue(6) = 1 Then
                                 Me.dgv生産データプレーン.Item(6, i).Value = "中断中"
+                            ElseIf (reader.GetValue(5) = 8 Or reader.GetValue(5) = 9) And reader.GetValue(6) = 1 Then
+                                Me.dgv生産データプレーン.Item(6, i).Value = "中断予約"
                             End If
                             Me.dgv生産データプレーン.Item(7, i).Value = reader.GetValue(7)
                             Me.dgv生産データプレーン.Item(8, i).Value = reader.GetValue(8)

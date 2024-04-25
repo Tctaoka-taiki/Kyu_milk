@@ -140,7 +140,8 @@ Public Class Dlg01004_出庫設定
                                 Case 7
                                     intRET = 2
                                 Case 8, 9
-                                    CMsg.gMsg_情報("既に出庫中です。")
+                                    intRET = 2
+                                    'CMsg.gMsg_情報("既に出庫中です。")
                             End Select
 
                         End If
@@ -195,7 +196,9 @@ Public Class Dlg01004_出庫設定
                 End If
                 .gSubColumnValue("更新プログラム", Name, True)
                 .gSubColumnValue("更新日時", "GETDATE()", False)
-                .gSubWhere("ステータス", 7, , , , , , , False)
+                .gSubWhere("ステータス", 7, , , , , , , False, CSql.EnmWhere.OrStart)
+                .gSubWhere("ステータス", 8, , , , , , , False, CSql.EnmWhere.WhereOr)
+                .gSubWhere("ステータス", 9, , , , , , , False, CSql.EnmWhere.OrEndOr)
                 .gSubWhere("ロットNo COLLATE Japanese_CS_AS_KS_WS", Me.txtロットNo.Text, , , , , , , True)
                 .gSubWhere("サンプルNo", Me.txtサンプルNo.Text, , , , , , , False)
 

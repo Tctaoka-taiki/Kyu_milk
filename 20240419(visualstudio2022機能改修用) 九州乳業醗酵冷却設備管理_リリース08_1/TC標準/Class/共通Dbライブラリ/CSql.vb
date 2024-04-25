@@ -49,6 +49,7 @@ Public Class CSql
         WhereNot
         OrStart         '  "WHERE(HAVING) ("　または　"OR (" ではじまる
         OrEnd           '  WHERE(HAVING)区の最後を  ")"  でおわる
+        OrEndOr         '  "OR"で始まり")"で終わる　
     End Enum
 
     ''ワイルド検索列挙型
@@ -722,7 +723,7 @@ Public Class CSql
 
         ''WHEREの作成
         Select Case enmWhere
-            Case enmWhere.WhereAnd, enmWhere.WhereOr, enmWhere.WhereNot, enmWhere.OrEnd
+            Case EnmWhere.WhereAnd, EnmWhere.WhereOr, EnmWhere.WhereNot, EnmWhere.OrEnd, EnmWhere.OrEndOr
                 If objArr.Count = 0 Then
                     If blnWhere Then
                         strBuffWhere = " WHERE " & vbCrLf & "  "
@@ -739,6 +740,9 @@ Public Class CSql
                             strBuffWhere = " AND Not" & vbCrLf & "  "
                         Case enmWhere.OrEnd
                             strBuffWhere = " AND" & vbCrLf & "  "
+                            strBuffWhereEnd = ")"
+                        Case EnmWhere.OrEndOr
+                            strBuffWhere = " OR" & vbCrLf & "  "
                             strBuffWhereEnd = ")"
                     End Select
                 End If
