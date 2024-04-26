@@ -19,61 +19,64 @@ Partial Class Frm00003_醗酵側設備状況
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Me.UsrLbl4 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl5 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl6 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl7 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl8 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl9 = New 共通Windowsコントロール.usrLbl
-        Me.lbl冷却倉庫温度 = New 共通Windowsコントロール.usrLbl
-        Me.lbl急冷室温度 = New 共通Windowsコントロール.usrLbl
-        Me.lbl醗酵倉庫温度 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl13 = New 共通Windowsコントロール.usrLbl
-        Me.UsrLbl14 = New 共通Windowsコントロール.usrLbl
-        Me.cmbライン = New 共通Windowsコントロール.usrCmb
-        Me.dgv設備状況 = New 共通Windowsコントロール.UsrDataGridView
-        Me.ColNo = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Col設備名称 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.col信号 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Col荷 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Col品種 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Col数 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ColSno = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Col棚番地 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Col作業 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.UsrLbl2 = New 共通Windowsコントロール.usrLbl
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.UsrLbl4 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl5 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl6 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl7 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl8 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl9 = New 共通Windowsコントロール.usrLbl()
+        Me.lbl冷却倉庫温度 = New 共通Windowsコントロール.usrLbl()
+        Me.lbl急冷室温度 = New 共通Windowsコントロール.usrLbl()
+        Me.lbl醗酵倉庫温度 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl13 = New 共通Windowsコントロール.usrLbl()
+        Me.UsrLbl14 = New 共通Windowsコントロール.usrLbl()
+        Me.cmbライン = New 共通Windowsコントロール.usrCmb()
+        Me.dgv設備状況 = New 共通Windowsコントロール.UsrDataGridView()
+        Me.UsrLbl2 = New 共通Windowsコントロール.usrLbl()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.dgv設備状況共通 = New 共通Windowsコントロール.UsrDataGridView
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.dgv設備状況共通 = New 共通Windowsコントロール.UsrDataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col設備名称 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col信号 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col荷 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col品種 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col数 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColSno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col棚番地 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Col作業 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColロットNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgv設備状況, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgv設備状況共通, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -147,7 +150,7 @@ Partial Class Frm00003_醗酵側設備状況
         Me.UsrLbl4.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.UsrLbl4.ForeColor = System.Drawing.SystemColors.ControlText
         Me.UsrLbl4.Isクリア = False
-        Me.UsrLbl4.Location = New System.Drawing.Point(608, 449)
+        Me.UsrLbl4.Location = New System.Drawing.Point(608, 512)
         Me.UsrLbl4.Name = "UsrLbl4"
         Me.UsrLbl4.pClearValue = ""
         Me.UsrLbl4.pID = ""
@@ -163,7 +166,7 @@ Partial Class Frm00003_醗酵側設備状況
         Me.UsrLbl5.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.UsrLbl5.ForeColor = System.Drawing.SystemColors.ControlText
         Me.UsrLbl5.Isクリア = False
-        Me.UsrLbl5.Location = New System.Drawing.Point(311, 449)
+        Me.UsrLbl5.Location = New System.Drawing.Point(311, 512)
         Me.UsrLbl5.Name = "UsrLbl5"
         Me.UsrLbl5.pClearValue = ""
         Me.UsrLbl5.pID = ""
@@ -179,7 +182,7 @@ Partial Class Frm00003_醗酵側設備状況
         Me.UsrLbl6.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.UsrLbl6.ForeColor = System.Drawing.SystemColors.ControlText
         Me.UsrLbl6.Isクリア = False
-        Me.UsrLbl6.Location = New System.Drawing.Point(12, 449)
+        Me.UsrLbl6.Location = New System.Drawing.Point(12, 512)
         Me.UsrLbl6.Name = "UsrLbl6"
         Me.UsrLbl6.pClearValue = ""
         Me.UsrLbl6.pID = ""
@@ -195,7 +198,7 @@ Partial Class Frm00003_醗酵側設備状況
         Me.UsrLbl7.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.UsrLbl7.ForeColor = System.Drawing.SystemColors.ControlText
         Me.UsrLbl7.Isクリア = False
-        Me.UsrLbl7.Location = New System.Drawing.Point(743, 449)
+        Me.UsrLbl7.Location = New System.Drawing.Point(743, 512)
         Me.UsrLbl7.Name = "UsrLbl7"
         Me.UsrLbl7.pClearValue = ""
         Me.UsrLbl7.pID = ""
@@ -211,7 +214,7 @@ Partial Class Frm00003_醗酵側設備状況
         Me.UsrLbl8.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.UsrLbl8.ForeColor = System.Drawing.SystemColors.ControlText
         Me.UsrLbl8.Isクリア = False
-        Me.UsrLbl8.Location = New System.Drawing.Point(446, 449)
+        Me.UsrLbl8.Location = New System.Drawing.Point(446, 512)
         Me.UsrLbl8.Name = "UsrLbl8"
         Me.UsrLbl8.pClearValue = ""
         Me.UsrLbl8.pID = ""
@@ -227,7 +230,7 @@ Partial Class Frm00003_醗酵側設備状況
         Me.UsrLbl9.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.UsrLbl9.ForeColor = System.Drawing.SystemColors.ControlText
         Me.UsrLbl9.Isクリア = False
-        Me.UsrLbl9.Location = New System.Drawing.Point(147, 449)
+        Me.UsrLbl9.Location = New System.Drawing.Point(147, 512)
         Me.UsrLbl9.Name = "UsrLbl9"
         Me.UsrLbl9.pClearValue = ""
         Me.UsrLbl9.pID = ""
@@ -242,7 +245,7 @@ Partial Class Frm00003_醗酵側設備状況
         Me.lbl冷却倉庫温度.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.lbl冷却倉庫温度.ForeColor = System.Drawing.SystemColors.ControlText
         Me.lbl冷却倉庫温度.Isクリア = False
-        Me.lbl冷却倉庫温度.Location = New System.Drawing.Point(760, 449)
+        Me.lbl冷却倉庫温度.Location = New System.Drawing.Point(760, 512)
         Me.lbl冷却倉庫温度.Name = "lbl冷却倉庫温度"
         Me.lbl冷却倉庫温度.pClearValue = ""
         Me.lbl冷却倉庫温度.pID = ""
@@ -257,7 +260,7 @@ Partial Class Frm00003_醗酵側設備状況
         Me.lbl急冷室温度.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.lbl急冷室温度.ForeColor = System.Drawing.SystemColors.ControlText
         Me.lbl急冷室温度.Isクリア = False
-        Me.lbl急冷室温度.Location = New System.Drawing.Point(463, 449)
+        Me.lbl急冷室温度.Location = New System.Drawing.Point(463, 512)
         Me.lbl急冷室温度.Name = "lbl急冷室温度"
         Me.lbl急冷室温度.pClearValue = ""
         Me.lbl急冷室温度.pID = ""
@@ -272,7 +275,7 @@ Partial Class Frm00003_醗酵側設備状況
         Me.lbl醗酵倉庫温度.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.lbl醗酵倉庫温度.ForeColor = System.Drawing.SystemColors.ControlText
         Me.lbl醗酵倉庫温度.Isクリア = False
-        Me.lbl醗酵倉庫温度.Location = New System.Drawing.Point(164, 449)
+        Me.lbl醗酵倉庫温度.Location = New System.Drawing.Point(164, 512)
         Me.lbl醗酵倉庫温度.Name = "lbl醗酵倉庫温度"
         Me.lbl醗酵倉庫温度.pClearValue = ""
         Me.lbl醗酵倉庫温度.pID = ""
@@ -288,7 +291,7 @@ Partial Class Frm00003_醗酵側設備状況
         Me.UsrLbl13.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.UsrLbl13.ForeColor = System.Drawing.SystemColors.ControlText
         Me.UsrLbl13.Isクリア = False
-        Me.UsrLbl13.Location = New System.Drawing.Point(844, 449)
+        Me.UsrLbl13.Location = New System.Drawing.Point(844, 512)
         Me.UsrLbl13.Name = "UsrLbl13"
         Me.UsrLbl13.pClearValue = ""
         Me.UsrLbl13.pID = ""
@@ -304,7 +307,7 @@ Partial Class Frm00003_醗酵側設備状況
         Me.UsrLbl14.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.UsrLbl14.ForeColor = System.Drawing.SystemColors.ControlText
         Me.UsrLbl14.Isクリア = False
-        Me.UsrLbl14.Location = New System.Drawing.Point(547, 449)
+        Me.UsrLbl14.Location = New System.Drawing.Point(547, 512)
         Me.UsrLbl14.Name = "UsrLbl14"
         Me.UsrLbl14.pClearValue = ""
         Me.UsrLbl14.pID = ""
@@ -322,7 +325,7 @@ Partial Class Frm00003_醗酵側設備状況
         Me.cmbライン.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
         Me.cmbライン.FormattingEnabled = True
         Me.cmbライン.Isクリア = True
-        Me.cmbライン.Items.AddRange(New Object() {"ハード１", "プレーン１", "ハード２"})
+        Me.cmbライン.Items.AddRange(New Object() {"プレーン１・ハード２", "ハード１"})
         Me.cmbライン.Location = New System.Drawing.Point(12, 12)
         Me.cmbライン.Name = "cmbライン"
         Me.cmbライン.pAutoFocus = True
@@ -356,10 +359,18 @@ Partial Class Frm00003_醗酵側設備状況
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgv設備状況.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgv設備状況.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv設備状況.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColNo, Me.Col設備名称, Me.col信号, Me.Col荷, Me.Col品種, Me.Col数, Me.ColSno, Me.Col棚番地, Me.Col作業})
+        Me.dgv設備状況.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColNo, Me.Col設備名称, Me.col信号, Me.Col荷, Me.Col品種, Me.Col数, Me.ColSno, Me.Col棚番地, Me.Col作業, Me.ColロットNo})
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgv設備状況.DefaultCellStyle = DataGridViewCellStyle12
         Me.dgv設備状況.Enabled = False
         Me.dgv設備状況.Isクリア = True
-        Me.dgv設備状況.Location = New System.Drawing.Point(12, 58)
+        Me.dgv設備状況.Location = New System.Drawing.Point(12, 48)
         Me.dgv設備状況.MultiSelect = False
         Me.dgv設備状況.Name = "dgv設備状況"
         Me.dgv設備状況.pIs固定行表示 = False
@@ -367,93 +378,12 @@ Partial Class Frm00003_醗酵側設備状況
         Me.dgv設備状況.Row = -1
         Me.dgv設備状況.RowHeadersVisible = False
         Me.dgv設備状況.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.dgv設備状況.RowTemplate.Height = 21
+        Me.dgv設備状況.RowTemplate.Height = 18
         Me.dgv設備状況.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv設備状況.Size = New System.Drawing.Size(842, 214)
+        Me.dgv設備状況.Size = New System.Drawing.Size(980, 349)
         Me.dgv設備状況.TabIndex = 1
         Me.dgv設備状況.エラー表示用項目名 = ""
         Me.dgv設備状況.件数表示ラベル = Nothing
-        '
-        'ColNo
-        '
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.ColNo.DefaultCellStyle = DataGridViewCellStyle2
-        Me.ColNo.HeaderText = "No"
-        Me.ColNo.Name = "ColNo"
-        Me.ColNo.ReadOnly = True
-        Me.ColNo.Width = 50
-        '
-        'Col設備名称
-        '
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Col設備名称.DefaultCellStyle = DataGridViewCellStyle3
-        Me.Col設備名称.HeaderText = "設備名称"
-        Me.Col設備名称.Name = "Col設備名称"
-        Me.Col設備名称.ReadOnly = True
-        Me.Col設備名称.Width = 160
-        '
-        'col信号
-        '
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.col信号.DefaultCellStyle = DataGridViewCellStyle4
-        Me.col信号.HeaderText = "信号"
-        Me.col信号.Name = "col信号"
-        Me.col信号.ReadOnly = True
-        Me.col信号.Width = 80
-        '
-        'Col荷
-        '
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Col荷.DefaultCellStyle = DataGridViewCellStyle5
-        Me.Col荷.HeaderText = "荷"
-        Me.Col荷.Name = "Col荷"
-        Me.Col荷.ReadOnly = True
-        Me.Col荷.Width = 50
-        '
-        'Col品種
-        '
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Col品種.DefaultCellStyle = DataGridViewCellStyle6
-        Me.Col品種.HeaderText = "品種名"
-        Me.Col品種.Name = "Col品種"
-        Me.Col品種.ReadOnly = True
-        Me.Col品種.Width = 250
-        '
-        'Col数
-        '
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Col数.DefaultCellStyle = DataGridViewCellStyle7
-        Me.Col数.HeaderText = "ｸﾚｰﾄ数"
-        Me.Col数.Name = "Col数"
-        Me.Col数.ReadOnly = True
-        Me.Col数.Width = 78
-        '
-        'ColSno
-        '
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.ColSno.DefaultCellStyle = DataGridViewCellStyle8
-        Me.ColSno.HeaderText = "SNo"
-        Me.ColSno.Name = "ColSno"
-        Me.ColSno.ReadOnly = True
-        Me.ColSno.Width = 50
-        '
-        'Col棚番地
-        '
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Col棚番地.DefaultCellStyle = DataGridViewCellStyle9
-        Me.Col棚番地.HeaderText = "棚番地"
-        Me.Col棚番地.Name = "Col棚番地"
-        Me.Col棚番地.ReadOnly = True
-        Me.Col棚番地.Width = 120
-        '
-        'Col作業
-        '
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Col作業.DefaultCellStyle = DataGridViewCellStyle10
-        Me.Col作業.HeaderText = "作業"
-        Me.Col作業.Name = "Col作業"
-        Me.Col作業.ReadOnly = True
-        Me.Col作業.Visible = False
         '
         'UsrLbl2
         '
@@ -461,7 +391,7 @@ Partial Class Frm00003_醗酵側設備状況
         Me.UsrLbl2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.UsrLbl2.ForeColor = System.Drawing.SystemColors.ControlText
         Me.UsrLbl2.Isクリア = False
-        Me.UsrLbl2.Location = New System.Drawing.Point(248, 449)
+        Me.UsrLbl2.Location = New System.Drawing.Point(248, 512)
         Me.UsrLbl2.Name = "UsrLbl2"
         Me.UsrLbl2.pClearValue = ""
         Me.UsrLbl2.pID = ""
@@ -481,19 +411,19 @@ Partial Class Frm00003_醗酵側設備状況
         Me.dgv設備状況共通.AllowUserToResizeColumns = False
         Me.dgv設備状況共通.AllowUserToResizeRows = False
         Me.dgv設備状況共通.CausesValidation = False
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 11.25!)
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv設備状況共通.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 11.25!)
+        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv設備状況共通.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
         Me.dgv設備状況共通.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv設備状況共通.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9})
         Me.dgv設備状況共通.Enabled = False
         Me.dgv設備状況共通.Isクリア = True
-        Me.dgv設備状況共通.Location = New System.Drawing.Point(12, 316)
+        Me.dgv設備状況共通.Location = New System.Drawing.Point(12, 408)
         Me.dgv設備状況共通.MultiSelect = False
         Me.dgv設備状況共通.Name = "dgv設備状況共通"
         Me.dgv設備状況共通.pIs固定行表示 = False
@@ -510,8 +440,8 @@ Partial Class Frm00003_醗酵側設備状況
         '
         'DataGridViewTextBoxColumn1
         '
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle14
         Me.DataGridViewTextBoxColumn1.HeaderText = "No"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
@@ -519,8 +449,8 @@ Partial Class Frm00003_醗酵側設備状況
         '
         'DataGridViewTextBoxColumn2
         '
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle15
         Me.DataGridViewTextBoxColumn2.HeaderText = "設備名称"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         Me.DataGridViewTextBoxColumn2.ReadOnly = True
@@ -528,8 +458,8 @@ Partial Class Frm00003_醗酵側設備状況
         '
         'DataGridViewTextBoxColumn3
         '
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.DataGridViewTextBoxColumn3.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.DataGridViewTextBoxColumn3.DefaultCellStyle = DataGridViewCellStyle16
         Me.DataGridViewTextBoxColumn3.HeaderText = "信号"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         Me.DataGridViewTextBoxColumn3.ReadOnly = True
@@ -537,8 +467,8 @@ Partial Class Frm00003_醗酵側設備状況
         '
         'DataGridViewTextBoxColumn4
         '
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle17
         Me.DataGridViewTextBoxColumn4.HeaderText = "荷"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         Me.DataGridViewTextBoxColumn4.ReadOnly = True
@@ -546,8 +476,8 @@ Partial Class Frm00003_醗酵側設備状況
         '
         'DataGridViewTextBoxColumn5
         '
-        DataGridViewCellStyle16.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.DataGridViewTextBoxColumn5.DefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.DataGridViewTextBoxColumn5.DefaultCellStyle = DataGridViewCellStyle18
         Me.DataGridViewTextBoxColumn5.HeaderText = "品種名"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         Me.DataGridViewTextBoxColumn5.ReadOnly = True
@@ -555,8 +485,8 @@ Partial Class Frm00003_醗酵側設備状況
         '
         'DataGridViewTextBoxColumn6
         '
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle19
         Me.DataGridViewTextBoxColumn6.HeaderText = "ｸﾚｰﾄ数"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         Me.DataGridViewTextBoxColumn6.ReadOnly = True
@@ -564,8 +494,8 @@ Partial Class Frm00003_醗酵側設備状況
         '
         'DataGridViewTextBoxColumn7
         '
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle20.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle20
         Me.DataGridViewTextBoxColumn7.HeaderText = "SNo"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         Me.DataGridViewTextBoxColumn7.ReadOnly = True
@@ -573,8 +503,8 @@ Partial Class Frm00003_醗酵側設備状況
         '
         'DataGridViewTextBoxColumn8
         '
-        DataGridViewCellStyle19.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle21.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle21
         Me.DataGridViewTextBoxColumn8.HeaderText = "棚番地"
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
         Me.DataGridViewTextBoxColumn8.ReadOnly = True
@@ -582,12 +512,102 @@ Partial Class Frm00003_醗酵側設備状況
         '
         'DataGridViewTextBoxColumn9
         '
-        DataGridViewCellStyle20.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.DataGridViewTextBoxColumn9.DefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle22.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.DataGridViewTextBoxColumn9.DefaultCellStyle = DataGridViewCellStyle22
         Me.DataGridViewTextBoxColumn9.HeaderText = "作業"
         Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
         Me.DataGridViewTextBoxColumn9.ReadOnly = True
         Me.DataGridViewTextBoxColumn9.Width = 138
+        '
+        'ColNo
+        '
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.ColNo.DefaultCellStyle = DataGridViewCellStyle2
+        Me.ColNo.HeaderText = "No"
+        Me.ColNo.Name = "ColNo"
+        Me.ColNo.ReadOnly = True
+        Me.ColNo.Width = 50
+        '
+        'Col設備名称
+        '
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Col設備名称.DefaultCellStyle = DataGridViewCellStyle3
+        Me.Col設備名称.HeaderText = "設備名称"
+        Me.Col設備名称.Name = "Col設備名称"
+        Me.Col設備名称.ReadOnly = True
+        Me.Col設備名称.Width = 160
+        '
+        'col信号
+        '
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.col信号.DefaultCellStyle = DataGridViewCellStyle4
+        Me.col信号.HeaderText = "信号"
+        Me.col信号.Name = "col信号"
+        Me.col信号.ReadOnly = True
+        Me.col信号.Width = 80
+        '
+        'Col荷
+        '
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Col荷.DefaultCellStyle = DataGridViewCellStyle5
+        Me.Col荷.HeaderText = "荷"
+        Me.Col荷.Name = "Col荷"
+        Me.Col荷.ReadOnly = True
+        Me.Col荷.Width = 50
+        '
+        'Col品種
+        '
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Col品種.DefaultCellStyle = DataGridViewCellStyle6
+        Me.Col品種.HeaderText = "品種名"
+        Me.Col品種.Name = "Col品種"
+        Me.Col品種.ReadOnly = True
+        Me.Col品種.Width = 250
+        '
+        'Col数
+        '
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Col数.DefaultCellStyle = DataGridViewCellStyle7
+        Me.Col数.HeaderText = "ｸﾚｰﾄ数"
+        Me.Col数.Name = "Col数"
+        Me.Col数.ReadOnly = True
+        Me.Col数.Width = 78
+        '
+        'ColSno
+        '
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.ColSno.DefaultCellStyle = DataGridViewCellStyle8
+        Me.ColSno.HeaderText = "SNo"
+        Me.ColSno.Name = "ColSno"
+        Me.ColSno.ReadOnly = True
+        Me.ColSno.Width = 50
+        '
+        'Col棚番地
+        '
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Col棚番地.DefaultCellStyle = DataGridViewCellStyle9
+        Me.Col棚番地.HeaderText = "棚番地"
+        Me.Col棚番地.Name = "Col棚番地"
+        Me.Col棚番地.ReadOnly = True
+        Me.Col棚番地.Width = 120
+        '
+        'Col作業
+        '
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Col作業.DefaultCellStyle = DataGridViewCellStyle10
+        Me.Col作業.HeaderText = "作業"
+        Me.Col作業.Name = "Col作業"
+        Me.Col作業.ReadOnly = True
+        Me.Col作業.Visible = False
+        '
+        'ColロットNo
+        '
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.ColロットNo.DefaultCellStyle = DataGridViewCellStyle11
+        Me.ColロットNo.HeaderText = "ロットNo"
+        Me.ColロットNo.Name = "ColロットNo"
+        Me.ColロットNo.ReadOnly = True
+        Me.ColロットNo.Width = 138
         '
         'Frm00003_醗酵側設備状況
         '
@@ -659,15 +679,6 @@ Partial Class Frm00003_醗酵側設備状況
     Friend WithEvents UsrLbl2 As 共通Windowsコントロール.usrLbl
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents dgv設備状況共通 As 共通Windowsコントロール.UsrDataGridView
-    Friend WithEvents ColNo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Col設備名称 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents col信号 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Col荷 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Col品種 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Col数 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColSno As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Col棚番地 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Col作業 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -677,5 +688,14 @@ Partial Class Frm00003_醗酵側設備状況
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
-
+    Friend WithEvents ColNo As DataGridViewTextBoxColumn
+    Friend WithEvents Col設備名称 As DataGridViewTextBoxColumn
+    Friend WithEvents col信号 As DataGridViewTextBoxColumn
+    Friend WithEvents Col荷 As DataGridViewTextBoxColumn
+    Friend WithEvents Col品種 As DataGridViewTextBoxColumn
+    Friend WithEvents Col数 As DataGridViewTextBoxColumn
+    Friend WithEvents ColSno As DataGridViewTextBoxColumn
+    Friend WithEvents Col棚番地 As DataGridViewTextBoxColumn
+    Friend WithEvents Col作業 As DataGridViewTextBoxColumn
+    Friend WithEvents ColロットNo As DataGridViewTextBoxColumn
 End Class
