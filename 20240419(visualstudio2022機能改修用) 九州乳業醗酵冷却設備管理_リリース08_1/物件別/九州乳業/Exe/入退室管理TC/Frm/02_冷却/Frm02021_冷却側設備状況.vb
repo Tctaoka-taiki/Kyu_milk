@@ -173,9 +173,11 @@ Public Class Frm00003_冷却側設備状況
                 .gSubSelect("MAX(A.列)")
                 .gSubSelect("MAX(A.連)")
                 .gSubSelect("MAX(A.段)")
+                .gSubSelect("A.ロットNo")
+                .gSubSelect("A.管理No")
                 .gSubFrom("DNトラッキング A")
                 .gSubFrom("DM品種 B")
-                .gSubGroupBy("A.ユニットSEQ")
+                .gSubGroupBy("A.ユニットSEQ,A.ロットNo,A.管理No")
                 .gSubWhere("A.品種CD = B.品種CD")
                 .gSubWhere("A.ステータス >= 20")
                 .gSubOrderBy("MAX(A.冷却開始時刻)")
@@ -186,18 +188,18 @@ Public Class Frm00003_冷却側設備状況
                     While reader.Read
                         Select Case reader.GetValue(0)
                             Case 20  '急冷室前データ
-                                mSub設備状況表示(0, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0))
+                                mSub設備状況表示(0, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0), reader.GetValue(7), reader.GetValue(8))
 
                             Case 21  '急冷コンベヤデータ
-                                mSub設備状況表示(21 - 急冷コンベヤ表示カウント, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0))
+                                mSub設備状況表示(21 - 急冷コンベヤ表示カウント, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0), reader.GetValue(7), reader.GetValue(8))
                                 急冷コンベヤ表示カウント += 1
 
                             Case 22, 23, 24, 25 '入庫ST&クレーン指示予約
-                                mSub設備状況表示(22, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0))
+                                mSub設備状況表示(22, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0), reader.GetValue(7), reader.GetValue(8))
                                 Me.dgv設備状況.Item(7, 22).Value = reader.GetValue(4) & "-" & reader.GetValue(5) & "-" & reader.GetValue(6)
 
                             Case 26, 30 'クレーン動作中
-                                mSub設備状況表示(23, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0))
+                                mSub設備状況表示(23, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0), reader.GetValue(7), reader.GetValue(8))
                                 Me.dgv設備状況.Item(7, 23).Value = reader.GetValue(4) & "-" & reader.GetValue(5) & "-" & reader.GetValue(6)
                                 Select Case reader.GetValue(0)
                                     Case 26
@@ -210,29 +212,29 @@ Public Class Frm00003_冷却側設備状況
                             Case 27, 28, 29 '入庫完了～出庫指示中
 
                             Case 31 '出庫ST
-                                mSub設備状況表示(24, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0))
+                                mSub設備状況表示(24, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0), reader.GetValue(7), reader.GetValue(8))
 
                             Case 32 '出庫コンベヤ
-                                mSub設備状況表示(25, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0))
+                                mSub設備状況表示(25, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0), reader.GetValue(7), reader.GetValue(8))
 
                             Case 33 '出庫前室
-                                mSub設備状況表示(26, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0))
+                                mSub設備状況表示(26, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0), reader.GetValue(7), reader.GetValue(8))
 
                             Case 34 '搬送コンベヤ
-                                mSub設備状況表示(27, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0))
+                                mSub設備状況表示(27, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0), reader.GetValue(7), reader.GetValue(8))
 
                             Case 35 'パレタイザ前
-                                mSub設備状況表示(28, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0))
+                                mSub設備状況表示(28, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0), reader.GetValue(7), reader.GetValue(8))
 
                             Case 36 'パレタイザ１
-                                mSub設備状況表示(29, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0))
+                                mSub設備状況表示(29, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0), reader.GetValue(7), reader.GetValue(8))
 
                             Case 37 'パレタイザ２
-                                mSub設備状況表示(30, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0))
+                                mSub設備状況表示(30, reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(0), reader.GetValue(7), reader.GetValue(8))
 
                             Case 38 '受渡しコンベヤ
                                 受渡コンベヤ総数 += Int(reader.GetValue(2).ToString)
-                                mSub設備状況表示(31, reader.GetValue(1), 受渡コンベヤ総数, reader.GetValue(3), reader.GetValue(0))
+                                mSub設備状況表示(31, reader.GetValue(1), 受渡コンベヤ総数, reader.GetValue(3), reader.GetValue(0), reader.GetValue(7), reader.GetValue(8))
 
                         End Select
                     End While
@@ -245,11 +247,13 @@ Public Class Frm00003_冷却側設備状況
         End Try
     End Sub
 
-    Private Sub mSub設備状況表示(ByVal intRow As Integer, ByVal data1 As String, ByVal data2 As String, ByVal data3 As String, ByVal data4 As String)
+    Private Sub mSub設備状況表示(ByVal intRow As Integer, ByVal data1 As String, ByVal data2 As String, ByVal data3 As String, ByVal data4 As String, ByVal data5 As String, ByVal data6 As String)
         Me.dgv設備状況.Item(4, intRow).Value = data1
         Me.dgv設備状況.Item(5, intRow).Value = data2
         Me.dgv設備状況.Item(6, intRow).Value = data3
         'Me.dgv設備状況.Item(8, intRow).Value = data4
+        Me.dgv設備状況.Item(9, intRow).Value = data5
+        Me.dgv設備状況.Item(10, intRow).Value = data6
 
     End Sub
     Private Sub クレーン信号情報更新(ByVal 倉庫区分 As Integer, ByVal デバイスNo As Integer, ByVal Row As Integer)
