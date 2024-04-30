@@ -12,6 +12,9 @@ Public Class Dlg01999_冷却出庫設定
                 Me.btnF1.Text = "F1" & vbCrLf & "中断"
 
         End Select
+        If txtロットNo.Text <> String.Empty Then
+            トラッキングデータ表示()
+        End If
     End Sub
     Dim int中断区分 As Integer = 0
     Private Sub btnF1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnF1.Click

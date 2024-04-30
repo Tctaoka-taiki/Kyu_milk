@@ -334,7 +334,7 @@ Public Class Frm01004_醗酵完了出庫設定
         Me.Timer1.Stop()
 
         Try
-            If Me.dgv生産データハード.Item(6, Me.dgv生産データハード.CurrentRow.Index).Value = "出庫中" Then
+            If Me.dgv生産データハード.Item(6, Me.dgv生産データハード.CurrentRow.Index).Value = "出庫中" Or Me.dgv生産データハード.Item(6, Me.dgv生産データハード.CurrentRow.Index).Value = "出庫待ち" Then
                 Dim dlg As New Dlg01004_出庫設定
                 With dlg
                     .m画面モード = 1    '出庫中断設定モード
@@ -373,7 +373,7 @@ Public Class Frm01004_醗酵完了出庫設定
 
         Me.Timer1.Stop()
         Try
-            If Me.dgv生産データプレーン.Item(6, Me.dgv生産データプレーン.CurrentRow.Index).Value = "出庫中" Then
+            If Me.dgv生産データプレーン.Item(6, Me.dgv生産データプレーン.CurrentRow.Index).Value = "出庫中" Or Me.dgv生産データプレーン.Item(6, Me.dgv生産データプレーン.CurrentRow.Index).Value Then
                 Dim dlg As New Dlg01004_出庫設定
                 With dlg
                     .m画面モード = 1    '出庫中断設定モード

@@ -165,23 +165,31 @@ Public Class Frm02001_冷却完了出庫設定
         Me.Timer1.Stop()
 
         Try
-            '
-            Dim dlg As New Dlg01999_冷却出庫設定
-            With dlg
-                .m画面モード = 0
-                .txtロットNo.Text = Me.dgv生産データ.Item(1, Me.dgv生産データ.CurrentRow.Index).Value
-                .lbl品種名.Text = Me.dgv生産データ.Item(2, Me.dgv生産データ.CurrentRow.Index).Value
-                .lbl所定醗酵時間.Text = Me.dgv生産データ.Item(3, Me.dgv生産データ.CurrentRow.Index).Value
-                .lbl醗酵経過時間.Text = Me.dgv生産データ.Item(4, Me.dgv生産データ.CurrentRow.Index).Value
-                .btnF1.Enabled = True
-                .ShowDialog()
+            If Me.dgv生産データ.Item(5, Me.dgv生産データ.CurrentRow.Index).Value = "出庫待ち" Then
+                Dim dlg As New Dlg01999_冷却出庫設定
+                With dlg
+                    .m画面モード = 1    '出庫中断設定モード
+                    .btnF1.Enabled = False
+                    .txtロットNo.Text = Me.dgv生産データ.Item(1, Me.dgv生産データ.CurrentRow.Index).Value
+                    .ShowDialog()
+                End With
+            Else
+                Dim dlg As New Dlg01999_冷却出庫設定
+                With dlg
+                    .m画面モード = 0
+                    .txtロットNo.Text = Me.dgv生産データ.Item(1, Me.dgv生産データ.CurrentRow.Index).Value
+                    .lbl品種名.Text = Me.dgv生産データ.Item(2, Me.dgv生産データ.CurrentRow.Index).Value
+                    .lbl所定醗酵時間.Text = Me.dgv生産データ.Item(3, Me.dgv生産データ.CurrentRow.Index).Value
+                    .lbl醗酵経過時間.Text = Me.dgv生産データ.Item(4, Me.dgv生産データ.CurrentRow.Index).Value
+                    .btnF1.Enabled = True
+                    .ShowDialog()
 
-            End With
-
-            '画面の再表示
-            冷却生産品情報()
+                End With
+            End If
         Catch ex As Exception
         Finally
+            '画面の再表示
+            冷却生産品情報()
             Me.Timer1.Start()
         End Try
     End Sub
