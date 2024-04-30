@@ -102,6 +102,8 @@ Public Class Frm02001_冷却完了出庫設定
                 .gSubSelect("MAX(A.ステータス)")
                 .gSubSelect("MAX(A.出庫中断_冷)")
                 .gSubSelect("MAX(A.出庫指示)")
+                .gSubSelect("Count(DISTINCT A.ユニットSEQ)")
+                .gSubSelect("SUM(A.受入数)")
                 .gSubFrom("DNトラッキング A")
                 .gSubFrom("DM品種 B")
                 .gSubWhere("A.ステータス >= 27 ")
@@ -146,6 +148,8 @@ Public Class Frm02001_冷却完了出庫設定
                             Me.dgv生産データ.Item(5, i).Value = "中断中"
 
                         End If
+                        Me.dgv生産データ.Item(7, i).Value = reader.GetValue(7)
+                        Me.dgv生産データ.Item(8, i).Value = reader.GetValue(8)
                         i += 1
                     End While
                 End If

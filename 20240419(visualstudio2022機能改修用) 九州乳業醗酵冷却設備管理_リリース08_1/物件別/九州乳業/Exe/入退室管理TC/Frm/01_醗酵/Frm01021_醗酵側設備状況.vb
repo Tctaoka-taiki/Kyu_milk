@@ -33,8 +33,9 @@ Public Class Frm00003_醗酵側設備状況
 
     Private Sub Frm00002_設備状況_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim i As Integer
-        For i = 0 To 17
+        For i = 0 To 8
             dgv設備状況.Rows.Add()
+            dgv設備状況追加分.Rows.Add()
         Next
 
         For i = 0 To 2
@@ -45,6 +46,7 @@ Public Class Frm00003_醗酵側設備状況
 
 
         dgv設備状況.CurrentCell = Nothing
+        dgv設備状況追加分.CurrentCell = Nothing
         dgv設備状況共通.CurrentCell = Nothing
         Me.cmbライン.Text = "プレーン１・ハード２"
         設備状況更新()
@@ -107,8 +109,11 @@ Public Class Frm00003_醗酵側設備状況
 
             Select Case Me.cmbライン.Text
                 Case "ハード１"
+                    lbl上.Text = "ハード１"
+                    lbl下.Text = ""
+                    Me.dgv設備状況追加分.Visible = False
                     Dim n As Integer
-                    For n = 9 To 17
+                    For n = 0 To 8
                         Me.dgv設備状況.Item(0, n).Value = ""
                         Me.dgv設備状況.Item(1, n).Value = ""
                         Me.dgv設備状況.Item(2, n).Value = ""
@@ -122,7 +127,7 @@ Public Class Frm00003_醗酵側設備状況
                         dgv設備状況(0, i).Value = i + 1
                         dgv設備状況(1, i).Value = str設備名称(i + 1)
                     Next
-                    For i = 0 To 17
+                    For i = 0 To 8
                         Me.dgv設備状況.Item(4, i).Value = ""
                         Me.dgv設備状況.Item(5, i).Value = ""
                         Me.dgv設備状況.Item(6, i).Value = ""
@@ -132,6 +137,9 @@ Public Class Frm00003_醗酵側設備状況
                     Next
                     表示処理(デバイスOFFSET, 製造ライン, 0)
                 Case "プレーン１・ハード２"
+                    lbl上.Text = "プレーン１"
+                    lbl下.Text = "ハード２"
+                    Me.dgv設備状況追加分.Visible = True
                     デバイスOFFSET = 6004
                     製造ライン = 1
                     Dim i As Integer = 0
@@ -152,18 +160,18 @@ Public Class Frm00003_醗酵側設備状況
                     製造ライン = 2
                     i = 0
                     For i = 0 To 8
-                        dgv設備状況(0, i + 9).Value = i + 31
-                        dgv設備状況(1, i + 9).Value = str設備名称(i + 1)
+                        dgv設備状況追加分(0, i).Value = i + 31
+                        dgv設備状況追加分(1, i).Value = str設備名称(i + 1)
                     Next
-                    For i = 9 To 17
-                        Me.dgv設備状況.Item(4, i).Value = ""
-                        Me.dgv設備状況.Item(5, i).Value = ""
-                        Me.dgv設備状況.Item(6, i).Value = ""
-                        Me.dgv設備状況.Item(7, i).Value = ""
-                        Me.dgv設備状況.Item(8, i).Value = ""
-                        Me.dgv設備状況.Item(9, i).Value = ""
+                    For i = 0 To 8
+                        Me.dgv設備状況追加分.Item(4, i).Value = ""
+                        Me.dgv設備状況追加分.Item(5, i).Value = ""
+                        Me.dgv設備状況追加分.Item(6, i).Value = ""
+                        Me.dgv設備状況追加分.Item(7, i).Value = ""
+                        Me.dgv設備状況追加分.Item(8, i).Value = ""
+                        Me.dgv設備状況追加分.Item(9, i).Value = ""
                     Next
-                    表示処理(デバイスOFFSET, 製造ライン, 9)
+                    表示処理(デバイスOFFSET, 製造ライン, 99)
                     'Case "プレーン１"
                     '    デバイスOFFSET = 6004
                     '    製造ライン = 1
@@ -194,26 +202,26 @@ Public Class Frm00003_醗酵側設備状況
         End Try
 
     End Sub
-    Private Sub 表示処理(ByVal デバイスOFFSET As Integer, ByVal 製造ライン As Integer, ByVal 開始行数 As Integer)
+    Private Sub 表示処理(ByVal デバイスOFFSET As Integer, ByVal 製造ライン As Integer, ByVal 表示grid As Integer)
         '段積機
-        信号情報更新_ライン別(0, デバイスOFFSET + 1, 0, 開始行数)
-        荷情報更新_ライン別(0, デバイスOFFSET + 1, 2, 0, 開始行数)
+        信号情報更新_ライン別(0, デバイスOFFSET + 1, 0, 表示grid)
+        荷情報更新_ライン別(0, デバイスOFFSET + 1, 2, 0, 表示grid)
 
         'コンベヤ
-        信号情報更新_ライン別(0, デバイスOFFSET + 2, 1, 開始行数)
+        信号情報更新_ライン別(0, デバイスOFFSET + 2, 1, 表示grid)
 
-        荷情報更新_ライン別(0, デバイスOFFSET + 2, 4, 3, 開始行数)
-        荷情報更新_ライン別(0, デバイスOFFSET + 2, 3, 4, 開始行数)
-        荷情報更新_ライン別(0, デバイスOFFSET + 2, 2, 5, 開始行数)
+        荷情報更新_ライン別(0, デバイスOFFSET + 2, 4, 3, 表示grid)
+        荷情報更新_ライン別(0, デバイスOFFSET + 2, 3, 4, 表示grid)
+        荷情報更新_ライン別(0, デバイスOFFSET + 2, 2, 5, 表示grid)
 
         '入庫ST
-        信号情報更新_ライン別(0, デバイスOFFSET + 3, 6, 開始行数)
-        信号情報更新_ライン別(0, デバイスOFFSET + 3, 7, 開始行数)
-        信号情報更新_ライン別(0, デバイスOFFSET + 3, 8, 開始行数)
+        信号情報更新_ライン別(0, デバイスOFFSET + 3, 6, 表示grid)
+        信号情報更新_ライン別(0, デバイスOFFSET + 3, 7, 表示grid)
+        信号情報更新_ライン別(0, デバイスOFFSET + 3, 8, 表示grid)
 
-        荷情報更新_ライン別(0, デバイスOFFSET + 3, 4, 6, 開始行数)
-        荷情報更新_ライン別(0, デバイスOFFSET + 3, 3, 7, 開始行数)
-        荷情報更新_ライン別(0, デバイスOFFSET + 3, 2, 8, 開始行数)
+        荷情報更新_ライン別(0, デバイスOFFSET + 3, 4, 6, 表示grid)
+        荷情報更新_ライン別(0, デバイスOFFSET + 3, 3, 7, 表示grid)
+        荷情報更新_ライン別(0, デバイスOFFSET + 3, 2, 8, 表示grid)
 
         'クレーン(不明)
         クレーン信号情報更新(0, 5002, 0)
@@ -227,15 +235,22 @@ Public Class Frm00003_醗酵側設備状況
         荷情報更新_共通(1, 6000, 2, 2)
 
         'トラッキングデータ表示
-        トラッキング情報更新(製造ライン, 開始行数)
+        トラッキング情報更新(製造ライン, 表示grid)
     End Sub
-    Private Sub トラッキング情報更新(ByVal 製造ライン As Integer, ByVal 開始行数 As Integer)
+    Private Sub トラッキング情報更新(ByVal 製造ライン As Integer, ByVal 表示grid As Integer)
         Dim i As Integer = 0
+        Dim grid As UsrDataGridView
+
+        If 表示grid = 0 Then
+            grid = Me.dgv設備状況
+        ElseIf 表示grid = 99 Then
+            grid = Me.dgv設備状況追加分
+        End If
 
         For i = 0 To 2
-            Me.dgv設備状況共通.Item(4, i).Value = ""
-            Me.dgv設備状況共通.Item(5, i).Value = ""
-            Me.dgv設備状況共通.Item(6, i).Value = ""
+            grid.Item(4, i).Value = ""
+            grid.Item(5, i).Value = ""
+            grid.Item(6, i).Value = ""
             Me.dgv設備状況共通.Item(7, i).Value = ""
             Me.dgv設備状況共通.Item(8, i).Value = ""
         Next
@@ -266,75 +281,75 @@ Public Class Frm00003_醗酵側設備状況
 
                         Select Case reader.GetValue(0)
                             Case 0  '段積機データ
-                                Me.dgv設備状況.Item(4, 0 + 開始行数).Value = reader.GetValue(1)
-                                Me.dgv設備状況.Item(5, 0 + 開始行数).Value = reader.GetValue(2)
-                                Me.dgv設備状況.Item(6, 0 + 開始行数).Value = reader.GetValue(3)
-                                Me.dgv設備状況.Item(9, 0 + 開始行数).Value = reader.GetValue(8)
+                                grid.Item(4, 0).Value = reader.GetValue(1)
+                                grid.Item(5, 0).Value = reader.GetValue(2)
+                                grid.Item(6, 0).Value = reader.GetValue(3)
+                                grid.Item(9, 0).Value = reader.GetValue(8)
 
                             Case 1  'コンベヤデータ ※複数データがストックされる場合がある
-                                Me.dgv設備状況.Item(4, 5 - コンベヤCNT + 開始行数).Value = reader.GetValue(1)
-                                Me.dgv設備状況.Item(5, 5 - コンベヤCNT + 開始行数).Value = reader.GetValue(2)
-                                Me.dgv設備状況.Item(6, 5 - コンベヤCNT + 開始行数).Value = reader.GetValue(3)
-                                Me.dgv設備状況.Item(9, 5 - コンベヤCNT + 開始行数).Value = reader.GetValue(8)
+                                grid.Item(4, 5 - コンベヤCNT).Value = reader.GetValue(1)
+                                grid.Item(5, 5 - コンベヤCNT).Value = reader.GetValue(2)
+                                grid.Item(6, 5 - コンベヤCNT).Value = reader.GetValue(3)
+                                grid.Item(9, 5 - コンベヤCNT).Value = reader.GetValue(8)
 
                                 コンベヤCNT += 1
                             Case 2
                                 Select Case reader.GetValue(4)
                                     Case 3
-                                        Me.dgv設備状況.Item(4, 8 + 開始行数).Value = reader.GetValue(1)
-                                        Me.dgv設備状況.Item(5, 8 + 開始行数).Value = reader.GetValue(2)
-                                        Me.dgv設備状況.Item(6, 8 + 開始行数).Value = reader.GetValue(3)
-                                        Me.dgv設備状況.Item(9, 8 + 開始行数).Value = reader.GetValue(8)
+                                        grid.Item(4, 8).Value = reader.GetValue(1)
+                                        grid.Item(5, 8).Value = reader.GetValue(2)
+                                        grid.Item(6, 8).Value = reader.GetValue(3)
+                                        grid.Item(9, 8).Value = reader.GetValue(8)
                                     Case 2
-                                        Me.dgv設備状況.Item(4, 7 + 開始行数).Value = reader.GetValue(1)
-                                        Me.dgv設備状況.Item(5, 7 + 開始行数).Value = reader.GetValue(2)
-                                        Me.dgv設備状況.Item(6, 7 + 開始行数).Value = reader.GetValue(3)
-                                        Me.dgv設備状況.Item(9, 7 + 開始行数).Value = reader.GetValue(8)
+                                        grid.Item(4, 7).Value = reader.GetValue(1)
+                                        grid.Item(5, 7).Value = reader.GetValue(2)
+                                        grid.Item(6, 7).Value = reader.GetValue(3)
+                                        grid.Item(9, 7).Value = reader.GetValue(8)
                                     Case 1
-                                        Me.dgv設備状況.Item(4, 6 + 開始行数).Value = reader.GetValue(1)
-                                        Me.dgv設備状況.Item(5, 6 + 開始行数).Value = reader.GetValue(2)
-                                        Me.dgv設備状況.Item(6, 6 + 開始行数).Value = reader.GetValue(3)
-                                        Me.dgv設備状況.Item(9, 6 + 開始行数).Value = reader.GetValue(8)
+                                        grid.Item(4, 6).Value = reader.GetValue(1)
+                                        grid.Item(5, 6).Value = reader.GetValue(2)
+                                        grid.Item(6, 6).Value = reader.GetValue(3)
+                                        grid.Item(9, 6).Value = reader.GetValue(8)
                                 End Select
 
                             Case 3 'クレーン指示予約
                                 Select Case reader.GetValue(4)
                                     Case 3
-                                        Me.dgv設備状況.Item(4, 8 + 開始行数).Value = reader.GetValue(1)
-                                        Me.dgv設備状況.Item(5, 8 + 開始行数).Value = reader.GetValue(2)
-                                        Me.dgv設備状況.Item(6, 8 + 開始行数).Value = reader.GetValue(3)
-                                        Me.dgv設備状況.Item(7, 8 + 開始行数).Value = reader.GetValue(5) & "-" & reader.GetValue(6).ToString.PadLeft(2, "0"c) & "-" & reader.GetValue(7)
-                                        Me.dgv設備状況.Item(9, 8 + 開始行数).Value = reader.GetValue(8)
+                                        grid.Item(4, 8).Value = reader.GetValue(1)
+                                        grid.Item(5, 8).Value = reader.GetValue(2)
+                                        grid.Item(6, 8).Value = reader.GetValue(3)
+                                        grid.Item(7, 8).Value = reader.GetValue(5) & "-" & reader.GetValue(6).ToString.PadLeft(2, "0"c) & "-" & reader.GetValue(7)
+                                        grid.Item(9, 8).Value = reader.GetValue(8)
                                     Case 2
-                                        Me.dgv設備状況.Item(4, 7 + 開始行数).Value = reader.GetValue(1)
-                                        Me.dgv設備状況.Item(5, 7 + 開始行数).Value = reader.GetValue(2)
-                                        Me.dgv設備状況.Item(6, 7 + 開始行数).Value = reader.GetValue(3)
-                                        Me.dgv設備状況.Item(9, 7 + 開始行数).Value = reader.GetValue(8)
+                                        grid.Item(4, 7).Value = reader.GetValue(1)
+                                        grid.Item(5, 7).Value = reader.GetValue(2)
+                                        grid.Item(6, 7).Value = reader.GetValue(3)
+                                        grid.Item(9, 7).Value = reader.GetValue(8)
                                     Case 1
-                                        Me.dgv設備状況.Item(4, 6 + 開始行数).Value = reader.GetValue(1)
-                                        Me.dgv設備状況.Item(5, 6 + 開始行数).Value = reader.GetValue(2)
-                                        Me.dgv設備状況.Item(6, 6 + 開始行数).Value = reader.GetValue(3)
-                                        Me.dgv設備状況.Item(9, 6 + 開始行数).Value = reader.GetValue(8)
+                                        grid.Item(4, 6).Value = reader.GetValue(1)
+                                        grid.Item(5, 6).Value = reader.GetValue(2)
+                                        grid.Item(6, 6).Value = reader.GetValue(3)
+                                        grid.Item(9, 6).Value = reader.GetValue(8)
                                 End Select
 
                             Case 4  'クレーン指示送信中
                                 Select Case reader.GetValue(4)
                                     Case 3
-                                        Me.dgv設備状況.Item(4, 8 + 開始行数).Value = reader.GetValue(1)
-                                        Me.dgv設備状況.Item(5, 8 + 開始行数).Value = reader.GetValue(2)
-                                        Me.dgv設備状況.Item(6, 8 + 開始行数).Value = reader.GetValue(3)
-                                        Me.dgv設備状況.Item(7, 8 + 開始行数).Value = reader.GetValue(5) & "-" & reader.GetValue(6).ToString.PadLeft(2, "0"c) & "-" & reader.GetValue(7)
-                                        Me.dgv設備状況.Item(9, 8 + 開始行数).Value = reader.GetValue(8)
+                                        grid.Item(4, 8).Value = reader.GetValue(1)
+                                        grid.Item(5, 8).Value = reader.GetValue(2)
+                                        grid.Item(6, 8).Value = reader.GetValue(3)
+                                        grid.Item(7, 8).Value = reader.GetValue(5) & "-" & reader.GetValue(6).ToString.PadLeft(2, "0"c) & "-" & reader.GetValue(7)
+                                        grid.Item(9, 8).Value = reader.GetValue(8)
                                     Case 2
-                                        Me.dgv設備状況.Item(4, 7 + 開始行数).Value = reader.GetValue(1)
-                                        Me.dgv設備状況.Item(5, 7 + 開始行数).Value = reader.GetValue(2)
-                                        Me.dgv設備状況.Item(6, 7 + 開始行数).Value = reader.GetValue(3)
-                                        Me.dgv設備状況.Item(9, 7 + 開始行数).Value = reader.GetValue(8)
+                                        grid.Item(4, 7).Value = reader.GetValue(1)
+                                        grid.Item(5, 7).Value = reader.GetValue(2)
+                                        grid.Item(6, 7).Value = reader.GetValue(3)
+                                        grid.Item(9, 7).Value = reader.GetValue(8)
                                     Case 1
-                                        Me.dgv設備状況.Item(4, 6 + 開始行数).Value = reader.GetValue(1)
-                                        Me.dgv設備状況.Item(5, 6 + 開始行数).Value = reader.GetValue(2)
-                                        Me.dgv設備状況.Item(6, 6 + 開始行数).Value = reader.GetValue(3)
-                                        Me.dgv設備状況.Item(9, 6 + 開始行数).Value = reader.GetValue(8)
+                                        grid.Item(4, 6).Value = reader.GetValue(1)
+                                        grid.Item(5, 6).Value = reader.GetValue(2)
+                                        grid.Item(6, 6).Value = reader.GetValue(3)
+                                        grid.Item(9, 6).Value = reader.GetValue(8)
                                 End Select
                         End Select
                     End While
@@ -413,23 +428,39 @@ Public Class Frm00003_醗酵側設備状況
         End If
     End Sub
 
-    Private Sub 信号情報更新_ライン別(ByVal 倉庫区分 As Integer, ByVal デバイスNo As Integer, ByVal Row As Integer, ByVal 開始行数 As Integer)
+    Private Sub 信号情報更新_ライン別(ByVal 倉庫区分 As Integer, ByVal デバイスNo As Integer, ByVal Row As Integer, ByVal 表示grid As Integer)
+        Dim grid As UsrDataGridView
+
+        If 表示grid = 0 Then
+            grid = Me.dgv設備状況
+        ElseIf 表示grid = 99 Then
+            grid = Me.dgv設備状況追加分
+        End If
+
         If CMdiMain.intデバイスステータス(倉庫区分, デバイスNo, 0) = 1 Then
-            dgv設備状況.Item(2, Row + 開始行数).Value = "異常"
+            grid.Item(2, Row).Value = "異常"
         Else
             If CMdiMain.intデバイスステータス(倉庫区分, デバイスNo, 1) = 1 Then
-                dgv設備状況.Item(2, Row + 開始行数).Value = "自動"
+                grid.Item(2, Row).Value = "自動"
             Else
-                dgv設備状況.Item(2, Row + 開始行数).Value = "手動"
+                grid.Item(2, Row).Value = "手動"
             End If
         End If
     End Sub
 
-    Private Sub 荷情報更新_ライン別(ByVal 倉庫区分 As Integer, ByVal デバイスNo As Integer, ByVal ビットNo As Integer, ByVal Row As Integer, ByVal 開始行数 As Integer)
+    Private Sub 荷情報更新_ライン別(ByVal 倉庫区分 As Integer, ByVal デバイスNo As Integer, ByVal ビットNo As Integer, ByVal Row As Integer, ByVal 表示grid As Integer)
+        Dim grid As UsrDataGridView
+
+        If 表示grid = 0 Then
+            grid = Me.dgv設備状況
+        ElseIf 表示grid = 99 Then
+            grid = Me.dgv設備状況追加分
+        End If
+
         If CMdiMain.intデバイスステータス(倉庫区分, デバイスNo, ビットNo) = 1 Then
-            dgv設備状況.Item(3, Row + 開始行数).Value = "有"
+            grid.Item(3, Row).Value = "有"
         Else
-            dgv設備状況.Item(3, Row + 開始行数).Value = ""
+            grid.Item(3, Row).Value = ""
         End If
     End Sub
 
