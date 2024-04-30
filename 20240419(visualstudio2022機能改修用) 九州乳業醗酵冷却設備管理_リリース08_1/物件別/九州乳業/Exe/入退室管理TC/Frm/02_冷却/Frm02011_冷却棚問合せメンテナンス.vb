@@ -108,6 +108,7 @@ Public Class Frm02011_冷却棚問合せメンテナンス
         Dim reader As DbDataReader = Nothing
         Try
             With New CSqlEx
+                .gSubSelect("B.品種CD")
                 .gSubSelect("MAX(A.列) as 列")
                 .gSubSelect("MAX(A.連) as 連")
                 .gSubSelect("MAX(A.段) as 段")
@@ -127,11 +128,10 @@ Public Class Frm02011_冷却棚問合せメンテナンス
                 .gSubWhere("A.ステータス <= 29 ")
                 '---------------------------------
                 .gSubWhere("A.品種CD = B.品種CD")
-                .gSubGroupBy("A.ユニットSEQ")
+                .gSubGroupBy("B.品種CD,A.ユニットSEQ")
 
                 Dim strトラッキング状況SQL As String = .gSQL文の取得
                 .gSubClearSQL()
-
                 .gSubSelect("A.列")
                 .gSubSelect("A.連")
                 .gSubSelect("A.段")
@@ -144,11 +144,12 @@ Public Class Frm02011_冷却棚問合せメンテナンス
                 .gSubSelect("B.所定時刻")
                 .gSubSelect("B.経過時刻")
                 .gSubSelect("A.棚区分")
+                .gSubSelect("B.品種CD")
                 .gSubFrom("DM棚 A LEFT JOIN (" & strトラッキング状況SQL & ")B ON A.列=B.列 AND A.連=B.連 AND A.段=B.段")
                 .gSubWhere("A.倉庫区分", 1, , , , , , , False)
                 .gSubWhere("A.棚区分<>1")   'ステーションは対象外
                 .gSubWhere("A.棚区分<>3")   '棚無しは対象外
-                .gSubOrderBy("列,連,段")
+                .gSubOrderBy("IIF(B.品種CD IS NOT NULL, 0, 1),B.品種CD,開始時刻,列,連,段")
 
                 If CUsrctl.gDp.gBlnReader(.gSQL文の取得, reader) Then
                     '合計表示行の作成
