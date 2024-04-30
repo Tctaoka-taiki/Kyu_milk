@@ -334,23 +334,34 @@ Public Class Frm01004_醗酵完了出庫設定
         Me.Timer1.Stop()
 
         Try
-            Dim dlg As New Dlg01004_出庫設定
-            With dlg
-                .m画面モード = 0    '出庫設定モード
-                .txtロットNo.Text = Me.dgv生産データハード.Item(1, Me.dgv生産データハード.CurrentRow.Index).Value
-                .txtサンプルNo.Text = Me.dgv生産データハード.Item(2, Me.dgv生産データハード.CurrentRow.Index).Value
-                .lbl品種名.Text = Me.dgv生産データハード.Item(3, Me.dgv生産データハード.CurrentRow.Index).Value
-                .lbl所定醗酵時間.Text = Me.dgv生産データハード.Item(4, Me.dgv生産データハード.CurrentRow.Index).Value
-                .lbl醗酵経過時間.Text = Me.dgv生産データハード.Item(5, Me.dgv生産データハード.CurrentRow.Index).Value
-                .btnF1.Focus()
+            If Me.dgv生産データハード.Item(6, Me.dgv生産データハード.CurrentRow.Index).Value = "出庫中" Then
+                Dim dlg As New Dlg01004_出庫設定
+                With dlg
+                    .m画面モード = 1    '出庫中断設定モード
+                    .btnF1.Enabled = False
+                    .txtロットNo.Text = Me.dgv生産データハード.Item(1, Me.dgv生産データハード.CurrentRow.Index).Value
+                    .txtサンプルNo.Text = Me.dgv生産データハード.Item(2, Me.dgv生産データハード.CurrentRow.Index).Value
+                    .ShowDialog()
+                End With
+            Else
 
-                .ShowDialog()
-            End With
+                Dim dlg As New Dlg01004_出庫設定
+                With dlg
+                    .m画面モード = 0    '出庫設定モード
+                    .txtロットNo.Text = Me.dgv生産データハード.Item(1, Me.dgv生産データハード.CurrentRow.Index).Value
+                    .txtサンプルNo.Text = Me.dgv生産データハード.Item(2, Me.dgv生産データハード.CurrentRow.Index).Value
+                    .lbl品種名.Text = Me.dgv生産データハード.Item(3, Me.dgv生産データハード.CurrentRow.Index).Value
+                    .lbl所定醗酵時間.Text = Me.dgv生産データハード.Item(4, Me.dgv生産データハード.CurrentRow.Index).Value
+                    .lbl醗酵経過時間.Text = Me.dgv生産データハード.Item(5, Me.dgv生産データハード.CurrentRow.Index).Value
+                    .btnF1.Focus()
 
-            '画面の再表示
-            醗酵生産品情報()
+                    .ShowDialog()
+                End With
+            End If
         Catch ex As Exception
         Finally
+            '画面の再表示
+            醗酵生産品情報()
             Me.Timer1.Start()
         End Try
 
@@ -361,26 +372,35 @@ Public Class Frm01004_醗酵完了出庫設定
         End If
 
         Me.Timer1.Stop()
-
         Try
-            Dim dlg As New Dlg01004_出庫設定
-            With dlg
-                .m画面モード = 0    '出庫設定モード
-                .txtロットNo.Text = Me.dgv生産データプレーン.Item(1, Me.dgv生産データプレーン.CurrentRow.Index).Value
-                .txtサンプルNo.Text = Me.dgv生産データプレーン.Item(2, Me.dgv生産データプレーン.CurrentRow.Index).Value
-                .lbl品種名.Text = Me.dgv生産データプレーン.Item(3, Me.dgv生産データプレーン.CurrentRow.Index).Value
-                .lbl所定醗酵時間.Text = Me.dgv生産データプレーン.Item(4, Me.dgv生産データプレーン.CurrentRow.Index).Value
-                .lbl醗酵経過時間.Text = Me.dgv生産データプレーン.Item(5, Me.dgv生産データプレーン.CurrentRow.Index).Value
-                .btnF1.Focus()
+            If Me.dgv生産データプレーン.Item(6, Me.dgv生産データプレーン.CurrentRow.Index).Value = "出庫中" Then
+                Dim dlg As New Dlg01004_出庫設定
+                With dlg
+                    .m画面モード = 1    '出庫中断設定モード
+                    .btnF1.Enabled = False
+                    .txtロットNo.Text = Me.dgv生産データプレーン.Item(1, Me.dgv生産データプレーン.CurrentRow.Index).Value
+                    .txtサンプルNo.Text = Me.dgv生産データプレーン.Item(2, Me.dgv生産データプレーン.CurrentRow.Index).Value
+                    .ShowDialog()
+                End With
+            Else
+                Dim dlg As New Dlg01004_出庫設定
+                With dlg
+                    .m画面モード = 0    '出庫設定モード
+                    .txtロットNo.Text = Me.dgv生産データプレーン.Item(1, Me.dgv生産データプレーン.CurrentRow.Index).Value
+                    .txtサンプルNo.Text = Me.dgv生産データプレーン.Item(2, Me.dgv生産データプレーン.CurrentRow.Index).Value
+                    .lbl品種名.Text = Me.dgv生産データプレーン.Item(3, Me.dgv生産データプレーン.CurrentRow.Index).Value
+                    .lbl所定醗酵時間.Text = Me.dgv生産データプレーン.Item(4, Me.dgv生産データプレーン.CurrentRow.Index).Value
+                    .lbl醗酵経過時間.Text = Me.dgv生産データプレーン.Item(5, Me.dgv生産データプレーン.CurrentRow.Index).Value
+                    .btnF1.Focus()
 
-                .ShowDialog()
-            End With
-
-            '画面の再表示
-            醗酵生産品情報()
+                    .ShowDialog()
+                End With
+            End If
         Catch ex As Exception
         Finally
-            Me.Timer1.Start()
+            '画面の再表示
+            醗酵生産品情報()
+                Me.Timer1.Start()
         End Try
 
     End Sub
