@@ -143,10 +143,11 @@ Public Class Frm02001_冷却完了出庫設定
                                 Me.dgv生産データ.Item(5, i).Value = "出庫待ち"
                             Case 29, 30
                                 Me.dgv生産データ.Item(5, i).Value = "出庫中"
+                                Me.dgv生産データ.Rows(i).DefaultCellStyle.BackColor = Color.LightCoral
                         End Select
                         If reader.GetValue(5) = 1 Then
                             Me.dgv生産データ.Item(5, i).Value = "中断中"
-
+                            Me.dgv生産データ.Rows(i).DefaultCellStyle.BackColor = Color.White
                         End If
                         Me.dgv生産データ.Item(7, i).Value = reader.GetValue(7)
                         Me.dgv生産データ.Item(8, i).Value = reader.GetValue(8)
