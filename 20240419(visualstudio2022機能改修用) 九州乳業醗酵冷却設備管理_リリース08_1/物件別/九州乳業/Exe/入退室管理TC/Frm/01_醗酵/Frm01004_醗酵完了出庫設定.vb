@@ -98,10 +98,12 @@ Public Class Frm01004_醗酵完了出庫設定
                                     Me.dgv生産データハード.Item(6, i).Value = "出庫待ち"
                                 Case 8, 9
                                     Me.dgv生産データハード.Item(6, i).Value = "出庫中"
+                                    Me.dgv生産データハード.Rows(i).DefaultCellStyle.BackColor = Color.LightCoral
                             End Select
 
                             If reader.GetValue(6) = 1 Then
                                 Me.dgv生産データハード.Item(6, i).Value = "中断中"
+                                Me.dgv生産データハード.Rows(i).DefaultCellStyle.BackColor = Color.White
                             End If
                             Me.dgv生産データハード.Item(7, i).Value = reader.GetValue(7)
                             Me.dgv生産データハード.Item(8, i).Value = reader.GetValue(8)
@@ -158,12 +160,15 @@ Public Class Frm01004_醗酵完了出庫設定
                                     Me.dgv生産データプレーン.Item(6, i).Value = "出庫待ち"
                                 Case 8, 9
                                     Me.dgv生産データプレーン.Item(6, i).Value = "出庫中"
+                                    Me.dgv生産データプレーン.Rows(i).DefaultCellStyle.BackColor = Color.LightCoral
                             End Select
 
                             If reader.GetValue(5) = 6 And reader.GetValue(6) = 1 Then
                                 Me.dgv生産データプレーン.Item(6, i).Value = "中断中"
+                                Me.dgv生産データプレーン.Rows(i).DefaultCellStyle.BackColor = Color.White
                             ElseIf (reader.GetValue(5) = 8 Or reader.GetValue(5) = 9) And reader.GetValue(6) = 1 Then
                                 Me.dgv生産データプレーン.Item(6, i).Value = "中断予約"
+                                Me.dgv生産データプレーン.Rows(i).DefaultCellStyle.BackColor = Color.White
                             End If
                             Me.dgv生産データプレーン.Item(7, i).Value = reader.GetValue(7)
                             Me.dgv生産データプレーン.Item(8, i).Value = reader.GetValue(8)
@@ -373,7 +378,7 @@ Public Class Frm01004_醗酵完了出庫設定
 
         Me.Timer1.Stop()
         Try
-            If Me.dgv生産データプレーン.Item(6, Me.dgv生産データプレーン.CurrentRow.Index).Value = "出庫中" Or Me.dgv生産データプレーン.Item(6, Me.dgv生産データプレーン.CurrentRow.Index).Value Then
+            If Me.dgv生産データプレーン.Item(6, Me.dgv生産データプレーン.CurrentRow.Index).Value = "出庫中" Or Me.dgv生産データプレーン.Item(6, Me.dgv生産データプレーン.CurrentRow.Index).Value = "出庫待ち" Then
                 Dim dlg As New Dlg01004_出庫設定
                 With dlg
                     .m画面モード = 1    '出庫中断設定モード
