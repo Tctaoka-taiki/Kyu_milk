@@ -148,7 +148,7 @@ Public Class Dlg01005_棚指定出庫開始
                                 Me.lblクレート数.Text = reader.GetValue(3)
                                 Me.lbl賞味期限.Text = reader.GetValue(4)
                                 Me.lbl醗酵冷却開始時刻.Text = reader.GetValue(5)
-                                Me.lblユニット列数.Text = reader.GetValue(6)
+                                Me.lblクレート列数.Text = reader.GetValue(6)
                                 Me.btnF1.Enabled = True
                                 Exit Sub
                             End If
@@ -173,7 +173,7 @@ Public Class Dlg01005_棚指定出庫開始
     Private Sub 画面初期化()
         Me.lblクレート数.Text = ""
         Me.lblサンプルNo.Text = ""
-        Me.lblユニット列数.Text = ""
+        Me.lblクレート列数.Text = ""
         Me.lblロットNo.Text = ""
         Me.lbl賞味期限.Text = ""
         Me.lbl醗酵冷却開始時刻.Text = ""
