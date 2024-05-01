@@ -79,6 +79,13 @@ Public Class Frm02011_冷却棚問合せメンテナンス
 
     Private Sub btnF4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnF4.Click
         Try
+            Dim 表示行数チェック As Integer
+
+            For 表示行数チェック = 0 To Me.dgv生産データ.Rows.Count
+                If Me.dgv生産データ.Rows(表示行数チェック).Displayed Then
+                    Exit For
+                End If
+            Next
             Dim dlg As New Dlg01999_棚メンテナンス禁止棚
             With dlg
                 .m画面モード = 1
@@ -86,6 +93,8 @@ Public Class Frm02011_冷却棚問合せメンテナンス
 
             End With
             倉庫情報表示()
+
+            Me.dgv生産データ.FirstDisplayedScrollingRowIndex = 表示行数チェック
 
         Catch ex As Exception
         Finally

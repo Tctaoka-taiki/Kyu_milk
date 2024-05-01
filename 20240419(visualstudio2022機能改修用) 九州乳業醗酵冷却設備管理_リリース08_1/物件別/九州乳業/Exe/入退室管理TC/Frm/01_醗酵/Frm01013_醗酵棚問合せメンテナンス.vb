@@ -79,6 +79,13 @@ Public Class Frm01013_醗酵棚問合せメンテナンス
 
     Private Sub btnF4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnF4.Click
         Try
+            Dim 表示行数チェック As Integer
+
+            For 表示行数チェック = 0 To Me.dgv生産データ.Rows.Count
+                If Me.dgv生産データ.Rows(表示行数チェック).Displayed Then
+                    Exit For
+                End If
+            Next
             Dim dlg As New Dlg01999_棚メンテナンス禁止棚
             With dlg
                 .m画面モード = 0
@@ -86,6 +93,8 @@ Public Class Frm01013_醗酵棚問合せメンテナンス
 
             End With
             倉庫情報表示()
+
+            Me.dgv生産データ.FirstDisplayedScrollingRowIndex = 表示行数チェック
 
         Catch ex As Exception
         Finally
@@ -108,6 +117,7 @@ Public Class Frm01013_醗酵棚問合せメンテナンス
         Dim reader As DbDataReader = Nothing
         Try
             With New CSqlEx
+                .gSubSelect("B.品種CD")
                 .gSubSelect("MAX(A.列) as 列")
                 .gSubSelect("MAX(A.連) as 連")
                 .gSubSelect("MAX(A.段) as 段")
@@ -126,7 +136,7 @@ Public Class Frm01013_醗酵棚問合せメンテナンス
                 .gSubWhere("A.ステータス < 10 ")
                 '---------------------------------
                 .gSubWhere("A.品種CD = B.品種CD")
-                .gSubGroupBy("A.ユニットSEQ")
+                .gSubGroupBy("B.品種CD,A.ユニットSEQ")
 
                 Dim strトラッキング状況SQL As String = .gSQL文の取得
                 .gSubClearSQL()
@@ -143,11 +153,13 @@ Public Class Frm01013_醗酵棚問合せメンテナンス
                 .gSubSelect("B.所定時刻")
                 .gSubSelect("B.経過時刻")
                 .gSubSelect("A.棚区分")
+                .gSubSelect("B.品種CD")
                 .gSubFrom("DM棚 A LEFT JOIN (" & strトラッキング状況SQL & ")B ON A.列=B.列 AND A.連=B.連 AND A.段=B.段")
                 .gSubWhere("A.倉庫区分", 0, , , , , , , False)
                 .gSubWhere("A.棚区分<>1")   'ステーションは対象外
+
                 .gSubWhere("A.棚区分<>3")   '棚無しは対象外
-                .gSubOrderBy("列,連,段")
+                .gSubOrderBy("IIF(B.品種CD IS NOT NULL, 0, 1),B.品種CD,開始時刻,列,連,段")
 
                 If CUsrctl.gDp.gBlnReader(.gSQL文の取得, reader) Then
                     '合計表示行の作成
