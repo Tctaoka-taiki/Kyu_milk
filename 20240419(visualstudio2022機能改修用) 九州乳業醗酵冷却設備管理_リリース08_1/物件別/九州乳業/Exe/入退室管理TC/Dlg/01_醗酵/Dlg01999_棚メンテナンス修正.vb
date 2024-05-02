@@ -118,8 +118,8 @@ Public Class Dlg01999_棚メンテナンス修正
                     End If
                     .gSubColumnValue("ロットNo", Me.txtロットNo.Text, True)
                     .gSubColumnValue("サンプルNo", Me.txtサンプルNo.Text, False)
-                    .gSubColumnValue("品種CD", Me.txt品種.Text, False)
-                    int品種CD = Convert.ToInt32(Me.txt品種.Text)
+                    .gSubColumnValue("品種CD", Me.lbl品種CD.Text, False)
+                    int品種CD = Convert.ToInt32(Me.lbl品種CD.Text)
                     .gSubColumnValue("受入数", int受入数, False)
                     .gSubColumnValue("賞味期限", Me.txt賞味期限年.Text & "/" & Me.txt賞味期限月.Text & "/" & Me.txt賞味期限日.Text & " 00:00:00", True)
 
@@ -243,13 +243,13 @@ Public Class Dlg01999_棚メンテナンス修正
                         Me.txt賞味期限日.Enabled = True
                         Me.txtサンプルNo.Enabled = True
                         Me.txtロットNo.Enabled = True
-                        Me.txt品種.Enabled = True
+                        'Me.txt品種.Enabled = False
                         int製品区分 = reader.GetValue(7)
                         int品種CD = reader.GetValue(8)
                         Me.txtロットNo.Text = reader.GetValue(0)
                         Me.txtサンプルNo.Text = reader.GetValue(1)
                         Me.lbl品種.Text = reader.GetValue(2)
-                        Me.txt品種.Text = reader.GetValue(8)
+                        Me.lbl品種CD.Text = reader.GetValue(8)
                         Me.txtクレート数.Text = reader.GetValue(3)
                         Me.txt賞味期限年.Text = (reader.GetValue(4)).ToString().Substring(0, 4)
                         Me.txt賞味期限月.Text = (reader.GetValue(4)).ToString().Substring(5, 2)
@@ -298,7 +298,7 @@ Public Class Dlg01999_棚メンテナンス修正
             Me.txt賞味期限日.Enabled = False
             Me.txtサンプルNo.Enabled = False
             Me.txtロットNo.Enabled = False
-            Me.txt品種.Enabled = False
+            'Me.txt品種.Enabled = False
             CMsg.gMsg_エラー("在庫情報がありません。")
             Me.txt列.Focus()
             Me.txt列.Text = ""
@@ -323,7 +323,7 @@ Public Class Dlg01999_棚メンテナンス修正
         Me.txt賞味期限日.Enabled = False
         Me.txtサンプルNo.Enabled = False
         Me.txtロットNo.Enabled = False
-        Me.txt品種.Enabled = False
+        'Me.txt品種.Enabled = False
         Me.btnF1.Enabled = False
         Me.txtクレート数.Text = ""
         Me.txtサンプルNo.Text = ""
@@ -338,7 +338,7 @@ Public Class Dlg01999_棚メンテナンス修正
         Me.txt醗酵開始時.Text = ""
         Me.txt醗酵開始分.Text = ""
         Me.lbl品種.Text = ""
-        Me.txt品種.Text = ""
+        Me.lbl品種CD.Text = ""
     End Sub
 
     Private Sub txtクレート数_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtクレート数.TextChanged
@@ -415,14 +415,14 @@ Public Class Dlg01999_棚メンテナンス修正
 
     End Sub
 
-    Private Sub txt品種_TextChanged(sender As Object, e As EventArgs) Handles txt品種.TextChanged
+    Private Sub lbl品種_TextChanged(sender As Object, e As EventArgs)
         Dim reader As DbDataReader = Nothing
         Try
             With New CSqlEx
                 .gSubSelect("MAX(B.品種名) as 品種名")
                 .gSubFrom("DNトラッキング A")
                 .gSubFrom("DM品種 B")
-                .gSubWhere(Me.txt品種.Text & " = B.品種CD")
+                .gSubWhere(Me.lbl品種CD.Text & " = B.品種CD")
                 .gSubWhere("A.列", Me.txt列.Text, , , , , , , False)
                 .gSubWhere("A.連", Me.txt連.Text, , , , , , , False)
                 .gSubWhere("A.段", Me.txt段.Text, , , , , , , False)

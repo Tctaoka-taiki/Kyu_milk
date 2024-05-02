@@ -57,8 +57,8 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.UsrLbl7 = New 共通Windowsコントロール.usrLbl()
         Me.txt賞味期限年 = New 共通Windowsコントロール.usrTxt()
         Me.UsrLbl15 = New 共通Windowsコントロール.usrLbl()
-        Me.txt品種 = New 共通Windowsコントロール.usrTxt()
         Me.txtロットNo = New 共通Windowsコントロール.usrTxt()
+        Me.lbl品種CD = New 共通Windowsコントロール.usrLbl()
         Me.SuspendLayout()
         '
         'btnF1
@@ -286,7 +286,7 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.lbl品種.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.lbl品種.ForeColor = System.Drawing.SystemColors.ControlText
         Me.lbl品種.Isクリア = False
-        Me.lbl品種.Location = New System.Drawing.Point(247, 71)
+        Me.lbl品種.Location = New System.Drawing.Point(201, 71)
         Me.lbl品種.Name = "lbl品種"
         Me.lbl品種.pClearValue = ""
         Me.lbl品種.pID = ""
@@ -459,8 +459,9 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.lblクレート列数.Name = "lblクレート列数"
         Me.lblクレート列数.pClearValue = ""
         Me.lblクレート列数.pID = ""
-        Me.lblクレート列数.Size = New System.Drawing.Size(0, 19)
+        Me.lblクレート列数.Size = New System.Drawing.Size(74, 19)
         Me.lblクレート列数.TabIndex = 138
+        Me.lblクレート列数.Text = "クレート"
         Me.lblクレート列数.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lblクレート列数.エラー表示用項目名 = ""
         '
@@ -867,31 +868,6 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.UsrLbl15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.UsrLbl15.エラー表示用項目名 = ""
         '
-        'txt品種
-        '
-        Me.txt品種.BackColor = System.Drawing.SystemColors.Window
-        Me.txt品種.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.txt品種.Isクリア = True
-        Me.txt品種.Location = New System.Drawing.Point(201, 68)
-        Me.txt品種.MaxLength = 1
-        Me.txt品種.Name = "txt品種"
-        Me.txt品種.pAutoFocus = True
-        Me.txt品種.pAutoPad = False
-        Me.txt品種.pAutoSelect = True
-        Me.txt品種.pCharType = 共通Windowsコントロール.MCtl.gEnmCharType.Numonly
-        Me.txt品種.pClearText = ""
-        Me.txt品種.pClearValue = ""
-        Me.txt品種.pCondition = 共通Windowsコントロール.MCtl.gEnm入力条件.Nomal
-        Me.txt品種.pFromCtl = Nothing
-        Me.txt品種.pFromToErrText = ""
-        Me.txt品種.pFromToSearch = 共通Windowsコントロール.MCtl.gEnmFromTo.None
-        Me.txt品種.pID = ""
-        Me.txt品種.pMaxByte = 2
-        Me.txt品種.pPadWord = ""
-        Me.txt品種.Size = New System.Drawing.Size(40, 26)
-        Me.txt品種.TabIndex = 4
-        Me.txt品種.エラー表示用項目名 = ""
-        '
         'txtロットNo
         '
         Me.txtロットNo.BackColor = System.Drawing.SystemColors.Window
@@ -917,12 +893,28 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.txtロットNo.TabIndex = 5
         Me.txtロットNo.エラー表示用項目名 = ""
         '
+        'lbl品種CD
+        '
+        Me.lbl品種CD.AutoSize = True
+        Me.lbl品種CD.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lbl品種CD.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.lbl品種CD.Isクリア = False
+        Me.lbl品種CD.Location = New System.Drawing.Point(201, 71)
+        Me.lbl品種CD.Name = "lbl品種CD"
+        Me.lbl品種CD.pClearValue = ""
+        Me.lbl品種CD.pID = ""
+        Me.lbl品種CD.Size = New System.Drawing.Size(76, 19)
+        Me.lbl品種CD.TabIndex = 167
+        Me.lbl品種CD.Text = "品種CD"
+        Me.lbl品種CD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbl品種CD.Visible = False
+        Me.lbl品種CD.エラー表示用項目名 = ""
+        '
         'Dlg01999_棚メンテナンス修正
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.ClientSize = New System.Drawing.Size(647, 413)
         Me.Controls.Add(Me.txtロットNo)
-        Me.Controls.Add(Me.txt品種)
         Me.Controls.Add(Me.txt賞味期限日)
         Me.Controls.Add(Me.txt賞味期限月)
         Me.Controls.Add(Me.UsrLbl7)
@@ -961,8 +953,10 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.Controls.Add(Me.txt段)
         Me.Controls.Add(Me.UsrLbl6)
         Me.Controls.Add(Me.UsrLbl5)
+        Me.Controls.Add(Me.lbl品種CD)
         Me.Name = "Dlg01999_棚メンテナンス修正"
         Me.Text = "棚データ修正"
+        Me.Controls.SetChildIndex(Me.lbl品種CD, 0)
         Me.Controls.SetChildIndex(Me.UsrLbl5, 0)
         Me.Controls.SetChildIndex(Me.UsrLbl6, 0)
         Me.Controls.SetChildIndex(Me.txt段, 0)
@@ -1013,7 +1007,6 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.Controls.SetChildIndex(Me.UsrLbl7, 0)
         Me.Controls.SetChildIndex(Me.txt賞味期限月, 0)
         Me.Controls.SetChildIndex(Me.txt賞味期限日, 0)
-        Me.Controls.SetChildIndex(Me.txt品種, 0)
         Me.Controls.SetChildIndex(Me.txtロットNo, 0)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -1057,6 +1050,6 @@ Partial Class Dlg01999_棚メンテナンス修正
     Friend WithEvents UsrLbl7 As usrLbl
     Friend WithEvents txt賞味期限年 As usrTxt
     Friend WithEvents UsrLbl15 As usrLbl
-    Friend WithEvents txt品種 As usrTxt
     Friend WithEvents txtロットNo As usrTxt
+    Friend WithEvents lbl品種CD As usrLbl
 End Class
