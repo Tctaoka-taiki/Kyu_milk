@@ -92,7 +92,7 @@ Public Class Dlg01999_棚メンテナンス修正
             With New CSql
                 Dim i As Integer
                 Dim int受入数 As Integer = 0
-                Dim intユニット列数 As Integer = Val(Me.lblユニット列数.Text)
+                Dim intユニット列数 As Integer = Val(Me.lblクレート列数.Text)
                 For i = 1 To intユニット列数
                     If int製品区分 = 0 Then 'ハード
                         If i <> intユニット列数 Then
@@ -121,7 +121,7 @@ Public Class Dlg01999_棚メンテナンス修正
                     .gSubColumnValue("品種CD", Me.txt品種.Text, False)
                     int品種CD = Convert.ToInt32(Me.txt品種.Text)
                     .gSubColumnValue("受入数", int受入数, False)
-                    .gSubColumnValue("賞味期限", Me.txt賞味期限年.Text & "/" & Me.txt醗酵開始月.Text & "/" & Me.txt醗酵開始日.Text & " 00:00:00", True)
+                    .gSubColumnValue("賞味期限", Me.txt賞味期限年.Text & "/" & Me.txt賞味期限月.Text & "/" & Me.txt賞味期限日.Text & " 00:00:00", True)
 
                     Select Case m画面モード
                         Case 0  '醗酵
@@ -132,7 +132,10 @@ Public Class Dlg01999_棚メンテナンス修正
                             .gSubColumnValue("冷却開始時刻", Me.txt醗酵開始年.Text & "/" & Me.txt醗酵開始月.Text & "/" & Me.txt醗酵開始日.Text & " " & Me.txt醗酵開始時.Text & ":" & Me.txt醗酵開始分.Text & ":00", True)
                             .gSubColumnValue("ステータス", 27, False)
                     End Select
+                    '---------------------------------
+                    '2024/4 田岡
                     .gSubColumnValue("ユニットSEQ", strユニットSEQ, False)
+                    '---------------------------------
                     .gSubColumnValue("列", Me.txt列.Text, False)
                     .gSubColumnValue("連", Me.txt連.Text, False)
                     .gSubColumnValue("段", Me.txt段.Text, False)
@@ -204,8 +207,8 @@ Public Class Dlg01999_棚メンテナンス修正
                 .gSubSelect("MAX(A.出庫中断) as 出庫中断_醗")
                 .gSubSelect("MAX(A.出庫中断_冷) as 出庫中断_冷")
                 '---------------------------------
-                '2024/9田岡
-                .gSubSelect("MAX(A.ユニットSEQ) as ユニットSEQ")
+                '2024/4田岡
+                .gSubSelect("A.ユニットSEQ as ユニットSEQ")
                 '---------------------------------
                 .gSubFrom("DNトラッキング A")
                 .gSubFrom("DM品種 B")
@@ -228,6 +231,19 @@ Public Class Dlg01999_棚メンテナンス修正
 
                 If CUsrctl.gDp.gBlnReader(.gSQL文の取得, reader) Then
                     While reader.Read
+                        Me.txtクレート数.Enabled = True
+                        Me.txt醗酵開始年.Enabled = True
+                        Me.txt醗酵開始月.Enabled = True
+                        Me.txt醗酵開始日.Enabled = True
+                        Me.txt醗酵開始時.Enabled = True
+                        Me.txt醗酵開始分.Enabled = True
+                        Me.btnF1.Enabled = True
+                        Me.txt賞味期限年.Enabled = True
+                        Me.txt賞味期限月.Enabled = True
+                        Me.txt賞味期限日.Enabled = True
+                        Me.txtサンプルNo.Enabled = True
+                        Me.txtロットNo.Enabled = True
+                        Me.txt品種.Enabled = True
                         int製品区分 = reader.GetValue(7)
                         int品種CD = reader.GetValue(8)
                         Me.txtロットNo.Text = reader.GetValue(0)
@@ -251,7 +267,7 @@ Public Class Dlg01999_棚メンテナンス修正
                             Me.txt醗酵開始時.Text = Mid(str醗酵開始時刻, 1, 2)
                             Me.txt醗酵開始分.Text = Mid(str醗酵開始時刻, 4, 2)
                         End If
-                        Me.lblユニット列数.Text = reader.GetValue(6)
+                        Me.lblクレート列数.Text = reader.GetValue(6)
                         '---------------------------------
                         '2014/9 Morichika
                         int出庫中断_醗酵 = reader.GetValue(9)
@@ -261,19 +277,7 @@ Public Class Dlg01999_棚メンテナンス修正
                         '2024/9田岡
                         strユニットSEQ = reader.GetValue(11)
                         '---------------------------------
-                        Me.txtクレート数.Enabled = True
-                        Me.txt醗酵開始年.Enabled = True
-                        Me.txt醗酵開始月.Enabled = True
-                        Me.txt醗酵開始日.Enabled = True
-                        Me.txt醗酵開始時.Enabled = True
-                        Me.txt醗酵開始分.Enabled = True
-                        Me.btnF1.Enabled = True
-                        Me.txt賞味期限年.Enabled = True
-                        Me.txt賞味期限月.Enabled = True
-                        Me.txt賞味期限日.Enabled = True
-                        Me.txtサンプルNo.Enabled = True
-                        Me.txtロットNo.Enabled = True
-                        Me.txt品種.Enabled = True
+
                         Exit Sub
                     End While
                 End If
@@ -323,7 +327,7 @@ Public Class Dlg01999_棚メンテナンス修正
         Me.btnF1.Enabled = False
         Me.txtクレート数.Text = ""
         Me.txtサンプルNo.Text = ""
-        Me.lblユニット列数.Text = ""
+        Me.lblクレート列数.Text = ""
         Me.txtロットNo.Text = ""
         Me.txt賞味期限年.Text = ""
         Me.txt賞味期限月.Text = ""
@@ -340,12 +344,12 @@ Public Class Dlg01999_棚メンテナンス修正
     Private Sub txtクレート数_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtクレート数.TextChanged
         If Trim(Me.txtクレート数.Text) = "" Then
             Me.txtクレート数.Text = ""
-            Me.lblユニット列数.Text = ""
+            Me.lblクレート列数.Text = ""
             Exit Sub
         End If
 
         '初期化
-        Me.lblユニット列数.Text = ""
+        Me.lblクレート列数.Text = ""
         Dim 入力値 As Integer = Me.txtクレート数.Text
         If int製品区分 = 0 Then 'ハード
 
@@ -355,7 +359,7 @@ Public Class Dlg01999_棚メンテナンス修正
                 Exit Sub
             End If
 
-            Me.lblユニット列数.Text = Math.Ceiling(Val(txtクレート数.Text) / 13)
+            Me.lblクレート列数.Text = Math.Ceiling(Val(txtクレート数.Text) / 13)
 
         Else    'プレーン
             If 入力値 > 21 Then
@@ -364,7 +368,7 @@ Public Class Dlg01999_棚メンテナンス修正
                 Exit Sub
             End If
 
-            Me.lblユニット列数.Text = Math.Ceiling(Val(txtクレート数.Text) / 7)
+            Me.lblクレート列数.Text = Math.Ceiling(Val(txtクレート数.Text) / 7)
 
         End If
     End Sub

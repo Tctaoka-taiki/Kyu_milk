@@ -153,7 +153,7 @@ Partial Class Frm01004_醗酵完了出庫設定
         Me.dgv生産データハード.RowHeadersVisible = False
         Me.dgv生産データハード.RowTemplate.Height = 21
         Me.dgv生産データハード.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv生産データハード.Size = New System.Drawing.Size(980, 240)
+        Me.dgv生産データハード.Size = New System.Drawing.Size(980, 235)
         Me.dgv生産データハード.TabIndex = 41
         Me.dgv生産データハード.エラー表示用項目名 = ""
         Me.dgv生産データハード.件数表示ラベル = Nothing
@@ -270,7 +270,7 @@ Partial Class Frm01004_醗酵完了出庫設定
         Me.dgv生産データプレーン.RowHeadersVisible = False
         Me.dgv生産データプレーン.RowTemplate.Height = 21
         Me.dgv生産データプレーン.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv生産データプレーン.Size = New System.Drawing.Size(980, 240)
+        Me.dgv生産データプレーン.Size = New System.Drawing.Size(980, 235)
         Me.dgv生産データプレーン.TabIndex = 42
         Me.dgv生産データプレーン.エラー表示用項目名 = ""
         Me.dgv生産データプレーン.件数表示ラベル = Nothing

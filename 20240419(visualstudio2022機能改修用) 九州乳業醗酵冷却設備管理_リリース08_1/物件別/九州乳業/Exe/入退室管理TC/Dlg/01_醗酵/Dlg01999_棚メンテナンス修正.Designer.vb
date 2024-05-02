@@ -37,7 +37,7 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.UsrLbl13 = New 共通Windowsコントロール.usrLbl()
         Me.UsrLbl14 = New 共通Windowsコントロール.usrLbl()
         Me.txt列 = New 共通Windowsコントロール.usrTxt()
-        Me.lblユニット列数 = New 共通Windowsコントロール.usrLbl()
+        Me.lblクレート列数 = New 共通Windowsコントロール.usrLbl()
         Me.UsrLbl2 = New 共通Windowsコントロール.usrLbl()
         Me.UsrLbl3 = New 共通Windowsコントロール.usrLbl()
         Me.UsrLbl22 = New 共通Windowsコントロール.usrLbl()
@@ -449,20 +449,20 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.txt列.TabIndex = 1
         Me.txt列.エラー表示用項目名 = ""
         '
-        'lblユニット列数
+        'lblクレート列数
         '
-        Me.lblユニット列数.AutoSize = True
-        Me.lblユニット列数.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblユニット列数.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblユニット列数.Isクリア = False
-        Me.lblユニット列数.Location = New System.Drawing.Point(201, 281)
-        Me.lblユニット列数.Name = "lblユニット列数"
-        Me.lblユニット列数.pClearValue = ""
-        Me.lblユニット列数.pID = ""
-        Me.lblユニット列数.Size = New System.Drawing.Size(0, 19)
-        Me.lblユニット列数.TabIndex = 138
-        Me.lblユニット列数.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblユニット列数.エラー表示用項目名 = ""
+        Me.lblクレート列数.AutoSize = True
+        Me.lblクレート列数.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblクレート列数.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.lblクレート列数.Isクリア = False
+        Me.lblクレート列数.Location = New System.Drawing.Point(201, 281)
+        Me.lblクレート列数.Name = "lblクレート列数"
+        Me.lblクレート列数.pClearValue = ""
+        Me.lblクレート列数.pID = ""
+        Me.lblクレート列数.Size = New System.Drawing.Size(0, 19)
+        Me.lblクレート列数.TabIndex = 138
+        Me.lblクレート列数.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblクレート列数.エラー表示用項目名 = ""
         '
         'UsrLbl2
         '
@@ -474,9 +474,9 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.UsrLbl2.Name = "UsrLbl2"
         Me.UsrLbl2.pClearValue = ""
         Me.UsrLbl2.pID = ""
-        Me.UsrLbl2.Size = New System.Drawing.Size(113, 19)
+        Me.UsrLbl2.Size = New System.Drawing.Size(114, 19)
         Me.UsrLbl2.TabIndex = 139
-        Me.UsrLbl2.Text = "ユニット列数"
+        Me.UsrLbl2.Text = "クレート列数"
         Me.UsrLbl2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.UsrLbl2.エラー表示用項目名 = ""
         '
@@ -942,7 +942,7 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.Controls.Add(Me.UsrLbl23)
         Me.Controls.Add(Me.UsrLbl2)
         Me.Controls.Add(Me.UsrLbl3)
-        Me.Controls.Add(Me.lblユニット列数)
+        Me.Controls.Add(Me.lblクレート列数)
         Me.Controls.Add(Me.txt列)
         Me.Controls.Add(Me.lbl品種)
         Me.Controls.Add(Me.UsrLbl9)
@@ -981,7 +981,7 @@ Partial Class Dlg01999_棚メンテナンス修正
         Me.Controls.SetChildIndex(Me.UsrLbl9, 0)
         Me.Controls.SetChildIndex(Me.lbl品種, 0)
         Me.Controls.SetChildIndex(Me.txt列, 0)
-        Me.Controls.SetChildIndex(Me.lblユニット列数, 0)
+        Me.Controls.SetChildIndex(Me.lblクレート列数, 0)
         Me.Controls.SetChildIndex(Me.UsrLbl3, 0)
         Me.Controls.SetChildIndex(Me.UsrLbl2, 0)
         Me.Controls.SetChildIndex(Me.UsrLbl23, 0)
@@ -1037,7 +1037,7 @@ Partial Class Dlg01999_棚メンテナンス修正
     Friend WithEvents UsrLbl13 As 共通Windowsコントロール.usrLbl
     Friend WithEvents UsrLbl14 As 共通Windowsコントロール.usrLbl
     Friend WithEvents txt列 As 共通Windowsコントロール.usrTxt
-    Friend WithEvents lblユニット列数 As 共通Windowsコントロール.usrLbl
+    Friend WithEvents lblクレート列数 As 共通Windowsコントロール.usrLbl
     Friend WithEvents UsrLbl2 As 共通Windowsコントロール.usrLbl
     Friend WithEvents UsrLbl3 As 共通Windowsコントロール.usrLbl
     Friend WithEvents UsrLbl22 As 共通Windowsコントロール.usrLbl
