@@ -30,7 +30,17 @@ Public Class Frm02011_冷却棚問合せメンテナンス
     End Sub
 
     Private Sub btnF1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnF1.Click
+        Dim 表示行数チェック As Integer
+        Dim 表示セル As String
+        Dim 行数 As Integer
+
         Try
+            For 表示行数チェック = 0 To Me.dgv生産データ.Rows.Count
+                If Me.dgv生産データ.Rows(表示行数チェック).Displayed Then
+                    表示セル = Me.dgv生産データ.Item(0, 表示行数チェック).Value
+                    Exit For
+                End If
+            Next
             Dim dlg As New Dlg01999_棚メンテナンス登録
             With dlg
                 .m画面モード = 1
@@ -39,6 +49,20 @@ Public Class Frm02011_冷却棚問合せメンテナンス
             End With
             倉庫情報表示()
 
+            Me.dgv生産データ.FirstDisplayedScrollingRowIndex = 表示行数チェック
+
+            For 行数 = 0 To Me.dgv生産データ.Rows.Count
+                If 表示セル = Me.dgv生産データ.Item(0, 行数).Value Then
+                    Exit For
+                End If
+            Next
+
+            If 行数 - 1 = 表示行数チェック Then
+                Me.dgv生産データ.FirstDisplayedScrollingRowIndex = 表示行数チェック + 1
+            Else
+                Me.dgv生産データ.FirstDisplayedScrollingRowIndex = 表示行数チェック
+            End If
+
         Catch ex As Exception
         Finally
 
@@ -46,7 +70,18 @@ Public Class Frm02011_冷却棚問合せメンテナンス
     End Sub
 
     Private Sub btnF2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnF2.Click
+
+        Dim 表示行数チェック As Integer
+        Dim 表示セル As String
+        Dim 行数 As Integer
+
         Try
+            For 表示行数チェック = 0 To Me.dgv生産データ.Rows.Count
+                If Me.dgv生産データ.Rows(表示行数チェック).Displayed Then
+                    表示セル = Me.dgv生産データ.Item(0, 表示行数チェック).Value
+                    Exit For
+                End If
+            Next
             Dim dlg As New Dlg01999_棚メンテナンス削除
             With dlg
                 .m画面モード = 1
@@ -55,6 +90,20 @@ Public Class Frm02011_冷却棚問合せメンテナンス
             End With
             倉庫情報表示()
 
+            Me.dgv生産データ.FirstDisplayedScrollingRowIndex = 表示行数チェック
+
+            For 行数 = 0 To Me.dgv生産データ.Rows.Count
+                If 表示セル = Me.dgv生産データ.Item(0, 行数).Value Then
+                    Exit For
+                End If
+            Next
+
+            If 行数 + 1 = 表示行数チェック Then
+                Me.dgv生産データ.FirstDisplayedScrollingRowIndex = 表示行数チェック - 1
+            Else
+                Me.dgv生産データ.FirstDisplayedScrollingRowIndex = 表示行数チェック
+            End If
+
         Catch ex As Exception
         Finally
 
@@ -62,7 +111,14 @@ Public Class Frm02011_冷却棚問合せメンテナンス
     End Sub
 
     Private Sub btnF3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnF3.Click
+        Dim 表示行数チェック As Integer
         Try
+            For 表示行数チェック = 0 To Me.dgv生産データ.Rows.Count
+                If Me.dgv生産データ.Rows(表示行数チェック).Displayed Then
+                    Exit For
+                End If
+            Next
+
             Dim dlg As New Dlg01999_棚メンテナンス修正
             With dlg
                 .m画面モード = 1
@@ -70,6 +126,8 @@ Public Class Frm02011_冷却棚問合せメンテナンス
 
             End With
             倉庫情報表示()
+
+            Me.dgv生産データ.FirstDisplayedScrollingRowIndex = 表示行数チェック
 
         Catch ex As Exception
         Finally
