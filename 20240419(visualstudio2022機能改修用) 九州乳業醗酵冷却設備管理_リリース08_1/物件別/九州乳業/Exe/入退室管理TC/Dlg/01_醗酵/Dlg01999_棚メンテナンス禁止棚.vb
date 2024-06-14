@@ -9,6 +9,16 @@ Public Class Dlg01999_棚メンテナンス禁止棚
         '初期表示
         画面初期化()
         Me.btnF1.Enabled = False
+        If Me.txt列.Text = "" Or Me.txt連.Text = "" Or Me.txt段.Text = "" Then
+
+        Else
+            If Trim(Me.txt列.Text) = "" Or Trim(Me.txt連.Text) = "" Or Trim(Me.txt段.Text) = "" Then
+                Exit Sub
+            End If
+
+            ロケ情報表示()
+        End If
+
     End Sub
 
     Private Sub btnF1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnF1.Click

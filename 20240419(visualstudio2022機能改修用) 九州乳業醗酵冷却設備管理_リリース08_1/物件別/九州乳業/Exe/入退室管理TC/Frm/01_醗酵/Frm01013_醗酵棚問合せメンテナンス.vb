@@ -141,29 +141,32 @@ Public Class Frm01013_醗酵棚問合せメンテナンス
 
     Private Sub btnF4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnF4.Click
         Try
-            Dim 表示行数チェック As Integer
-
-            For 表示行数チェック = 0 To Me.dgv生産データ.Rows.Count
-                If Me.dgv生産データ.Rows(表示行数チェック).Displayed Then
-                    Exit For
-                End If
-            Next
-            Dim dlg As New Dlg01999_棚メンテナンス禁止棚
-            With dlg
-                .m画面モード = 0
-                .ShowDialog()
-
-            End With
-            倉庫情報表示()
-
-            Me.dgv生産データ.FirstDisplayedScrollingRowIndex = 表示行数チェック
-
+            禁止棚設定("      ")
         Catch ex As Exception
         Finally
 
         End Try
     End Sub
+    Private Sub 禁止棚設定(ByVal 棚番号 As String)
+        Dim 表示行数チェック As Integer
+        For 表示行数チェック = 0 To Me.dgv生産データ.Rows.Count
+            If Me.dgv生産データ.Rows(表示行数チェック).Displayed Then
+                Exit For
+            End If
+        Next
+        Dim dlg As New Dlg01999_棚メンテナンス禁止棚
+        With dlg
+            .m画面モード = 0
+            .txt列.Text = 棚番号.Substring(0, 1)
+            .txt連.Text = 棚番号.Substring(2, 2)
+            .txt段.Text = 棚番号.Substring(5, 1)
+            .ShowDialog()
+        End With
+        倉庫情報表示()
 
+        Me.dgv生産データ.FirstDisplayedScrollingRowIndex = 表示行数チェック
+
+    End Sub
     Private Sub btnF12_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnF12.Click
         Try
             CMdiMain.gSubMDI子フォームを開く(C画面制御オーダー別.醗酵メインメニュー)
@@ -378,5 +381,16 @@ Public Class Frm01013_醗酵棚問合せメンテナンス
         Finally
         End Try
 
+    End Sub
+
+    Private Sub dgv生産データ_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv生産データ.CellDoubleClick
+        Dim 行数 As Integer = e.RowIndex
+        Dim 棚番号 As String = dgv生産データ(0, e.RowIndex).Value.ToString()
+        Try
+            禁止棚設定(棚番号)
+        Catch ex As Exception
+        Finally
+
+        End Try
     End Sub
 End Class
